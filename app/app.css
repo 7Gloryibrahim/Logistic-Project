@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+ .track-order{
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+ }
+
+
+.track-order::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0;
+  height: 100%;
+  background-color: #F75128;
+  left: 0;
+  transition: 5s ease;
+  z-index: -1;
+}
+
+.track-order:hover::before{
+width: 100%;
+
+}
+
+ @keyframes Animate-geo {
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-12%);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+} 
+
+.geo{
+  animation: Animate-geo 3s ease infinite; 
+
+}
+
+.Home{
+  position: relative;
+}
+
+.Home-one{
+position:absolute;
+visibility: hidden;
+display: block;
+top:40px;
+left:-6px;
+width: 400%;
+height: 200px;
+padding-left: 10px;
+padding-top: 15px;
+border-top: #F75128 10px solid;
+color:  #F75128;;
+background-color: white;
+z-index: 50;
+opacity: 0;
+transition: 0.9s ease;
+}
+
+.Home:hover .Home-one{
+  visibility: visible;
+  opacity: 1;
+}
+
+.Drop-one{
+  padding: 10px;
+  z-index: 1;            /* Why was this used (I get the mechanism, but I still need a proper explanation)*/
+  position:relative;
+}
+
+.Drop-one::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  inset: 0;
+  width: 0;
+  background-color: #2B4D57;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;   /* Why was this used (I get the mechanism, but I still need a proper explanation) */
+  visibility: hidden;
+  transition: 3s ease;
+
+}
+
+.Drop-one:hover::before{
+  width: 90%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrow-one{
+background-color: #2B4D57;
+border-radius: 15px;
+  transform: rotateX(0);
+  transition: 5s ease;
+}
+.Fs-menu:hover .arrow-one{
+transform: rotate(90deg);
+}
+
+ .second-menu{
+position: absolute;
+visibility: hidden;
+opacity: 0;
+background-color: #2B4D57;
+width: 90%;
+border-top: #F75128 10px solid;
+padding: 20px;
+height: 80%;
+top: 90%;
+left: 110%;
+transition: 3s ease;
+}
+
+.Fs-menu:hover .second-menu{
+  visibility: visible;
+  opacity: 1;
+}
+
+.service-drop-down{
+  
+}
