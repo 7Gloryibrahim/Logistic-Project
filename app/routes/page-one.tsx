@@ -1,4 +1,5 @@
 import { useState,} from "react";
+import Solution  from "./Solution";
 import { Link } from "react-router";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -16,11 +17,13 @@ import { RiArrowRightWideFill } from "react-icons/ri";
 
 export function Page(){
     const [search, setSearch] = useState(false)
+    const [menu, setMenu] = useState(false)
     return(
         <div>
-             <div className="absolute z-50 w-full bg-[#062E39]  sm:block md:block">
+            <nav>
+             <div className="absolute z-50 w-full bg-[#192235] sm:block md:block">
             {/*first Top */}
-            <div className="bg-[#2B4D57] hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
+            <div className="bg-[#111827] hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
                 {/* Left side */}
                 <div className="">
                     <ul className=" sm:flex sm:gap-5  sm:py-3  ">
@@ -51,11 +54,11 @@ export function Page(){
 
             {/*Second Top */}
 
-                <div className="second-border flex bg-[#2B4D57] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 lg:mr-3 lg:h-20">
+                <div className="second-border flex bg-[#111827] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-20">
                     <div className="bg-[#F75128] w-72 " style={{clipPath:"polygon(0 0, 100% 0, 90% 100%, 0 100%)"}}>
                         <img src="/Truck1.png" alt="Truck" className="mt-4  sm:pl-1 sm:w " />
                     </div>
-
+                    {/*Nav bar at the top*/}
                     <div className=" flex justify-between w-full  font-bold">
                         <ul className=" hidden  sm:flex sm:ml-4 sm:gap-6 mt-5 text-white items-center md:hidden lg:flex    ">
                             <li className="Home flex">Home <MdArrowDropDown className="mt-1" />
@@ -70,10 +73,10 @@ export function Page(){
 
                             {/* Second Drop-down */}
 
-                            <li className="second-menu font-bold">
+                            <li className="second-menu font-bold text-white">
                                 <li className="home-head-one">Header One</li>
                                 <li className="home-head-one">Header Two</li>
-                                <li>Header Three</li>
+                                <li className="home-head-one">Header Three</li>
 
                             </li>
 
@@ -83,19 +86,54 @@ export function Page(){
                             <li className="flex">About <MdArrowDropDown  className="mt-1"/></li>
                             <li className="services flex">Services <MdArrowDropDown className="mt-1"/>
                             <li className="service-drop-down ">
-                                <li>Services</li>
-                                <li>International Transport</li>
-                                <li>Local Track Transport</li>
-                                <li>Local Track Transport</li>
-                                <li>Fast Personal Delivery</li>
-                                <li>Safe Ocean Transport</li>
-                                 <li> Warehouse Facility</li>
-                               <li>Emergency Transport</li> 
+                                <li className="service-menu">Services</li>
+                                <li className="service-menu">International Transport</li>
+                                <li className="service-menu">Local Track Transport</li>
+                                <li className="service-menu">Fast Personal Delivery</li>
+                                <li className="service-menu">Safe Ocean Transport</li>
+                                 <li className="service-menu"> Warehouse Facility</li>
+                               <li className="service-menu">Emergency Transport</li> 
                             </li>
                             </li>
-                            <li className="flex">Pages <MdArrowDropDown className="mt-1"/></li>
-                            <li className="flex">Shop <MdArrowDropDown  className="mt-1"/></li>
-                            <li className="flex">BLog <MdArrowDropDown  className="mt-1"/></li>
+                            <li className=" Pages flex">Pages <MdArrowDropDown className="mt-1"/>
+                            
+                                <li className="Pages-menu">
+                                       <li className="pages-list">Team</li> 
+                                        <li className="pages-list">Team Details</li>
+                                        <li className="pages-list">Projects</li>
+                                        <li className="pages-list">Project Details</li>
+                                        <li className="pages-list">Testimonials</li>
+                                        <li className="pages-list">Pricing</li>
+                                        <li className="pages-list">FAQ</li>
+                                        <li className="pages-list">404 Error</li>
+                                </li>
+
+                            </li>
+                            <li className=" Shop flex">Shop <MdArrowDropDown  className="mt-1"/>
+                            
+                                <li className="Shop-menu">
+                                   <li className="Shop-list">Products</li> 
+                                     <li className="Shop-list">Product Details </li> 
+                                     <li className="Shop-list">Cart </li>
+                                       <li className="Shop-list">Checkout</li>
+                                         <li className="Shop-list">Wishlist</li>
+                                        <li className="Shop-list">Sign up</li>
+                                          <li className="Shop-list">Login</li>  
+                                </li>
+
+                            </li>
+                            <li className="Blog flex">BLog <MdArrowDropDown  className="mt-1"/>
+                            
+                            <li className="Blog-menu">
+                                    <li className="Blog-list">Blog</li>
+                                    <li className="Blog-list">Blog Standard</li>
+                                    <li className="Blog-list">Blog Left Sidebar</li>
+                                    <li className="Blog-list">Blog Left Sidebar</li>
+                                    <li className="Blog-list">Blog Details</li>
+
+                            </li>
+                            
+                            </li>
                             <li>Contact</li>
                         </ul>
 
@@ -107,40 +145,75 @@ export function Page(){
                         <span className="track4"></span>
                     </div>
                          {/*Mobile Icon */}
-                    <div className="absolute left-5/6  text-[#F75128] text-3xl font-bold  sm:hidden md:block md:mt-6 md:left-5/6  lg:hidden ">
-                        <IoMenu />
+                    <div onClick={()=> setMenu(prev => !prev)} className="absolute left-5/6  text-[#F75128] text-3xl font-bold  sm:hidden md:block md:mt-6 md:left-5/6  lg:hidden ">
+                        <IoMenu  />
                     </div>
                     </div>
 
                 </div>
 
             </div>
-
-
+            </nav>
+          
+            <section>
             {/*Hero Background-Image */}
             <div>
-                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-96 sm:h-screen md:h-screen lg:h-screen ">
+                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-[140vh] sm:h-[140vh] ">
                
               
                 <div>
                     <img src="/hero-globe.png" alt="Globe" className="absolute   left-1/2 -translate-x-1/2 z-40 top-28 sm:mx-auto md:top-36    lg:top-44"/>
 {/*Goe location icons */}
-                    <div className=" text-wrap top-44 w-fit  ">
-
-                            
+                    <div className="relative z-40 text-wrap justify-center h-full top-20 sm:top-50  ">
+                    <div className=" absolute sm:left-1/3 sm:top-"><FaCircle className="relative text-[#F75128] left-26 top-9 sm:top-2 sm:left-20" /><FaRegCircle className=" absolute text-[#F75128] text-3xl left-24 top-7  sm:top-0 sm:left-18.25 "/> </div>
+                     <div className="text-[#F75128] absolute sm:left-2/3 "><FaCircle className="relative left-40 top-26 sm:top-52 sm:-left-62"/><FaRegCircle className=" absolute text-3xl left-38 top-24  sm:top-50 sm:-left-64 " /></div>
+                     <div className="text-[#F75128] absolute sm:left-80 sm:top-20"><FaCircle className="relative left-60 top-16 sm:top-2 sm:left-4" /><FaRegCircle className=" absolute text-3xl top-14 left-58 sm:top-0 sm:left-2 "/></div>
+                     <div className="text-[#F75128] absolute sm:left-2/3 sm:top-20"> <FaCircle className="relative left-14 top-16 sm:top-2 sm:left-4"/><FaRegCircle className=" absolute text-3xl left-12 top-14 sm:top-0 sm:left-2"/></div>
                     </div>
 
                 </div>
 
-                  {/* Hero Overlay */}
-                <div className="absolute bg-black/50 inset-0 h-96 sm:h-screen md:h-screen lg:h-screen"></div>
+    {/* Hero Overlay */}
+                <div className="absolute bg-black/50 inset-0 h-[140vh] sm:h-[140vh] md:h-[140vh] lg:h-[140vh]"></div>
                
-                
-               
+     {/*Hero text*/}
+               <div className="relative   z-50 top-64 gap-4 sm:top-2/3  sm:flex sm:items-center sm:left-80 md:block lg:flex ">
+                {/*First Text*/}
+                <div >
+                    <h1 className="text-white font-bold sm:text-4xl bg-red-700  sm:mb-5 sm:w-fit  ">Modern Logistic </h1>
+                       <p className="text-[#F75128] font-bold sm:text-4xl sm:text-right sm:mb-5"> Transport</p>
+                    <p className=" text-white sm:text-right">Specialist In Modern</p>
+                    <p className=" text-white sm:text-right">Transportation</p>
+                </div>
+   {/* Line in-between */}
+                <div className="hidden sm:block bg-[#F75128] w-1 sm:h-72 md:hidden lg:block"></div>
+      {/*Second Text*/}
+                <div>
+                <div className="sm:w-[60%] sm:text-wrap ">
+                    <p className="text-left  text-white">Logistic service provider company plays a pivotal role
+                        in the global supply chain ecosystem managing.</p>
+                    </div>
+       {/*Rounded Hero Images*/}
+                    <div className="flex relative mt-5">
+                        <img src="hero1.jpg" alt="hero1" className=" rounded-full border-2 border-[#F75128]"/>
+
+                        <img src="hero2.jpg" alt="hero2" className="absolute left-10 rounded-full border-2 border-[#F75128]"/>
+
+                        <img src="/hero3.jpg" alt="hero3" className="absolute left-20 rounded-full border-2 border-[#F75128]"/>
+                    </div>
+
+                    <div>
+                        <p className="text-white">Customer Satisfied</p>
+                    </div>
+                </div>
+               </div>
                     
 
             </div>
              </div>
+             </section>
+       {/*Second section*/} 
+        <Solution/>
             <div
     onClick={() => setSearch(false)}
     className={`
@@ -175,7 +248,7 @@ export function Page(){
         className="w-full flex justify-center">
 
         <input
-            type="text,number"
+            type="text"
             placeholder="Search..."
             className=" py-5 px-6 relative w-72 rounded-l-2xl border-2 border-[#F75128] bg-white outline-0 text-black"
         />
@@ -186,6 +259,17 @@ export function Page(){
     </div>
 
             </div>
+      <div onClick={()=> setMenu(false)} className={`fixed top-2 left-0 bottom-2 rounded-tr-2xl rounded-br-2xl items-start w-60 z-50 transition-transform duration-700  pl-5 ease-in-out  bg-[#111827] border-t-4 border-t-[#F75128] shadow-2xl shadow-black block  md:block md:w-80 lg:hidden ${menu ? "translate-x-0" : "-translate-x-full"} `}  ><div onClick={(e)=> e.stopPropagation() } className={`h-full`}>
+     <ul className={`text-amber-50`}>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+     </ul>
+      </div>
+      
+      </div>
 
         </div>
     )
