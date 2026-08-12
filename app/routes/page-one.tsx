@@ -14,7 +14,8 @@ import { BsGeoAltFill } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa";
 import { FaRegCircle } from "react-icons/fa";
 import { RiArrowRightWideFill } from "react-icons/ri";
-
+import { FaArrowRightLong } from "react-icons/fa6";
+import {motion} from "framer-motion"
 export function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
@@ -63,29 +64,29 @@ export function Page(){
                         <ul className=" hidden  sm:flex sm:ml-4 sm:gap-6 mt-5 text-white items-center md:hidden lg:flex    ">
                             <li className="Home flex">Home <MdArrowDropDown className="mt-1" />
                             {/*First Drop Down */}
-                            <li className="Home-one">
+                            <ul className="Home-one">
                             <li className="Drop-one">Header One</li>
                             <li className="Drop-one">Header Two</li>
                             <li className="Drop-one">Header Three</li>
-                            <li className="Fs-menu flex justify-between ">
+                            <ul className="Fs-menu flex justify-between ">
                             <li className="Drop-one  ">Header Styles</li>
                              < RiArrowRightWideFill className="arrow-one mt-3 mr-3 text-2xl text-[#F75128]" />
 
                             {/* Second Drop-down */}
 
-                            <li className="second-menu font-bold text-white">
+                            <ul className="second-menu font-bold text-white">
                                 <li className="home-head-one">Header One</li>
                                 <li className="home-head-one">Header Two</li>
                                 <li className="home-head-one">Header Three</li>
 
-                            </li>
+                            </ul>
 
-                           </li>
-                            </li>
+                           </ul>
+                            </ul>
                             </li>
                             <li className="flex">About <MdArrowDropDown  className="mt-1"/></li>
                             <li className="services flex">Services <MdArrowDropDown className="mt-1"/>
-                            <li className="service-drop-down ">
+                            <ul className="service-drop-down ">
                                 <li className="service-menu">Services</li>
                                 <li className="service-menu">International Transport</li>
                                 <li className="service-menu">Local Track Transport</li>
@@ -93,11 +94,11 @@ export function Page(){
                                 <li className="service-menu">Safe Ocean Transport</li>
                                  <li className="service-menu"> Warehouse Facility</li>
                                <li className="service-menu">Emergency Transport</li> 
-                            </li>
+                            </ul>
                             </li>
                             <li className=" Pages flex">Pages <MdArrowDropDown className="mt-1"/>
                             
-                                <li className="Pages-menu">
+                                <ul className="Pages-menu">
                                        <li className="pages-list">Team</li> 
                                         <li className="pages-list">Team Details</li>
                                         <li className="pages-list">Projects</li>
@@ -106,12 +107,12 @@ export function Page(){
                                         <li className="pages-list">Pricing</li>
                                         <li className="pages-list">FAQ</li>
                                         <li className="pages-list">404 Error</li>
-                                </li>
+                                </ul>
 
                             </li>
                             <li className=" Shop flex">Shop <MdArrowDropDown  className="mt-1"/>
                             
-                                <li className="Shop-menu">
+                                <ul className="Shop-menu">
                                    <li className="Shop-list">Products</li> 
                                      <li className="Shop-list">Product Details </li> 
                                      <li className="Shop-list">Cart </li>
@@ -119,19 +120,19 @@ export function Page(){
                                          <li className="Shop-list">Wishlist</li>
                                         <li className="Shop-list">Sign up</li>
                                           <li className="Shop-list">Login</li>  
-                                </li>
+                                </ul>
 
                             </li>
                             <li className="Blog flex">BLog <MdArrowDropDown  className="mt-1"/>
                             
-                            <li className="Blog-menu">
+                            <ul className="Blog-menu">
                                     <li className="Blog-list">Blog</li>
                                     <li className="Blog-list">Blog Standard</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
                                     <li className="Blog-list">Blog Details</li>
 
-                            </li>
+                            </ul>
                             
                             </li>
                             <li>Contact</li>
@@ -139,10 +140,7 @@ export function Page(){
 
                             <div className="hidden  sm:hidden md:hidden lg:block">
                         <button className="track-order border-2 border-double border-white text-white  p-3 h-20  md:block">TRACK ORDER</button>
-                        <span className="track1"></span>
-                        <span className="track2"></span>
-                        <span className="track3"></span>
-                        <span className="track4"></span>
+                       
                     </div>
                          {/*Mobile Icon */}
                     <div onClick={()=> setMenu(prev => !prev)} className="absolute left-5/6  text-[#F75128] text-3xl font-bold  sm:hidden md:block md:mt-6 md:left-5/6  lg:hidden ">
@@ -158,7 +156,7 @@ export function Page(){
             <section>
             {/*Hero Background-Image */}
             <div>
-                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-[140vh] sm:h-[140vh] ">
+                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh] ">
                
               
                 <div>
@@ -174,39 +172,55 @@ export function Page(){
                 </div>
 
     {/* Hero Overlay */}
-                <div className="absolute bg-black/50 inset-0 h-[140vh] sm:h-[140vh] md:h-[140vh] lg:h-[140vh]"></div>
+                <div className="absolute bg-black/50 inset-0 h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh]"></div>
                
      {/*Hero text*/}
-               <div className="relative   z-50 top-64 gap-4 sm:top-2/3  sm:flex sm:items-center sm:left-80 md:block lg:flex ">
+               <motion.div initial={{opacity:0 , y:50}}
+                                   whileInView={{opacity:1, y:0}}
+                                   transition={{duration:0.8,
+                                    ease:"easeOut"
+                                   }}
+                                viewport={{once:false}}
+                                
+               className=" relative text-wrap z-50 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-2/3 lg:gap-4 lg:left-1/5 lg:backdrop-blur-md ">
                 {/*First Text*/}
                 <div >
-                    <h1 className="text-white font-bold sm:text-4xl bg-red-700  sm:mb-5 sm:w-fit  ">Modern Logistic </h1>
-                       <p className="text-[#F75128] font-bold sm:text-4xl sm:text-right sm:mb-5"> Transport</p>
-                    <p className=" text-white sm:text-right">Specialist In Modern</p>
-                    <p className=" text-white sm:text-right">Transportation</p>
+                    <h1 className="text-white font-bold ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full ">Modern Logistic </h1>
+                       <p className="text-[#F75128] font-bold ml-10 sm:text-4xl  sm:mb-5 sm:ml-0 md:ml-10 lg:ml-0 lg:text-right"> Transport</p>
+                    <p className=" text-white ml-10 md:ml-10 sm:ml-0 lg:ml-0  lg:text-right">Specialist In Modern</p>
+                    <p className=" text-white mb-5 ml-10 sm:ml-0 md:ml-10 md:mb-3 lg:text-right lg:ml-0">Transportation</p>
                 </div>
    {/* Line in-between */}
-                <div className="hidden sm:block bg-[#F75128] w-1 sm:h-72 md:hidden lg:block"></div>
+                <div className="hidden sm:block bg-[#F75128] w-1 sm:h-72 md:hidden lg:block lg:h-64"></div>
+                <div className="block h-72 w-1  absolute bg-[#F75128]  left-5 sm:hidden md:block md:top-44 lg:hidden"></div>
       {/*Second Text*/}
                 <div>
                 <div className="sm:w-[60%] sm:text-wrap ">
-                    <p className="text-left  text-white">Logistic service provider company plays a pivotal role
+                    <p className=" ml-10 w-52 text-white  md:ml-10 md:w-80 lg:ml-0 lg:text-left lg:w-72">Logistic service provider company plays a pivotal role
                         in the global supply chain ecosystem managing.</p>
                     </div>
        {/*Rounded Hero Images*/}
-                    <div className="flex relative mt-5">
-                        <img src="hero1.jpg" alt="hero1" className=" rounded-full border-2 border-[#F75128]"/>
+                    <div className=" relative block ml-10 mt-5 gap-x-24 sm:ml-0 md:flex md:ml-10 lg:ml-0 lg:flex ">
+                     
+                        <img src="hero1.jpg" alt="hero1" className="relative rounded-full border-2 border-[#F75128]"/>
 
-                        <img src="hero2.jpg" alt="hero2" className="absolute left-10 rounded-full border-2 border-[#F75128]"/>
+                        <img src="hero2.jpg" alt="hero2" className="absolute top-0 left-10 rounded-full border-2 border-[#F75128] sm:top-0 md:top-0 lg:top-0"/>
 
-                        <img src="/hero3.jpg" alt="hero3" className="absolute left-20 rounded-full border-2 border-[#F75128]"/>
-                    </div>
+                        <img src="/hero3.jpg" alt="hero3" className="absolute left-20 top-0 rounded-full border-2 border-[#F75128]"/>
+                   
 
                     <div>
-                        <p className="text-white">Customer Satisfied</p>
+                        <p className="text-white  md:text-2xl lg:text-2xl">Customer Satisfied</p>
+                        <p className="text-white ">4.8 (15k Reviews)</p>
                     </div>
+                    
+                  </div>
+                  <button className="About-btn flex left-7 overflow-hidden text-wrap items-center gap-4 h-16 font-bold bg-[#F75128] text-white py-2 px-4 rounded mt-6 sm:ml-0 md:ml-10 lg:ml-0">About Us <FaArrowRightLong />
+                  <span className="About-btn-line1"></span>
+                 
+                  </button>
                 </div>
-               </div>
+               </motion.div>
                     
 
             </div>

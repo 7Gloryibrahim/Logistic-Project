@@ -80,6 +80,7 @@ transition: 0.9s ease;
 .Home:hover .Home-one{
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .Drop-one{
@@ -165,6 +166,7 @@ transition: 1s ease;
 .services:hover .service-drop-down{
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .service-menu{
@@ -214,7 +216,7 @@ transition: 1s ease;
 .Pages:hover .Pages-menu{
   visibility: visible;
   opacity:1;
-
+pointer-events: auto;
 }
 
 .pages-list{
@@ -293,6 +295,7 @@ transition: 1s ease;
 .Shop:hover .Shop-menu{
   visibility: visible;
 opacity: 1;
+pointer-events: auto;
 }
 
 .Blog{
@@ -316,6 +319,7 @@ transition: 1s ease;
 .Blog:hover .Blog-menu{
   visibility: visible;
   opacity:1;
+  pointer-events: auto;
 }
 
 .Blog-list{
@@ -345,3 +349,63 @@ transition: 1s ease;
   opacity: 1;
   width: 90%;
 }
+
+.About-btn{
+  position:relative;
+  z-index: 1;
+  
+}
+
+.About-btn-line1::before{
+  content:"";
+  position:absolute;
+ height: 100%;
+ width: 100%;
+ top:0;
+ left:0;
+ display:flex;
+ background-color:#111827;
+ visibility:visible;
+ 
+ z-index:-1;
+ transition:1s ease;
+}
+
+.About-btn:hover .About-btn-line1::before{
+visibility: visible;
+transform: rotateX(90deg);
+
+}
+
+.rotate{
+  animation: rotation 3s ease infinite;
+}
+
+@keyframes rotation {
+  
+from{
+  transform: rotate(0deg);
+}
+
+to{
+  transform:rotate(360deg)
+}
+}
+
+.hero-box{
+  animation: fadeUp 1.5s ease-in  both;
+   will-change: transform, opacity;
+   
+}
+
+@keyframes fadeUp{
+ from{
+  opacity: 0;
+  transform:translateY(50%);
+ }
+ to{
+ opacity: 1;
+ transform: translateY(0%);
+ }
+}
+
