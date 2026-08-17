@@ -1,5 +1,5 @@
 import { useState,} from "react";
-import Solution  from "./Solution";
+
 import { Link } from "react-router";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -9,20 +9,16 @@ import { MdPhoneInTalk } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
 import { FaMagnifyingGlassChart } from "react-icons/fa6";
-import { MdArrowDropDown } from "react-icons/md";
-import { BsGeoAltFill } from "react-icons/bs";
-import { FaCircle } from "react-icons/fa";
-import { FaRegCircle } from "react-icons/fa";
 import { RiArrowRightWideFill } from "react-icons/ri";
-import { FaArrowRightLong } from "react-icons/fa6";
-import {motion} from "framer-motion"
-export function Page(){
-    const [search, setSearch] = useState(false)
-    const [menu, setMenu] = useState(false)
+import { MdArrowDropDown } from "react-icons/md";
+
+export function Nav(){
+    const [search, setSearch]= useState(false)
+    const [ menu, setMenu] = useState(false)
     return(
-        <div className="bg-[#111827]">
-            <nav>
-             <div className="absolute z-50 w-full bg-[#192235] sm:block md:block">
+        <div>
+         <nav>
+             <div className="relative z-50 w-full bg-[#192235] sm:block md:block">
             {/*first Top */}
             <div className="bg-[#111827] hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
                 {/* Left side */}
@@ -152,84 +148,7 @@ export function Page(){
 
             </div>
             </nav>
-          
-            <section>
-            {/*Hero Background-Image */}
-            <div>
-                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh] ">
-               
-              
-                <div>
-                    <img src="/hero-globe.png" alt="Globe" className="absolute   left-1/2 -translate-x-1/2 z-40 top-28 sm:mx-auto md:top-36    lg:top-44"/>
-{/*Goe location icons */}
-                    <div className="relative z-40 text-wrap justify-center h-full top-20 sm:top-50  ">
-                    <div className=" absolute sm:left-1/3 sm:top-"><FaCircle className="relative text-[#F75128] left-26 top-9 sm:top-2 sm:left-20" /><FaRegCircle className=" absolute text-[#F75128] text-3xl left-24 top-7  sm:top-0 sm:left-18.25 "/> </div>
-                     <div className="text-[#F75128] absolute sm:left-2/3 "><FaCircle className="relative left-40 top-26 sm:top-52 sm:-left-62"/><FaRegCircle className=" absolute text-3xl left-38 top-24  sm:top-50 sm:-left-64 " /></div>
-                     <div className="text-[#F75128] absolute sm:left-80 sm:top-20"><FaCircle className="relative left-60 top-16 sm:top-2 sm:left-4" /><FaRegCircle className=" absolute text-3xl top-14 left-58 sm:top-0 sm:left-2 "/></div>
-                     <div className="text-[#F75128] absolute sm:left-2/3 sm:top-20"> <FaCircle className="relative left-14 top-16 sm:top-2 sm:left-4"/><FaRegCircle className=" absolute text-3xl left-12 top-14 sm:top-0 sm:left-2"/></div>
-                    </div>
-
-                </div>
-
-    {/* Hero Overlay */}
-                <div className="absolute bg-black/50 inset-0 h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh]"></div>
-               
-     {/*Hero text*/}
-               <motion.div initial={{opacity:0 , y:50}}
-                                   whileInView={{opacity:1, y:0}}
-                                   transition={{duration:0.8,
-                                    ease:"easeOut"
-                                   }}
-                                viewport={{once:false}}
-                                
-               className=" relative text-wrap z-50 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-2/3 lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
-                {/*First Text*/}
-                <div >
-                    <h1 className="text-white font-bold ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full ">Modern Logistic </h1>
-                       <p className="text-[#F75128] font-bold ml-10 sm:text-4xl  sm:mb-5 sm:ml-0 md:ml-10 lg:ml-0 lg:text-right"> Transport</p>
-                    <p className=" text-white ml-10 md:ml-10 sm:ml-0 lg:ml-0  lg:text-right">Specialist In Modern</p>
-                    <p className=" text-white mb-5 ml-10 sm:ml-0 md:ml-10 md:mb-3 lg:text-right lg:ml-0">Transportation</p>
-                </div>
-   {/* Line in-between */}
-                <div className="hidden sm:block bg-[#F75128] w-1 sm:h-72 md:hidden lg:block lg:h-64"></div>
-                <div className="block h-72 w-1  absolute bg-[#F75128]  left-5 sm:hidden md:block md:top-44 lg:hidden"></div>
-      {/*Second Text*/}
-                <div>
-                <div className="sm:w-[60%] sm:text-wrap ">
-                    <p className=" ml-10 w-52 text-white  md:ml-10 md:w-80 lg:ml-0 lg:text-left lg:w-72">Logistic service provider company plays a pivotal role
-                        in the global supply chain ecosystem managing.</p>
-                    </div>
-       {/*Rounded Hero Images*/}
-                    <div className=" relative block ml-10 mt-5 gap-x-24 sm:ml-0 md:flex md:ml-10 lg:ml-0 lg:flex ">
-                     
-                        <img src="hero1.jpg" alt="hero1" className="relative rounded-full border-2 border-[#F75128]"/>
-
-                        <img src="hero2.jpg" alt="hero2" className="absolute top-0 left-10 rounded-full border-2 border-[#F75128] sm:top-0 md:top-0 lg:top-0"/>
-
-                        <img src="/hero3.jpg" alt="hero3" className="absolute left-20 top-0 rounded-full border-2 border-[#F75128]"/>
-                   
-
-                    <div>
-                        <p className="text-white  md:text-2xl lg:text-2xl">Customer Satisfied</p>
-                        <p className="text-white ">4.8 (15k Reviews)</p>
-                    </div>
-                    
-                  </div>
-                 <Link to="/AboutUs"> <button className="About-btn flex left-7 overflow-hidden text-wrap items-center gap-4 h-16 font-bold bg-[#F75128] text-white py-2 px-4 rounded mt-6 sm:ml-0 md:ml-10 lg:ml-0">About Us <FaArrowRightLong />
-                  <span className="About-btn-line1"></span>
-                 
-                  </button>
-                  </Link>
-                </div>
-               </motion.div>
-                    
-
-            </div>
-             </div>
-             </section>
-       {/*Second section*/} 
-        <Solution/>
-            <div
+              <div
     onClick={() => setSearch(false)}
     className={`
         fixed
@@ -272,24 +191,43 @@ export function Page(){
         </label>
         
     </div>
-
             </div>
-      <div 
-      onClick={()=> setMenu(false)} className={`fixed top-2 left-0 bottom-2 rounded-tr-2xl rounded-br-2xl items-start w-60 z-50 transition-transform duration-700  pl-5 ease-in-out  bg-[#111827] border-t-4 border-t-[#F75128] shadow-2xl shadow-black block  md:block md:w-80 lg:hidden ${menu ? "translate-x-0" : "-translate-x-full"} `}  >
-        <div onClick={(e)=> e.stopPropagation() } className={`h-full`}>
-     <ul className={`text-amber-50`}>
+
+            <div onClick={ ()=> setMenu(false)} 
+                className={`
+                    fixed
+                    top-2
+                    left-0
+                    bottom-2
+                    w-52
+                    h-full
+                    block
+                    md:block
+                    lg:hidden
+                    items-center
+                    border-t-2
+                    border-t-[#F75128]
+                    bg-[#192235]
+
+                    
+                    ${
+                     menu
+                       ? "translate-x-0"
+                       : "-translate-x-full"
+                        }
+                        
+                        `}
+                >
+           <div onClick={(e)=>e.stopPropagation() } className={`h-full`} >
+      <ul className={`text-amber-50`}>
         <li>Home</li>
         <li>Home</li>
         <li>Home</li>
         <li>Home</li>
         <li>Home</li>
      </ul>
-      </div>
-      
-      </div>
-
-        </div>
+           </div>
+            </div>
+            </div>
     )
-   
 }
-

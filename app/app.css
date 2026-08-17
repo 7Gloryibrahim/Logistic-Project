@@ -7,8 +7,8 @@
 
 html, body {          
   max-width: 100vw;  /*To avoid page overflow*/
-  overflow-x: hidden; /*To avoid page overflow*/
-  background-color:#111827
+  /* overflow-x: hidden; To avoid page overflow */
+  /* background-color:#111827 */
 }
 
 
@@ -409,3 +409,18 @@ to{
  }
 }
 
+.box-icon1{
+  transition: transform 0.8s ease-in-out
+}
+
+.box1:hover .box-icon1{
+transform: rotateY(180deg);
+}
+
+.box-icon2{
+  transition: transform 0.8s ease-in-out;
+}
+
+.box2:hover .box-icon2{
+  transform: rotateY(180deg);
+}
