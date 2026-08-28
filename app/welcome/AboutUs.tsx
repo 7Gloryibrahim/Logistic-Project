@@ -42,7 +42,7 @@ export default function AboutUs(){
                         </div>
 
                         <div className="w-44 font-sans" >
-                            <p> From First Mile to Last</p>
+                            <p>From First Mile to Last</p>
          {/*Text underline*/} <div className="underLine w-[50%] left-[73px] rounded-2xl h-1 bg-[#F75128] lg:w-[50%] lg:left-[72px]"></div>
                         
                         </div>
@@ -54,11 +54,11 @@ export default function AboutUs(){
                 <div className="hidden subhead mt-5 border-l-4 border-l-[#F75128]  rounded-2xl bg-[#F75128] pl-4 text-[#111827] font-sans font-bold pt-3 pr-3 pb-3 tracking-normal text-[20px] text-left items-center sm:block lg:block" >
                     
                     
-                    <p className="font-bold left-3/ ">For over a decade, we have combined asset-backed asset capacity, deep compliance expertise, and an unwavering commitment to safety to ensure your inventory arrives on time, intact, and on budget—every single Mile of the journey.</p>
+                    <p className="font-bold  ">For over a decade, we have combined asset-backed asset capacity, deep compliance expertise, and an unwavering commitment to safety to ensure your inventory arrives on time, intact, and on budget—every single Mile of the journey.</p>
                 </div>
                 </div>
                 {/*Half Rotating Container*/}
-                <img src="/container2.png"className="container2 left-7 top-3/4   absolute lg:top- w-52"/>
+                <img src="/container2.png"className="container2 left-7 top-[33%]   absolute lg:top-[64%] w-52"/>
                 </div>
                 </section>
             </div>
