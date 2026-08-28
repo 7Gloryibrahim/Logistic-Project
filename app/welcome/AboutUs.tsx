@@ -48,17 +48,17 @@ export default function AboutUs(){
                         </div>
                         
                     </div>
-                    <div className=" block subhead text-2xl bg-[#F75128] text-[#111827] rounded-2xl pl-4 mt-5 border-l-4 pt-2 pb-2 border-l-[#F75128] max-w-87.5 text-left sm:hidden lg:hidden">
+                    <div className=" block subhead text-2xl bg-[#F75128] text-[#111827] rounded-2xl pl-4 mt-5 border-l-4 pt-2 pb-2 border-l-[#F75128] max-w-87.5 text-left font-bold sm:hidden lg:hidden">
                   <p>Bridging the distance from raw materials to satisfied customers.</p>
                     </div>
                 <div className="hidden subhead mt-5 border-l-4 border-l-[#F75128]  rounded-2xl bg-[#F75128] pl-4 text-[#111827] font-sans font-bold pt-3 pr-3 pb-3 tracking-normal text-[20px] text-left items-center sm:block lg:block" >
                     
                     
-                    <p className="font-bold ">For over a decade, we have combined asset-backed asset capacity, deep compliance expertise, and an unwavering commitment to safety to ensure your inventory arrives on time, intact, and on budget—every single Mile of the journey.</p>
+                    <p className="font-bold left-3/ ">For over a decade, we have combined asset-backed asset capacity, deep compliance expertise, and an unwavering commitment to safety to ensure your inventory arrives on time, intact, and on budget—every single Mile of the journey.</p>
                 </div>
                 </div>
                 {/*Half Rotating Container*/}
-                <img src="/container2.png"className="container2 left-7 top-[74%] absolute lg:top-[69%] w-52"/>
+                <img src="/container2.png"className="container2 left-7 top-3/4   absolute lg:top- w-52"/>
                 </div>
                 </section>
             </div>
