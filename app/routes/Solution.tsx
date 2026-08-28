@@ -7,7 +7,8 @@ import { TbArrowWaveRightDown } from "react-icons/tb";
 import { VscGlobe } from "react-icons/vsc";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbPhoneCalling } from "react-icons/tb";
-
+import { BsGrid3X3Gap } from "react-icons/bs";
+import "@fontsource/oswald/500.css";
 
 interface RotatingBadgeProps {
   text?: string;
@@ -28,7 +29,7 @@ export default function Solution( {
   
     return(
         <div>
-           <section  className="relative mt-7 w-full h-[400vh] overflow-hidden lg:h-[140vh] ">
+           <section  className="relative mt-0 border-t-2 border-t-[#F75128] border-b-2 border-b-[#F75128] w-full h-[300vh] overflow-hidden md:h-[230vh] lg:h-[110vh] ">
             <video
             autoPlay
             muted
@@ -47,17 +48,20 @@ export default function Solution( {
                         <motion.div  initial={{ opacity: 0, y: 50 }}   
                                     whileInView={{ opacity: 1, y: 0 }}
                                      transition={{ duration: 0.8, ease: 'easeOut' }}
-                                     viewport={{once:false}}
+                                    
+                                     viewport={{once:false,
+                                     
+                                     }}
                             className="backdrop-blur-md p-5 border-2 h-fit border-white">
                            {/* Little horizontal line */}
                             <div className="flex items-center gap-2">
                               <span className="h-1 w-7 rounded bg-[#F75128]"></span>
-                            <p className="text-white">OUR COMPANY</p>
+                            <p className="text-white text-2xl">OUR COMPANY</p>
                             </div>
                             
-                            <p className=" text-white font-bold md:text-4xl lg:text-4xl">Our Expertise Stands in</p>
-                            <p className="text-[#F75128] font-bold underline mt-4 md:text-5xl lg:text-5xl">Logistics Solutions</p>
-                            <p className="font-bold font-sans text-white mt-7">Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.</p>
+                            <p className=" text-white text-2xl font-bold md:text-4xl lg:text-4xl space-x-0.5">Our Expertise Stands in</p>
+                            <p className="text-[#F75128] text-3xl font-bold underline mt-4 md:text-5xl lg:text-5xl uppercase">Logistics Solutions</p>
+                            <p className="font-bold font-sans text-[20px] text-white mt-7">Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.</p>
                             
                             {/* The two white Boxes */}
   {/* The main container for them */} <div className="flex-1 gap-6 mt-28 md:flex lg:flex">
@@ -77,7 +81,7 @@ export default function Solution( {
                                 <p className=" text-[#F75128] text-2xl border-r-2 border-[#F75128] pr-1 "><RiCustomerService2Fill className="box-icon2"/></p>
                                 <p className="font-bold text-[#242B39]">24/7 Online Support</p>
                               </div>
-                              <p className="text-[#2B313F] font-sans w-fit">Logistic service provider company plays a pivotal role in the global</p>
+                              <p className="text-[#2B313F] font-sans w-fit font-oswald ">Logistic service provider company plays a pivotal role in the global</p>
                             </div>
                             </div>
                              {/* Button & Box */}
@@ -98,6 +102,7 @@ export default function Solution( {
                                     whileInView={{opacity:1, y:0}}
                                     transition={{duration:0.9, ease:"easeInOut"}}
                                     viewport={{once:false}} className=" relative lg:ml-36 ">
+          {/*Dot Box*/}            <div className="grid-box absolute  text-[#F75128] left-80 -top-5 -z-10"><BsGrid3X3Gap /></div>
                             <img src="/about-v1-img1-5tcu7YgK.jpg" alt="about" className="rounded-2xl"/>
                             <img src="/about-v1.jpg" alt="about" className=" absolute mt-7 md:top-52 md:left-44 md:mt-0 lg:absolute lg:top-60 lg:right-16 lg:mt-0 rounded-2xl  "/>
                            {/*Rotating  Svg  */}
@@ -167,7 +172,9 @@ export default function Solution( {
 <style >{`
 @keyframes spin {
 from { transform: rotate(0deg); }
-to { transform: rotate(360deg);}}`} </style>
+to { transform: rotate(360deg);}}`}
+ 
+</style>
 </div>
                         </motion.div>
                     </div>

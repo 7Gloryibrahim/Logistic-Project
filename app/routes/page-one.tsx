@@ -15,12 +15,15 @@ import { FaCircle } from "react-icons/fa";
 import { FaRegCircle } from "react-icons/fa";
 import { RiArrowRightWideFill } from "react-icons/ri";
 import { FaArrowRightLong } from "react-icons/fa6";
+
+import FlipWords from "~/flip";
 import {motion} from "framer-motion"
+
 export function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
     return(
-        <div className="bg-[#111827]">
+        <div className="bg-[#111827] font-sans">
             <nav>
              <div className="absolute z-50 w-full bg-[#192235] sm:block md:block">
             {/*first Top */}
@@ -123,7 +126,7 @@ export function Page(){
                                 </ul>
 
                             </li>
-                            <li className="Blog flex">BLog <MdArrowDropDown  className="mt-1"/>
+                            <li className="Blog flex">Blog <MdArrowDropDown  className="mt-1"/>
                             
                             <ul className="Blog-menu">
                                     <li className="Blog-list">Blog</li>
@@ -163,17 +166,109 @@ export function Page(){
                     <img src="/hero-globe.png" alt="Globe" className="absolute   left-1/2 -translate-x-1/2 z-40 top-28 sm:mx-auto md:top-36    lg:top-44"/>
 {/*Goe location icons */}
                     <div className="relative z-40 text-wrap justify-center h-full top-20 sm:top-50  ">
-                    <div className=" absolute sm:left-1/3 sm:top-"><FaCircle className="relative text-[#F75128] left-26 top-9 sm:top-2 sm:left-20" /><FaRegCircle className=" absolute text-[#F75128] text-3xl left-24 top-7  sm:top-0 sm:left-18.25 "/> </div>
-                     <div className="text-[#F75128] absolute sm:left-2/3 "><FaCircle className="relative left-40 top-26 sm:top-52 sm:-left-62"/><FaRegCircle className=" absolute text-3xl left-38 top-24  sm:top-50 sm:-left-64 " /></div>
-                     <div className="text-[#F75128] absolute sm:left-80 sm:top-20"><FaCircle className="relative left-60 top-16 sm:top-2 sm:left-4" /><FaRegCircle className=" absolute text-3xl top-14 left-58 sm:top-0 sm:left-2 "/></div>
-                     <div className="text-[#F75128] absolute sm:left-2/3 sm:top-20"> <FaCircle className="relative left-14 top-16 sm:top-2 sm:left-4"/><FaRegCircle className=" absolute text-3xl left-12 top-14 sm:top-0 sm:left-2"/></div>
+                    <div className="circleicon1  absolute text-[#F75128] sm:left-1/3 sm:top-"><FaCircle className="relative text-[#F75128] left-26 top-9 sm:top-2 sm:left-20" /><FaRegCircle className=" absolute text-[#F75128] text-3xl left-24 top-7  sm:top-0 sm:left-18.25 "/>
+
+                 <div className="dot1 absolute bg-white w-36 text-center">
+                        <p>Nigeria</p>
+                        <p>Logistic service provider</p>
+                     </div>  
+                
+                   <div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full left-[55px] -top-4 transition animate-ping [animation-duration:1s] -z-20 "></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-[68px] -top-1 transition animate-ping [animation-duration:2s] -z-10 "></div>
+                    </div>
+                     </div>
+                     <div className="circleicon2 text-[#F75128] absolute sm:left-2/3 "><FaCircle className="circleicon2  relative left-40 top-26 sm:top-52 sm:-left-62"/><FaRegCircle className=" absolute text-3xl left-38 top-24  sm:top-50 sm:-left-64 " />
+
+                         <div className=" dot2 absolute  bg-white w-36 text-center top-28">
+                        <p>Nigeria</p>
+                        <p>Logistic service provider</p>
+                     </div>
+                     
+                      <div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full -left-2 top-16 transition  [animation-duration:1s] animate-ping -z-20 ">
+                        
+                    </div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-0.75  top-[75px] transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div>
+                    </div>
+                     </div>
+                     <div className="circleicon3 text-[#F75128] absolute sm:left-80 sm:top-20"><FaCircle className="circleicon3 relative left-60 top-16 sm:top-2 sm:left-4" /><FaRegCircle className=" absolute text-3xl top-14 left-58 sm:top-0 sm:left-2 "/>
+
+                      <div className="dot3 absolute bg-white w-36 text-center">
+                        <p>Nigeria</p>
+                        <p>Logistic service provider</p>
+                     </div>
+                      <div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full -left-2 -top-4 transition  [animation-duration:1s] animate-ping -z-20 "></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-0.75  -top-1 transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div>
+                    </div>
+                     </div>
+                     <div className="circleicon4 text-[#F75128] absolute sm:left-2/3 sm:top-20"> <FaCircle className="circleicon4 relative left-14 top-16 sm:top-2 sm:left-4"/><FaRegCircle className=" absolute text-3xl left-12 top-14 sm:top-0 sm:left-2"/>
+                     <div className="dot4  absolute bg-white w-36 right-[225px] top-40 text-center">
+                        <p>Nigeria</p>
+                        <p>Logistic service provider</p>
+                     </div>
+                     <div>
+                         <div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full right-[225px] top-25 transition  [animation-duration:1s] animate-ping -z-20 "></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full right-[237px]  top-[114px] transition [animation-duration:2s]  animate-ping   duration-700 -z-10 "></div>
+                    </div>
+</div>
+                     </div>
                     </div>
 
                 </div>
 
     {/* Hero Overlay */}
                 <div className="absolute bg-black/50 inset-0 h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh]"></div>
-               
+                
+             {/*Hero mini video*/}   
+                <motion.div 
+                 initial={{opacity:0, y:-50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:2, ease:"easeInOut"}}
+                viewport={{once:false}}
+                className="absolute object-cover h-fit w-72  top-96 left-[78%] z-50 hidden sm:hidden md:hidden lg:block border border-[#F75128] rounded-2xl ">
+                    <video
+                    autoPlay
+                    playsInline
+                    muted
+                    loop className="h-fit w-96 rounded-2xl mt-0 ">
+                        <source src="/container1.mp4" type="video/mp4" className="absolute  "/>
+                    </video>
+                    <motion.div 
+                     initial={{opacity:0, y:-50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:2, ease:"easeInOut"}}
+                viewport={{once:false}}
+                    className="absolute backdrop-blur-md border border-[#F75128] p-1 rounded-2xl top-36">
+                       <Link to='/AboutUs'> <button className="bg-[#111827] text-[#F75128] rounded-2xl p-3 cursor-pointer border border-amber-50">Our Team</button></Link>
+                    </motion.div>
+                </motion.div>
+               {/*Mini Hero Box*/}
+                <motion.div 
+                initial={{opacity:0, y:-50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:2, ease:"easeInOut"}}
+                viewport={{once:false}}
+                className="absolute hidden  z-50 top-96 backdrop-blur-md text-white p-7 border border-[#F75128] rounded-2xl
+                left-7 sm:hidden md:hidden lg:block ">
+                   
+                   <div className="flex items-center gap-1 ">
+                    <div className="w-7 h-1 bg-white rounded"></div>
+                    <p className="text-[#F75128] text-4xl ">Reliable</p>
+                    <p className="font-bold">Transport.</p>
+                    </div>
+                    <div className="flex items-center gap-1 ">
+                        <div className="bg-[#F75128] h-1 w-7 rounded"></div>
+                    <p className="font-bold">On Time,</p>
+                    <p className="text-[#F75128] text-4xl"><FlipWords
+    words={["Ahead", "Safe", "Success","Direct","Proven","Swift "]}
+  /></p>
+  <p className="font-bold">Everytime</p>
+                    </div>
+                </motion.div>
+
      {/*Hero text*/}
                <motion.div initial={{opacity:0 , y:50}}
                                    whileInView={{opacity:1, y:0}}
@@ -185,7 +280,7 @@ export function Page(){
                className=" relative text-wrap z-50 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-2/3 lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
                 {/*First Text*/}
                 <div >
-                    <h1 className="text-white font-bold ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full ">Modern Logistic </h1>
+                    <h1 className="text-white font-bold ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full  ">Modern Logistic </h1>
                        <p className="text-[#F75128] font-bold ml-10 sm:text-4xl  sm:mb-5 sm:ml-0 md:ml-10 lg:ml-0 lg:text-right"> Transport</p>
                     <p className=" text-white ml-10 md:ml-10 sm:ml-0 lg:ml-0  lg:text-right">Specialist In Modern</p>
                     <p className=" text-white mb-5 ml-10 sm:ml-0 md:ml-10 md:mb-3 lg:text-right lg:ml-0">Transportation</p>
@@ -196,7 +291,7 @@ export function Page(){
       {/*Second Text*/}
                 <div>
                 <div className="sm:w-[60%] sm:text-wrap ">
-                    <p className=" ml-10 w-52 text-white  md:ml-10 md:w-80 lg:ml-0 lg:text-left lg:w-72">Logistic service provider company plays a pivotal role
+                    <p className=" ml-10 w-80 text-white  md:ml-10 md:w-80 lg:ml-0 lg:text-left lg:w-72 tracking-[1px]">Logistic service provider company plays a pivotal role
                         in the global supply chain ecosystem managing.</p>
                     </div>
        {/*Rounded Hero Images*/}
@@ -215,11 +310,11 @@ export function Page(){
                     </div>
                     
                   </div>
-                 <Link to="/AboutUs"> <button className="About-btn flex left-7 overflow-hidden text-wrap items-center gap-4 h-16 font-bold bg-[#F75128] text-white py-2 px-4 rounded mt-6 sm:ml-0 md:ml-10 lg:ml-0">About Us <FaArrowRightLong />
-                  <span className="About-btn-line1"></span>
+                  <button className="About-btn flex left-7 overflow-hidden text-wrap items-center gap-4 h-16 font-bold bg-[#F75128] text-white py-2 px-4 rounded mt-6 sm:ml-0 md:ml-10 lg:ml-0"><Link to="/AboutUs"   className="flex items-center gap-4 w-full h-full">About Us <FaArrowRightLong />
+                  <span className="About-btn-line1"></span> </Link>
                  
                   </button>
-                  </Link>
+                 
                 </div>
                </motion.div>
                     
