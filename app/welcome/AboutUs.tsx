@@ -8,7 +8,7 @@ export default function AboutUs(){
 
 
     return(
-        <div className="bg-white overflow-hidden font-sans" >
+        <div className="bg-white overflow-hidden font-sans select-none" >
             <Nav/>
             
             <div className="relative  ">

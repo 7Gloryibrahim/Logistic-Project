@@ -23,7 +23,7 @@ export function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
     return(
-        <div className="bg-[#111827] font-sans">
+        <div className="bg-[#111827] font-sans select-none">
             <nav>
              <div className="absolute z-50 w-full bg-[#192235] sm:block md:block">
             {/*first Top */}
