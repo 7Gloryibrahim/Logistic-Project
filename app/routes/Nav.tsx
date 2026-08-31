@@ -20,7 +20,7 @@ export function Nav(){
          <nav>
              <div className="absolute z-50 w-full bg-[#192235] sm:block md:block">
             {/*first Top */}
-            <div className="bg-[#111827] hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
+            <div className="bg-[#111827] hidden z-50 sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
                 {/* Left side */}
                 <div className="">
                     <ul className=" sm:flex sm:gap-5  sm:py-3  ">
@@ -51,9 +51,9 @@ export function Nav(){
 
             {/*Second Top */}
 
-                <div className="second-border flex bg-[#111827] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-20">
+                <div className="second-border flex sticky top-0 z-100 bg-[#111827] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-20">
                     <div className="bg-[#F75128] w-72 " style={{clipPath:"polygon(0 0, 100% 0, 90% 100%, 0 100%)"}}>
-                        <img src="/Truck1.png" alt="Truck" className="mt-4  sm:pl-1 sm:w "/>
+                        <img src="/Truck1.png" alt="Truck" className="mt-4 pb-3 pr-3.5 sm:pl-1 sm:w "/>
                     </div>
                     {/*Nav bar at the top*/}
                     <div className=" flex justify-between w-full  font-bold">
@@ -139,7 +139,7 @@ export function Nav(){
                        
                     </div>
                          {/*Mobile Icon */}
-                    <div onClick={()=> setMenu(prev => !prev)} className="absolute   text-[#F75128] text-3xl font-bold  sm:hidden md:block  md:md:left-5/6  lg:hidden ">
+                    <div onClick={()=> setMenu(prev => !prev)} className="absolute right-5 top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128] md:hidden">
                         <IoMenu  />
                     </div>
                     </div>
@@ -171,8 +171,8 @@ export function Nav(){
 
         ${
             search
-                ? "translate-y-0"
-                : "-translate-y-full"
+                ? "translate-x-0"
+                : "-translate-x-full"
         }
     `}
 >
@@ -196,19 +196,21 @@ export function Nav(){
             <div onClick={ ()=> setMenu(false)} 
                 className={`
                     fixed
-                    top-2
-                    left-0
-                    bottom-2
-                    w-52
-                    h-full
-                    block
-                    md:block
-                    lg:hidden
-                    items-center
-                    border-t-2
-                    border-t-[#F75128]
-                    bg-[#192235]
-
+    top-2
+    bottom-2
+    left-0
+    z-[90]
+    w-52
+    rounded-tr-2xl
+    rounded-br-2xl
+    h-screen
+    bg-[#192235]
+    border-t-4
+    border-[#F75128]
+    lg:hidden
+    transition-transform
+    duration-500
+    ease-in-out
                     
                     ${
                      menu
@@ -218,7 +220,7 @@ export function Nav(){
                         
                         `}
                 >
-           <div onClick={(e)=>e.stopPropagation() } className={`h-full`} >
+           <div onClick={(e)=>e.stopPropagation() } className={`h-full `} >
       <ul className={`text-amber-50`}>
         <li>Home</li>
         <li>Home</li>

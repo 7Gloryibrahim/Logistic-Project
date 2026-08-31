@@ -60,7 +60,7 @@ export function Page(){
 
                 <div className="second-border flex bg-[#111827] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-20">
                     <div className="bg-[#F75128] w-72 " style={{clipPath:"polygon(0 0, 100% 0, 90% 100%, 0 100%)"}}>
-                        <img src="/Truck1.png" alt="Truck" className="mt-4  sm:pl-1 sm:w " />
+                        <img src="/Truck1.png" alt="Truck" className="mt-4 items-center pr-3.5 pb-3 sm:pl-1 sm:w " />
                     </div>
                     {/*Nav bar at the top*/}
                     <div className=" flex justify-between w-full  font-bold">
@@ -159,7 +159,7 @@ export function Page(){
             <section>
             {/*Hero Background-Image */}
             <div>
-                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh] ">
+                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-[45em] sm:h-[140vh] md:h-[180vh] lg:h-[140vh] ">
                
               
                 <div>
@@ -167,56 +167,85 @@ export function Page(){
 {/*Goe location icons */}
                     <div className="relative z-40 text-wrap justify-center h-full top-20 sm:top-50  ">
                     <div className="circleicon1  absolute text-[#F75128] sm:left-1/3 sm:top-"><FaCircle className="relative text-[#F75128] left-26 top-9 sm:top-2 sm:left-20" /><FaRegCircle className=" absolute text-[#F75128] text-3xl left-24 top-7  sm:top-0 sm:left-18.25 "/>
-
-                 <div className="dot1 absolute bg-white w-36 text-center">
-                        <p>Nigeria</p>
+<div className="dot1 absolute top-10 text-[#111827] z-50 p-2 font-bold rounded left-28 lg:left-0 bg-white w-36 text-center">
+                        <p>Cross River State</p>
+                        <div className=" ml-12 w-10  border-2 border-[#F75128] shadow-2xl shadow-white rounded-full ">
+                            <img src="/flag1.png" className="w-10 rounded-full"/>
+                        </div>
+                       
                         <p>Logistic service provider</p>
-                     </div>  
-                
+                     </div>
+
+
                    <div>
-                    <div className="bg-white absolute h-16 w-16 rounded-full left-[55px] -top-4 transition animate-ping [animation-duration:1s] -z-20 "></div>
-                    <div className="bg-white absolute h-10 w-10 rounded-full left-[68px] -top-1 transition animate-ping [animation-duration:2s] -z-10 "></div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full -top-0 left-20 lg:-top-4 transition animate-ping [animation-duration:1s] -z-20 lg:left-[55px]"></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-[91px] lg:left-[69px] lg:-top-1 transition animate-ping [animation-duration:2s] -z-10 "></div>
                     </div>
+                    
                      </div>
-                     <div className="circleicon2 text-[#F75128] absolute sm:left-2/3 "><FaCircle className="circleicon2  relative left-40 top-26 sm:top-52 sm:-left-62"/><FaRegCircle className=" absolute text-3xl left-38 top-24  sm:top-50 sm:-left-64 " />
+                      <div className="circleicon2  text-[#F75128] absolute sm:left-2/3 "><FaCircle className="circleicon2  relative left-40 top-26 sm:top-52 sm:-left-62"/><FaRegCircle className=" absolute text-3xl left-38 top-24  sm:top-50 sm:-left-64 " />
 
-                         <div className=" dot2 absolute  bg-white w-36 text-center top-28">
-                        <p>Nigeria</p>
+                        <div className="dot2 absolute right-60 top-60 text-[#111827] font-bold bg-white w-36 text-center rounded p-2">
+                        <p>Delta State</p>
+<div className="w-10 border-2 ml-12   border-[#F75128] rounded-full">
+                            <img src="/flag1.png" className="rounded-full w-10"/>
+                        </div>
+
                         <p>Logistic service provider</p>
                      </div>
+
                      
                       <div>
-                    <div className="bg-white absolute h-16 w-16 rounded-full -left-2 top-16 transition  [animation-duration:1s] animate-ping -z-20 ">
-                        
-                    </div>
-                    <div className="bg-white absolute h-10 w-10 rounded-full left-0.75  top-[75px] transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div>
-                    </div>
-                     </div>
-                     <div className="circleicon3 text-[#F75128] absolute sm:left-80 sm:top-20"><FaCircle className="circleicon3 relative left-60 top-16 sm:top-2 sm:left-4" /><FaRegCircle className=" absolute text-3xl top-14 left-58 sm:top-0 sm:left-2 "/>
+                    <div className="bg-white absolute h-16 w-16 rounded-full left-[135px] top-[75px] lg:right-[224px]  lg:top-44 transition  [animation-duration:1s] animate-ping -z-20">
+                    </div>   
+                      <div className="bg-white absolute h-10 w-10 rounded-full left-36.5 top-22.5 lg:right-[236px]  lg:top-[193px] transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div> 
 
-                      <div className="dot3 absolute bg-white w-36 text-center">
-                        <p>Nigeria</p>
-                        <p>Logistic service provider</p>
-                     </div>
-                      <div>
-                    <div className="bg-white absolute h-16 w-16 rounded-full -left-2 -top-4 transition  [animation-duration:1s] animate-ping -z-20 "></div>
-                    <div className="bg-white absolute h-10 w-10 rounded-full left-0.75  -top-1 transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div>
+
+
                     </div>
-                     </div>
-                     <div className="circleicon4 text-[#F75128] absolute sm:left-2/3 sm:top-20"> <FaCircle className="circleicon4 relative left-14 top-16 sm:top-2 sm:left-4"/><FaRegCircle className=" absolute text-3xl left-12 top-14 sm:top-0 sm:left-2"/>
-                     <div className="dot4  absolute bg-white w-36 right-[225px] top-40 text-center">
-                        <p>Nigeria</p>
+                     </div> 
+                     
+                     <div className="circleicon3 text-[#F75128] absolute sm:left-80 sm:top-20"><FaCircle className="circleicon3 relative left-60 top-16 sm:top-2 sm:left-4" /><FaRegCircle className=" absolute text-3xl top-14 left-58 sm:top-0 sm:left-2 "/>
+                    <div className="dot3 absolute bottom-6 right-7 text-[#111827] font-bold bg-white w-36 text-center rounded p-2">
+                        <p>Lagos</p>
+                        <div className="w-10 border-2 ml-12   border-[#F75128] rounded-full">
+                            <img src="/flag1.png" className="rounded-full w-10"/>
+                        </div>
+
                         <p>Logistic service provider</p>
                      </div>
+
+                      <div>
+
+                    <div className="bg-white absolute h-16 w-16 rounded-full left-7 top-8 lg:-left-2 lg:-top-4 transition  [animation-duration:1s] animate-ping -z-20 "></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-11 top-12 lg:left-0.75  lg:-top-1 transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div>
+                    </div>
+                    
+
+                     </div>
+                     {/*right*/}
+                     <div className="circleicon4 text-[#F75128] absolute sm:left-2/3 sm:top-20"> <FaCircle className="circleicon4 relative left-14 top-16 sm:top-2 sm:left-4"/><FaRegCircle className=" absolute text-3xl left-12 top-14 sm:top-0 sm:left-2"/>
+
+
+         {/*The right hand dot*/}           
                      <div>
                          <div>
-                    <div className="bg-white absolute h-16 w-16 rounded-full right-[225px] top-25 transition  [animation-duration:1s] animate-ping -z-20 "></div>
-                    <div className="bg-white absolute h-10 w-10 rounded-full right-[237px]  top-[114px] transition [animation-duration:2s]  animate-ping   duration-700 -z-10 "></div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full left-[214px] top-8 lg:-top-4 lg:-left-2 transition  [animation-duration:1s] animate-ping  -z-20 "></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-[227px] top-12 lg:-top-1 lg:left-[3px] transition [animation-duration:2s]    animate-ping  duration-700 -z-10 "></div>
                     </div>
-</div>
+                    </div>
+                     <div className="dot4 absolute top-24 lg:top-8 left-32 lg:left-0  text-[#111827] font-bold bg-white w-36 text-center rounded p-2 ">
+                        <p className="">Rivers State</p>
+                        <div className="w-10 border-2 ml-12   border-[#F75128] rounded-full">
+                            <img src="/flag1.png" className="rounded-full w-10"/>
+                        </div>
+                        <p>Logistic service provider</p>
                      </div>
-                    </div>
+                     </div>
 
+                   
+
+                    </div>
                 </div>
 
     {/* Hero Overlay */}

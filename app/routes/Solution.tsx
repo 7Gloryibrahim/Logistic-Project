@@ -29,13 +29,13 @@ export default function Solution( {
   
     return(
         <div>
-           <section  className="relative mt-0 border-t-2 border-t-[#F75128] border-b-2 border-b-[#F75128] w-full h-[300vh] overflow-hidden md:h-[230vh] lg:h-[110vh] ">
+           <section  className="relative mt-0 border-t-2 border-t-[#F75128] border-b-2 border-b-[#F75128] w-full h-[300vh] overflow-hidden md:h-[230vh] lg:h-[120vh] ">
             <video
             autoPlay
             muted
             playsInline
             loop
-           className="h-[400vh] w-full object-cover lg:h-full"
+           className="h-[410vh] w-full object-cover lg:h-full"
             >
                 <source src="/LogisticVideo.mp4" type="video/mp4" className="absolute "/>
                 </video>
@@ -52,7 +52,7 @@ export default function Solution( {
                                      viewport={{once:false,
                                      
                                      }}
-                            className="backdrop-blur-md p-5 border-2 h-fit border-white">
+                            className="backdrop-blur-md p-5  border-2 h-fit border-white">
                            {/* Little horizontal line */}
                             <div className="flex items-center gap-2">
                               <span className="h-1 w-7 rounded bg-[#F75128]"></span>
@@ -60,7 +60,7 @@ export default function Solution( {
                             </div>
                             
                             <p className=" text-white text-2xl font-bold md:text-4xl lg:text-4xl space-x-0.5">Our Expertise Stands in</p>
-                            <p className="text-[#F75128] text-3xl font-bold underline mt-4 md:text-5xl lg:text-5xl uppercase">Logistics Solutions</p>
+                            <p className="text-[#F75128] text-2xl font-extrabold underline mt-4 md:text-5xl lg:text-5xl uppercase">Logistics Solutions</p>
                             <p className="font-bold font-sans text-[20px] text-white mt-7">Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.</p>
                             
                             {/* The two white Boxes */}

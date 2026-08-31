@@ -58,7 +58,7 @@ export default function AboutUs(){
                 </div>
                 </div>
                 {/*Half Rotating Container*/}
-                <img src="/container2.png"className="container2 left-7 top-[570px]  absolute lg:top-[64%] w-52"/>
+                <img src="/container2.png"className="container2 left-7 top-[570px]  absolute lg:top-[620px] w-52"/>
                 </div>
                 </section>
             </div>
