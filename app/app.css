@@ -561,6 +561,69 @@ transform: rotateY(180deg);
   opacity: 1;
   transform: translateY(0px);
 }
+
+.blueOrange{
+animation: blueOrange 3s ease-in-out infinite;
+
+}
+
+@keyframes blueOrange {
+  0%{
+    transform: translateY(0px)
+  };
+
+50%{
+  transform: translateY(10px)
+};
+
+100%{
+  transform: translateY(0px)
+}
+
+}
+
+.IoAirplaneSharp{
+  animation: IoAirplaneSharp 3s ease-in-out infinite;
+}
+
+@keyframes IoAirplaneSharp {
+  0%{
+    transform: translateX(0px);
+  }
+
+  50%{
+    transform: translateX(6px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.slidermain{
+  overflow: hidden;
+
+}
+
+.slider{
+ transition: 5s ease-in-out infinite ;
+}
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #F75128;
+  background: #111827;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
 /*---break---*/
 @theme inline {
   --font-heading: var(--font-sans);

@@ -15,6 +15,7 @@ import { FaCircle } from "react-icons/fa";
 import { FaRegCircle } from "react-icons/fa";
 import { RiArrowRightWideFill } from "react-icons/ri";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Services from "./services"
 
 import FlipWords from "~/flip";
 import {motion} from "framer-motion"
@@ -178,14 +179,14 @@ export function Page(){
 
 
                    <div>
-                    <div className="bg-white absolute h-16 w-16 rounded-full -top-0 left-20 lg:-top-4 transition animate-ping [animation-duration:1s] -z-20 lg:left-[55px]"></div>
-                    <div className="bg-white absolute h-10 w-10 rounded-full left-[91px] lg:left-[69px] lg:-top-1 transition animate-ping [animation-duration:2s] -z-10 "></div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full -top-0 left-20  lg:-top-4 transition animate-ping [animation-duration:1s] -z-20 md:left-[55px] md:-top-6 lg:left-[55px]"></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-[91px] md:-top-2 md:left-[69px] lg:left-[69px] lg:-top-1 transition animate-ping [animation-duration:2s] -z-10 "></div>
                     </div>
                     
                      </div>
                       <div className="circleicon2  text-[#F75128] absolute sm:left-2/3 "><FaCircle className="circleicon2  relative left-40 top-26 sm:top-52 sm:-left-62"/><FaRegCircle className=" absolute text-3xl left-38 top-24  sm:top-50 sm:-left-64 " />
 
-                        <div className="dot2 absolute right-60 top-60 text-[#111827] font-bold bg-white w-36 text-center rounded p-2">
+                        <div className="dot2 absolute right-60 top-60 text-[#111827] md:top-44 md:right-24 lg:right-60 lg: font-bold bg-white w-36 text-center rounded p-2">
                         <p>Delta State</p>
 <div className="w-10 border-2 ml-12   border-[#F75128] rounded-full">
                             <img src="/flag1.png" className="rounded-full w-10"/>
@@ -196,9 +197,9 @@ export function Page(){
 
                      
                       <div>
-                    <div className="bg-white absolute h-16 w-16 rounded-full left-[135px] top-[75px] lg:right-[224px]  lg:top-44 transition  [animation-duration:1s] animate-ping -z-20">
+                    <div className="bg-white absolute h-16 w-16 rounded-full left-[135px] top-[75px] md:-left-[10px]  lg:-left-[270px] lg:top-44 transition  [animation-duration:1s] animate-ping -z-20">
                     </div>   
-                      <div className="bg-white absolute h-10 w-10 rounded-full left-36.5 top-22.5 lg:right-[236px]  lg:top-[193px] transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div> 
+                      <div className="bg-white absolute h-10 w-10 rounded-full left-36.5 top-22.5 md:-left-[4px]     lg:-left-[260px]   lg:top-[193px] transition [animation-duration:2s] animate-ping   duration-700 -z-10 "></div> 
 
 
 
@@ -230,11 +231,11 @@ export function Page(){
          {/*The right hand dot*/}           
                      <div>
                          <div>
-                    <div className="bg-white absolute h-16 w-16 rounded-full left-[214px] top-8 lg:-top-4 lg:-left-2 transition  [animation-duration:1s] animate-ping  -z-20 "></div>
-                    <div className="bg-white absolute h-10 w-10 rounded-full left-[227px] top-12 lg:-top-1 lg:left-[3px] transition [animation-duration:2s]    animate-ping  duration-700 -z-10 "></div>
+                    <div className="bg-white absolute h-16 w-16 rounded-full md:-left-[270px] md:top-24 left-[214px] top-8 lg:-top-4 lg:-left-2 transition  [animation-duration:1s] animate-ping  -z-20 "></div>
+                    <div className="bg-white absolute h-10 w-10 rounded-full left-[227px] top-12 md:-left-[260px] md:top-28 lg:-top-1 lg:left-[3px] transition [animation-duration:2s]    animate-ping  duration-700 -z-10 "></div>
                     </div>
                     </div>
-                     <div className="dot4 absolute top-24 lg:top-8 left-32 lg:left-0  text-[#111827] font-bold bg-white w-36 text-center rounded p-2 ">
+                     <div className="dot4 absolute top-24  lg:top-8 left-32 lg:left-0  text-[#111827] font-bold bg-white w-36 text-center rounded p-2 ">
                         <p className="">Rivers State</p>
                         <div className="w-10 border-2 ml-12   border-[#F75128] rounded-full">
                             <img src="/flag1.png" className="rounded-full w-10"/>
@@ -306,7 +307,7 @@ export function Page(){
                                    }}
                                 viewport={{once:false}}
                                 
-               className=" relative text-wrap z-50 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-2/3 lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
+               className=" relative text-wrap z-50 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-[570px] lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
                 {/*First Text*/}
                 <div >
                     <h1 className="text-white font-bold ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full  ">Modern Logistic </h1>
@@ -411,7 +412,7 @@ export function Page(){
       </div>
       
       </div>
-
+    <Services />
         </div>
     )
    

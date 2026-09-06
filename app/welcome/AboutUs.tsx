@@ -13,7 +13,7 @@ export default function AboutUs(){
             
             <div className="relative  ">
 {/*First Overlay*/}
-                <div className="absolute bg-black/50 inset-0 h-[140vh]"></div>
+                <div className="absolute bg-black/50 inset-0 h-[140em]"></div>
              {/*Second Overlay*/}   
                 <div className="bg-linear-to-r/increasing from-black  w-96 h-[140vh] absolute"></div>
                 {/*The Hero Worker Image*/}

@@ -8,6 +8,7 @@ import { VscGlobe } from "react-icons/vsc";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbPhoneCalling } from "react-icons/tb";
 import { BsGrid3X3Gap } from "react-icons/bs";
+
 import "@fontsource/oswald/500.css";
 
 interface RotatingBadgeProps {
@@ -29,7 +30,7 @@ export default function Solution( {
   
     return(
         <div>
-           <section  className="relative mt-0 border-t-2 border-t-[#F75128] border-b-2 border-b-[#F75128] w-full h-[300vh] overflow-hidden md:h-[230vh] lg:h-[120vh] ">
+           <section  className="relative mt-0 border-t-2 border-t-[#F75128] border-b-2 border-b-[#F75128] w-full h-[120em] overflow-hidden md:h-[82em] lg:h-[123vh] ">
             <video
             autoPlay
             muted
@@ -60,7 +61,7 @@ export default function Solution( {
                             </div>
                             
                             <p className=" text-white text-2xl font-bold md:text-4xl lg:text-4xl space-x-0.5">Our Expertise Stands in</p>
-                            <p className="text-[#F75128] text-2xl font-extrabold underline mt-4 md:text-5xl lg:text-5xl uppercase">Logistics Solutions</p>
+                            <p className="text-[#F75128] w-full text-2xl font-extrabold underline mt-4 md:text-5xl lg:text-5xl uppercase">Logistics Solutions</p>
                             <p className="font-bold font-sans text-[20px] text-white mt-7">Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.</p>
                             
                             {/* The two white Boxes */}
@@ -104,9 +105,9 @@ export default function Solution( {
                                     viewport={{once:false}} className=" relative lg:ml-36 ">
           {/*Dot Box*/}            <div className="grid-box absolute  text-[#F75128] left-80 -top-5 -z-10"><BsGrid3X3Gap /></div>
                             <img src="/about-v1-img1-5tcu7YgK.jpg" alt="about" className="rounded-2xl"/>
-                            <img src="/about-v1.jpg" alt="about" className=" absolute mt-7 md:top-52 md:left-44 md:mt-0 lg:absolute lg:top-60 lg:right-16 lg:mt-0 rounded-2xl  "/>
+                            <img src="/about-v1.jpg" alt="about" className=" absolute mt-7 left-24 md:top-52  md:left-44 md:mt-0 lg:absolute lg:top-60 lg:right-16 lg:mt-0 rounded-2xl  "/>
                            {/*Rotating  Svg  */}
-                           <div className=" relative z-100 w-fit top-32 -left-24 md:-top-32 md:left-16 lg:-top-32 lg:left-16">
+                           <div className=" relative z-100 w-fit top-32  md:-top-32 md:left-16 lg:-top-32 lg:left-16">
                             <svg style={{width:200, height: 200}} 
                               viewBox="0 0 200 200"
   // className=" absolute top-56 inset-0 h-full w-full animate-spin-slow lg:left-52"
