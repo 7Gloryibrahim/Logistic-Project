@@ -624,6 +624,108 @@ animation: blueOrange 3s ease-in-out infinite;
 }
 
 
+.videoSix{
+  position: relative;
+
+}
+
+.videoSix::before{
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  top:10;
+  left: 10;
+  bottom:10;
+  right: 10;
+  height: 92%;
+  z-index: 10;
+  width: 96%;
+  border-radius: 20px;
+  transition: opacity 0.6s ease;
+}
+.videoSix .videoS {
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.videoSix:hover .videoS{
+transform: scale(1.1);
+}
+ 
+.videoSix:hover::before{
+  opacity: 1;
+}
+
+.videoBox{
+  position: absolute;
+  visibility: hidden;
+  transform: rotateX(90deg);
+  opacity: 0;
+   transition: all 0.9s ease-in-out;
+}
+
+.videoSix:hover .videoBox{
+  transform: rotateX(0deg);
+  visibility: visible;
+ opacity: 1;
+
+}
+
+.straightUp{
+  transition: all 1s ease-in-out;
+}
+
+.videoBox:hover .straightUp{
+  transform: rotate(60deg);
+}
+
+.latest1{
+  position: relative;
+  overflow: hidden ;
+}
+
+.latestImg{
+  transition: transform 0.5s ease;
+}
+
+.latest1:hover .latestImg{
+transform: scale(1.1);
+}
+
+.latestImg{
+  position: relative;
+}
+
+.latest1::before{
+  content:"";
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+ top: 10;
+ left:10;
+  z-index: 10;
+  width: 94%;
+  height: 86%;
+  border-radius: 20px;
+ transition: opacity  0.6s ease;
+}
+
+.latest1:hover::before{
+  opacity:1;
+}
+
+.imgcardText{
+  transform: rotateX(60deg);
+  opacity:0;
+  transition: 1s ease;
+}
+
+.latest1:hover .imgcardText{
+opacity:1;
+transform: rotateX(0deg);
+}
+
 /*---break---*/
 @theme inline {
   --font-heading: var(--font-sans);

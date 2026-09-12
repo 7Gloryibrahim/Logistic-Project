@@ -6,16 +6,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow'; 
 
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from 'swiper/modules';
+import type { Swiper as SwiperInstance } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { useState, useEffect,useRef } from "react";
+import { useState, useRef } from "react";
 import { IoAirplaneSharp } from "react-icons/io5";
 
 
 const slides =[
 
     {
-        imagePath: "/freeShip.jpg",
+        imagePath: "/ocean.jpg",
         title: "Ocean Freight",
          description:"A Logistic service provider company plays a pivotal role in the global supply chain, logistic service"
     },
@@ -29,18 +30,18 @@ const slides =[
 
   {
         imagePath: "/shpin3.jpg",
-        title:"Warehouse",
-        description:"A Logistic service provider company plays a pivotal role in the global supply chain, logistic service"
+        title:"Express Delivery",
+        description:"Our Express delivery services ensure your urgent shipments arrives on time"
     },
 
       {
         imagePath: "/inter.jpg",
-        title:"International Freight",
+        title:"Intl Freight",
         description:"A Logistic service provider company plays a pivotal role in the global supply chain, logistic service"
     },
 
       {
-        imagePath: "/shipn5.jpg",
+        imagePath: "/ocean3.png",
         title:"Ocean Freight",
         description:"A Logistic service provider company plays a pivotal role in the global supply chain, logistic service"
     },
@@ -55,6 +56,12 @@ const slides =[
         imagePath: "/train.jpg",
         title:"Rail Freight",
         description:"A Logistic service provider company plays a pivotal role in the global supply chain, logistic service"
+    },
+
+    {
+      imagePath: "air.png",
+      title:"Air Freight",
+      description:"Our Air freight services offers FAST & EFFICIENT delivery for urgent shipments"
     }
 
 ]
@@ -114,12 +121,13 @@ export default function Services(){
 //   );
 // };
 
- 
+   const [swiper, setSwiper] = useState(0);
+  const swiperRef = useRef<SwiperInstance | null>(null);
 
  
 
     return(
-<div style={{backgroundImage:"url('/blob.jpg')", backgroundSize:"cover",backgroundPosition:"center", overflow:"hidden", backgroundAttachment:"scroll"}} className="h-[50em] lg:h-[64em] relative">
+<div style={{backgroundImage:"url('/blob.jpg')", backgroundSize:"cover",backgroundPosition:"center", overflow:"hidden", backgroundAttachment:"fixed"}} className="h-[55em]  lg:h-[69em] relative">
 
                 <section>
                     <img src="/container1.png" alt="container1" className=" blueOrange absolute hidden md:block lg:block -top-3 left-2.5" />
@@ -134,7 +142,7 @@ export default function Services(){
                         <IoAirplaneSharp  className="IoAirplaneSharp text-[#CBCFDA] lg:text-[#F75127] text-2xl"/>
                     </div>
 
-                    <div className="absolute mt-10 left-5 text-2xl uppercase md:text-3xl md:left-44 lg:left-60 lg:mt-10 font-bold text-[#111827]">
+                    <div className="absolute mt-10 left-5 text-2xl uppercase md:text-3xl md:left-44 lg:left-64 lg:mt-10 font-bold text-[#111827]">
                         <p className="lg:text-5xl">Provide Efficient Logistics</p>
 
                          <div className="flex ml-12 lg:text-5xl lg:justify-center uppercase gap-2">
@@ -164,6 +172,10 @@ export default function Services(){
 </button>
                </div>  */}
            <Swiper
+         onSwiper={(swiperInstance) => {
+  swiperRef.current = swiperInstance;
+}}
+
            effect={'coverflow'}
         grabCursor={true}
         autoplay={{
@@ -211,7 +223,7 @@ breakpoints={{
                   {slides.map((slides,index)=>
               <SwiperSlide key={index} className='relative   lg:w-52'>
                 <div className='relative'>
-              <img src={slides.imagePath} alt='slides' className="rounded h-72 w-full px-10 lg:p-0 lg:w-fit object-cover" />
+              <img src={slides.imagePath} alt='slides' className="rounded-2xl h-72 w-full px-10 lg:p-0 lg:w-fit object-cover" />
              <h1 className='absolute text-3xl font-sans font-bold text-[#F75128] text-center backdrop-blur-lg border-2 border-[#2B313F] shadow-2xl shadow-black text-shadow-2xs text-shadow-black w-fit p-3 flex uppercase left-16 md:left-28 lg:left-6 top-4 rounded-r-full'>
               {slides.title}
               </h1>
@@ -220,7 +232,7 @@ breakpoints={{
                         <div >
                         <p className=' w-fit   font-bold font-sans items-center'>{slides.description}</p>
                         </div>
-                        <div className='p-2 w-fit pb-7 mt-2  backdrop-blur-xl  border-2 border-[#F75128] rounded-full'>
+                        <div className='p-2 hover:shadow hover:shadow-black transition duration-300 w-fit pb-7 mt-2  backdrop-blur-xl  border-2 border-[#F75128] rounded-full'>
                         <p className='mt-7 font-bold font-sans bg-[#192235] text-white text-shadow-2xs text-shadow-[#F75128] p-2 rounded-full'>Read More</p>
                       </div>
                       </div>
@@ -231,9 +243,23 @@ breakpoints={{
              )}
            
                </Swiper>
+<div className='flex justify-between relative z-40 mx-4 -mt-16'>
+               <button
+  onClick={() => swiperRef.current?.slidePrev()}
+  className="bg-[#111827]  text-[#F75128] p-4 rounded-full font-extrabold  text-2xl"
+>
+  ←
+</button>
+
+<button
+  onClick={() => swiperRef.current?.slideNext()}
+  className="bg-[#111827] text-[#F75128] p-4 rounded-full text-2xl font-extrabold"
+>
+  →
+</button>
+</div>
 
 
-  
                     </div>
                 </section>
 

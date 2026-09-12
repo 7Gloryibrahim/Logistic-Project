@@ -61,7 +61,7 @@ export default function Solution( {
                             </div>
                             
                             <p className=" text-white text-2xl font-bold md:text-4xl lg:text-4xl space-x-0.5">Our Expertise Stands in</p>
-                            <p className="text-[#F75128] w-full text-2xl font-extrabold underline mt-4 md:text-5xl lg:text-5xl uppercase">Logistics Solutions</p>
+                            <p className="text-[#F75128] w-full text-2xl font-extrabold underline mt-4 md:text-5xl lg:text-4xl uppercase">Logistics Solutions</p>
                             <p className="font-bold font-sans text-[20px] text-white mt-7">Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.</p>
                             
                             {/* The two white Boxes */}
