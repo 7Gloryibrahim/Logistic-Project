@@ -61,11 +61,11 @@ export default function Solution( {
                             </div>
                             
                             <p className=" text-white text-2xl font-bold md:text-4xl lg:text-4xl space-x-0.5">Our Expertise Stands in</p>
-                            <p className="text-[#F75128] w-full text-2xl font-extrabold underline mt-4 md:text-5xl lg:text-4xl uppercase">Logistics Solutions</p>
-                            <p className="font-bold font-sans text-[20px] text-white mt-7">Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.</p>
+                            <p className="text-[#F75128] w-full text-2xl font-extrabold underline mt-4 md:text-5xl lg:text-4xl uppercase ">Logistics Solutions</p>
+                            <p className="font-bold  text-[20px] text-white mt-7 comic-neue-bold-italic">Our global logistics expertise, advanced supply chain technology & customized logistics solutions will help you analyze, develop and implement successful supply chain management strategies.</p>
                             
                             {/* The two white Boxes */}
-  {/* The main container for them */} <div className="flex-1 gap-6 mt-28 md:flex lg:flex">
+  {/* The main container for them */} <div className="flex-1 gap-6 mt-20 md:flex lg:flex">
     
     {/* First Box */}
                             <div className="box1 mb-5 rounded bg-white border-l-4 border-[#F75128] p-5 lg:mb-0">

@@ -43,7 +43,7 @@ const slides =[
       {
         imagePath: "/ocean3.png",
         title:"Ocean Freight",
-        description:"A Logistic service provider company plays a pivotal role in the global supply chain, logistic service"
+        description:"We provides with the main types of basic conditions International sea transportation is implemented by our partners’ vessels, the largest ocean carriers."
     },
 
   {
@@ -61,7 +61,7 @@ const slides =[
     {
       imagePath: "air.png",
       title:"Air Freight",
-      description:"Our Air freight services offers FAST & EFFICIENT delivery for urgent shipments"
+      description:"We can arrange and provide with the comprehensive service in the sphere of urgent, valuable, fragile or any cargoes conscientious accelerated delivery by air."
     }
 
 ]
@@ -142,8 +142,8 @@ export default function Services(){
                         <IoAirplaneSharp  className="IoAirplaneSharp text-[#CBCFDA] lg:text-[#F75127] text-2xl"/>
                     </div>
 
-                    <div className="absolute mt-10 left-5 text-2xl uppercase md:text-3xl md:left-44 lg:left-64 lg:mt-10 font-bold text-[#111827]">
-                        <p className="lg:text-5xl">Provide Efficient Logistics</p>
+                    <div className="absolute mt-10 left-5 text-2xl uppercase md:text-3xl md:left-44 lg:left-72 lg:mt-10 font-bold text-[#111827]">
+                        <p className="lg:text-5xl comic-neue-bold">Provide Efficient Logistics</p>
 
                          <div className="flex ml-12 lg:text-5xl lg:justify-center uppercase gap-2">
                         <p>Solutions</p>
@@ -230,7 +230,7 @@ breakpoints={{
              
                       <div className='absolute p-6 bg-white rounded-2xl top-64 mx-1 md:mx-16 lg:mx-16 items-center shadow-2xl shadow-black'>
                         <div >
-                        <p className=' w-fit   font-bold font-sans items-center'>{slides.description}</p>
+                        <p className=' w-fit    font-[fredoka] items-center'>{slides.description}</p>
                         </div>
                         <div className='p-2 hover:shadow hover:shadow-black transition duration-300 w-fit pb-7 mt-2  backdrop-blur-xl  border-2 border-[#F75128] rounded-full'>
                         <p className='mt-7 font-bold font-sans bg-[#192235] text-white text-shadow-2xs text-shadow-[#F75128] p-2 rounded-full'>Read More</p>

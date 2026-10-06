@@ -20,6 +20,7 @@ import Services from "./services"
 import FlipWords from "~/flip";
 import {motion} from "framer-motion"
 import Latest from "./latest"
+import Why from "./why"
 export function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
@@ -415,6 +416,7 @@ export function Page(){
     <Services />
 
     <Latest />
+    <Why />
         </div>
     )
    

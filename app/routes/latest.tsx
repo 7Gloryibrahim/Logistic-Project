@@ -1,8 +1,10 @@
 import {motion} from "framer-motion"
+import { Link } from "react-router";
+
 import { IoAirplaneSharp } from "react-icons/io5";
 export default function Latest(){
     return(
-        <div className="h-[64em] relative bg-[#192235]">
+        <div className=" relative">
            
           
          {/* <div className="custom-shape-divider-top-1788805964 ">
@@ -12,7 +14,7 @@ export default function Latest(){
 </div> */}
 
             <section>
-                <div className="bg-white relative h-[67em] lg:h-[50em]  ">
+                <div className="bg-white relative h-[103em] md:h-[55em] lg:h-[55em]">
 
                     <div className=" grid grid-cols-1 md:grid-cols-2    lg:grid-cols-2 gap-7 p-9">
                         <div className="shadow lg:w-[40em] lg:h-[20em] shadow-[#192235] relative rounded-2xl">
@@ -33,15 +35,15 @@ export default function Latest(){
                     </div>
                         </div>
 
-                        <button className="bg-[#192235] mt-5 mb-6 md:mb-5  text-white rounded-2xl  p-5 font-bold font-sans">See All About Us →</button>
+                        <Link to="/Project"><button className="bg-[#192235] mt-5 mb-6 md:mb-5  text-white rounded-2xl  p-5 font-bold font-sans">See All About Us →</button></Link>
                     </div>
                         </div>
                    
 
                     <motion.div
                     
-                      initial={{opacity:0, y:50}}
-                        whileInView={{opacity:1, y:0}}
+                      initial={{ y:50}}
+                        whileInView={{ y:0}}
                         transition={{duration:2, ease:"easeInOut"}}
                         viewport={{once:true}}
                     className="videoSix overflow-hidden shadow shadow-[#192235] p-3 lg:h-[23em] md:h-[12em] rounded-2xl">
@@ -79,58 +81,58 @@ export default function Latest(){
                     </motion.div>
                    </div>
                      {/*Flexed Images*/}
-                     <div className="grid grid-cols-1 ml-12 md:grid-cols-2 lg:grid-cols-4 md:ml-3  lg:ml-3 gap-2">
+                     <div className="grid grid-cols-1 ml-7 md:grid-cols-2 lg:grid-cols-4 md:ml-3  lg:ml-3 gap-2">
                      {/*img1*/}
                     <motion.div 
-                      initial={{opacity:0, y:50}}
-                        whileInView={{opacity:1, y:0}}
-                        transition={{duration:2, ease:"easeInOut"}}
+                      initial={{ y:50}}
+                        whileInView={{ y:0}}
+                        transition={{duration:0.9, ease:"easeInOut"}}
                         viewport={{once:false}}
                     className="latest1 relative p-3  shadow shadow-[#192235] w-80  rounded-2xl overflow-hidden ">
                       <div className="overflow-hidden rounded-2xl">
                         <img src="/warehouse7.jpeg" className="latestImg rounded-2xl overflow-hidden " />
                             </div>
-                             <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#E9E3D3] font-sans">
-                        <p>Warehouse Solutions</p>
+                             <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#FFFFFF]  font-sans">
+                        <Link to="/detail"><p>Warehouse Solutions</p></Link>
                         </div>
                     </motion.div>
 {/*img2*/}
                 <motion.div 
                 
-                  initial={{opacity:0, y:50}}
-                        whileInView={{opacity:1, y:0}}
-                        transition={{duration:2, ease:"easeInOut"}}
+                  initial={{ y:50}}
+                        whileInView={{ y:0}}
+                        transition={{duration:0.8, ease:"easeInOut"}}
                         viewport={{once:false}}
 
                 className="latest1 h-60 mt-4 md:mt-0 lg:mt-0 w-80 p-3 items-center rounded-2xl overflow-hidden shadow shadow-[#192235]  ">
                     <div className="overflow-hidden rounded-2xl">
                         <img src="/warehouse.jpg" className="latestImg h-52 w-80 rounded-2xl"/>
                     </div>
-                     <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#E9E3D3] font-sans">
-                        <p>Warehouse Solutions</p>
+                     <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#FFFFFF]  font-sans">
+                     <Link to="/detail"><p>Warehouse Solutions</p></Link>
                         </div>
                 </motion.div>
 {/*img3*/}
                  <motion.div 
                  
-                   initial={{opacity:0, y:50}}
-                        whileInView={{opacity:1, y:0}}
-                        transition={{duration:3, ease:"easeInOut"}}
+                   initial={{ y:50}}
+                        whileInView={{ y:0}}
+                        transition={{duration:0.7, ease:"easeInOut"}}
                         viewport={{once:false}}
 
                  className="latest1 relative h-60 mt-4 md:mt-0 lg:mt-0 w-80  p-3 items-center rounded-2xl overflow-hidden shadow shadow-[#192235]  ">
                     <div className="overflow-hidden rounded-2xl">
                         <img src="/warehouse3.jpg" className="latestImg h-52 w-80 rounded-2xl"/>
                     </div>
-                     <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#E9E3D3] font-sans">
-                        <p>Warehouse Solutions</p>
+                     <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#FFFFFF]  font-sans">
+                        <Link to="/detail"><p>Warehouse Solutions</p></Link>
                         </div>
                 </motion.div>
 {/*img4*/}
                   <motion.div 
-                    initial={{opacity:0, y:50}}
-                        whileInView={{opacity:1, y:0}}
-                        transition={{duration:3, ease:"easeInOut"}}
+                    initial={{ y:50}}
+                        whileInView={{ y:0}}
+                        transition={{duration:0.6, ease:"easeInOut"}}
                         viewport={{once:false}}
 
                   className="latest1 h-60 mt-4 md:mt-0 lg:mt-0 w-80 p-3 items-center  rounded-2xl overflow-hidden shadow shadow-[#192235]  ">
@@ -138,8 +140,8 @@ export default function Latest(){
                         <img src="/warehouse4.jpg" className="latestImg h-52 w-80 rounded-2xl"/>
                     </div>
 
-                        <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127]  text-[#E9E3D3] font-sans">
-                        <p>Warehouse Solutions</p>
+                        <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127]  text-[#FFFFFF]  font-sans">
+                        <p><Link to="/detail">Warehouse Solutions </Link></p>
                         </div>
 
                 </motion.div>

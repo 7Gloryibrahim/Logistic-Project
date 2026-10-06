@@ -37,8 +37,8 @@ export default function AboutUs(){
                         <div className="flex items-center gap-2 font-sans text-2xl  w-fit uppercase  lg:text-5xl lg:flex ">
                          
                             <div className="w-6 h-1 bg-[#F75128] font-serif font-medium rounded lg:w-6"></div>
-                        <p className="">Seamless</p>
-                        <p className="text-[#F75128] backdrop-blur-md p-1 border-2  uppercase  border-white rounded">Logistics,</p>
+                        <p className="bebas-neue-regular -tracking-normal">Seamless</p>
+                        <p className="text-[#F75128] backdrop-blur-md p-1 border-2 bebas-neue-regular uppercase  border-white rounded">Logistics,</p>
                         </div>
 
                         <div className="w-44 font-sans" >
@@ -54,7 +54,7 @@ export default function AboutUs(){
                 <div className="hidden subhead mt-5 border-l-4 border-l-[#F75128]  rounded-2xl bg-[#F75128] pl-4 text-[#111827] font-sans font-bold pt-3 pr-3 pb-3 tracking-normal text-[20px] text-left items-center sm:block lg:block" >
                     
                     
-                    <p className="font-bold  ">For over a decade, we have combined asset-backed asset capacity, deep compliance expertise, and an unwavering commitment to safety to ensure your inventory arrives on time, intact, and on budget—every single Mile of the journey.</p>
+                    <p className="font-bold  comic-neue-bold-italic">For over a decade, we have combined asset-backed asset capacity, deep compliance expertise, and an unwavering commitment to safety to ensure your inventory arrives on time, intact, and on budget—every single Mile of the journey.</p>
                 </div>
                 </div>
                 {/*Half Rotating Container*/}

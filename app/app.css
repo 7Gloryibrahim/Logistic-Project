@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comic+Relief:wght@400;700&family=Fredoka:wght@300..700&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -6,6 +7,57 @@
 
 /*---break---*/
 @custom-variant dark (&:is(.dark *));
+body {
+  font-family: 'Inter', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.comic-neue-light {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-neue-bold {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.comic-neue-light-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.comic-neue-regular-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.comic-neue-bold-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif,
@@ -265,7 +317,7 @@ pointer-events: auto;
   width: 300px;
   padding: 10px;
   padding-left: 30px;
-  background-color: #111827;
+  background-color: #F75128;
   border-top: #F75128 5px solid;
   opacity: 0;
   transition: 1s ease;
@@ -563,7 +615,7 @@ transform: rotateY(180deg);
 }
 
 .blueOrange{
-animation: blueOrange 3s ease-in-out infinite;
+animation: blueOrange 1s ease-in-out infinite;
 
 }
 
@@ -583,7 +635,7 @@ animation: blueOrange 3s ease-in-out infinite;
 }
 
 .IoAirplaneSharp{
-  animation: IoAirplaneSharp 3s ease-in-out infinite;
+  animation: IoAirplaneSharp 1s ease-in-out infinite;
 }
 
 @keyframes IoAirplaneSharp {
@@ -719,12 +771,46 @@ transform: scale(1.1);
   transform: rotateX(60deg);
   opacity:0;
   transition: 1s ease;
+  z-index: 11;
 }
 
 .latest1:hover .imgcardText{
 opacity:1;
 transform: rotateX(0deg);
 }
+
+
+.skill::before{
+  content:"";
+  position:absolute;
+  top: 0;
+  left:0;
+  right:0;
+  z-index: 2;
+  width: 100%;
+  opacity: 0.1;
+  height: 0%;
+  background-color: white;
+ transition: height 0.5s ease;
+}
+
+.skill:hover::before{
+ 
+  height: 100%;
+ 
+}
+
+.skill img{
+   transition: transform 0.5s ease;
+}
+  .skill:hover img{
+
+    transform: scale(1.1);
+   
+   
+
+  }
+
 
 /*---break---*/
 @theme inline {
