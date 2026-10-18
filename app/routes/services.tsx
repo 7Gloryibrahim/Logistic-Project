@@ -213,7 +213,7 @@ breakpoints={{
         }}
         
         pagination={true}
-           navigation={true}  
+         
         modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
         className="mySwiper top-60 h-125 "
              >

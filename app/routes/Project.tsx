@@ -5,14 +5,15 @@ import {motion} from "framer-motion"
  export default function Project() {
 
     return(
-        <div className="">
+        <div className="relative ">
             <Nav/>
-            <div className="relative overflow-hidden">
+            <div className="relative h-[50em] lg:h-[90em] overflow-hidden">
+                
                 <div style={{backgroundImage:"url('/detail1.jpg')", backgroundSize:"cover", backgroundAttachment:"fixed", }} className="h-[50em] lg:h-[39em]">
                 {/* <img src="/detail1.jpg" className="h-[38em] w-screen fixed"/> */}
-                <div className="bg-blue-500/35 absolute h-[50em] lg:h-[39em] inset-0 "></div>
+                
                 </div>
-            
+            <div className="bg-blue-500/35 absolute h-[50em] lg:h-[39em] inset-0 "></div>
             <motion.div
             
             initial={{opacity:0, x:50}}
@@ -56,7 +57,7 @@ import {motion} from "framer-motion"
                             className="bg-white/35 p-5 uppercase font-bold border border-white text-[#D44216]">Reliable Delivery</motion.p>
                         </div>
                     </div>
-                    </div>
+                   
 
 
                     <div className=" relative">
@@ -130,7 +131,32 @@ import {motion} from "framer-motion"
                             </div>
                         </div>
                         <img src="container2.png" className="hidden lg:block left-[27em] absolute"/>
+                  
+                  
+
+                  
+                   </div>
+                </div>
+                 <div className="relative h-[40em]">
+                 <div className="hidden lg:block md:hidden">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" width="1351" height="320" preserveAspectRatio="none">
+  <path d="M 0 235.1 C 80 221.6 320 155 480 154.6 C 640 154.1 800 231.7 960 232.4 C 1120 233.1 1360 171 1440 158.7 L 1440 320 L 0 320 Z" fill="#262A70"/>
+</svg>
+                 </div>
+
+                 <div className="relative h-[40em] bg-[#262A70]">
+                    <div style={{backgroundImage:"url('/v2.png')", backgroundSize:"cover", backgroundPosition:"fixed" }} className="h-[20em] w-full"></div>
+                  
+                    <div className="absolute top-20 flex-col lg:left-20 lg:gap-5 lg:flex lg:flex-row">
+                            <div className="w-fit shadow shadow-[#D44216]"><img src="/shipn7.jpg" className="h-[30em] w-96"/></div>
+                              <div className=" proimg1 w-fit shadow  shadow-[#D44216]"> <img src="/warehouse8.jpg" className="proimg2 h-[30em] w-96"/> </div>
+                               <div className=" proimg3 w-fit shadow shadow-[#D44216]"> <img src="/truck.JPG" className="h-[30em] w-96"/></div>
+                        </div>
+                    <div>
+                      
                     </div>
+                 </div>
+                 </div>
         </div>
      
     )

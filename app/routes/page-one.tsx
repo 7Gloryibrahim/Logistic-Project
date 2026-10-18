@@ -21,6 +21,13 @@ import FlipWords from "~/flip";
 import {motion} from "framer-motion"
 import Latest from "./latest"
 import Why from "./why"
+import Transportation from "./transportation";
+import Testimonials from "./testimonials";
+import Video from "./video"
+import { IoIosClose } from "react-icons/io";
+import Quee from "./quee";
+import Team from "./team";
+
 export function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
@@ -311,7 +318,7 @@ export function Page(){
                className=" relative text-wrap z-50 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-[570px] lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
                 {/*First Text*/}
                 <div >
-                    <h1 className="text-white font-bold ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full  ">Modern Logistic </h1>
+                    <h1 className="text-white bebas-neue ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full  ">Modern Logistic </h1>
                        <p className="text-[#F75128] font-bold ml-10 sm:text-4xl  sm:mb-5 sm:ml-0 md:ml-10 lg:ml-0 lg:text-right"> Transport</p>
                     <p className=" text-white ml-10 md:ml-10 sm:ml-0 lg:ml-0  lg:text-right">Specialist In Modern</p>
                     <p className=" text-white mb-5 ml-10 sm:ml-0 md:ml-10 md:mb-3 lg:text-right lg:ml-0">Transportation</p>
@@ -355,6 +362,7 @@ export function Page(){
              </section>
        {/*Second section*/} 
         <Solution/>
+       
             <div
     onClick={() => setSearch(false)}
     className={`
@@ -403,6 +411,9 @@ export function Page(){
       <div 
       onClick={()=> setMenu(false)} className={`fixed top-2 left-0 bottom-2 rounded-tr-2xl rounded-br-2xl items-start w-60 z-50 transition-transform duration-700  pl-5 ease-in-out  bg-[#111827] border-t-4 border-t-[#F75128] shadow-2xl shadow-black block  md:block md:w-80 lg:hidden ${menu ? "translate-x-0" : "-translate-x-full"} `}  >
         <div onClick={(e)=> e.stopPropagation() } className={`h-full`}>
+            <div onClick={()=> setMenu(prev=>!prev)} className="text-[#F75128] backdrop-blur-lg text-2xl ml-[7em] mt-2 rounded-2xl border border-[#F75128] w-fit">
+                <IoIosClose/>
+            </div>
      <ul className={`text-amber-50`}>
         <li>Home</li>
         <li>Home</li>
@@ -414,10 +425,14 @@ export function Page(){
       
       </div>
     <Services />
-
     <Latest />
     <Why />
-        </div>
+    <Transportation/>
+     <Testimonials/>
+     <Video/>
+     <Quee/>
+     <Team/>
+         </div>
     )
    
 }

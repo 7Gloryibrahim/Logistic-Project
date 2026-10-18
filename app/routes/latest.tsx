@@ -14,7 +14,7 @@ export default function Latest(){
 </div> */}
 
             <section>
-                <div className="bg-white relative h-[103em] md:h-[55em] lg:h-[55em]">
+                <div className="bg-[#CBCFDA] relative h-[103em] md:h-[55em] lg:h-[55em]">
 
                     <div className=" grid grid-cols-1 md:grid-cols-2    lg:grid-cols-2 gap-7 p-9">
                         <div className="shadow lg:w-[40em] lg:h-[20em] shadow-[#192235] relative rounded-2xl">
@@ -81,7 +81,7 @@ export default function Latest(){
                     </motion.div>
                    </div>
                      {/*Flexed Images*/}
-                     <div className="grid grid-cols-1 ml-7 md:grid-cols-2 lg:grid-cols-4 md:ml-3  lg:ml-3 gap-2">
+                     <div className="grid grid-cols-1 ml-12 md:grid-cols-2 lg:grid-cols-4 md:ml-3  lg:ml-3 gap-2">
                      {/*img1*/}
                     <motion.div 
                       initial={{ y:50}}

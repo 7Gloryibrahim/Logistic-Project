@@ -6,7 +6,7 @@ import { MdPhoneInTalk } from "react-icons/md";
 import { Link } from "react-router";
 import {motion} from "framer-motion"
 import Transportation from "./transportation";
-
+import Video from "./video";
 
 
 export default function Why(){
@@ -114,9 +114,6 @@ const handleSubmit = (
     notes: ""
             })
         }
-
-        
-
 
 return(
     <div className="bg-[#111827]  relative ">
@@ -250,7 +247,8 @@ return(
     
 
 
-    <Transportation/>
+   
+ 
     </div>
 
 
@@ -258,3 +256,4 @@ return(
 )
 
 }
+

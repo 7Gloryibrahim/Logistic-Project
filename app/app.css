@@ -3,7 +3,7 @@
 
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+
 
 /*---break---*/
 @custom-variant dark (&:is(.dark *));
@@ -812,6 +812,115 @@ transform: rotateX(0deg);
   }
 
 
+  .playButton {
+  position: relative;
+}
+
+.playButton::before,
+.playButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: ping 1.5s infinite;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+
+.maquee{
+  width: 100%;
+  overflow:hidden;
+  white-space: nowrap;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #DDF5FF 10%,
+    #DDF5FF 90%,
+    transparent
+  );
+}
+
+.maquee-items{
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  font-family: "Bebas Neue";
+  animation: maquee 30s linear infinite;
+}
+
+@keyframes maquee{
+  from{
+    transform: translateX(0)
+  }
+
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+.embla {
+  overflow: hidden;
+ 
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.team1::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right:0;
+  top:0;
+  bottom:0;
+  width:100%;
+  height: 0;
+  background-color: rgba(255,255,255,0.1);
+  transition:height 0.5s ease;
+  z-index: 2;
+
+}
+
+.team1:hover::before{
+ 
+ height: 100%;
+}
+.team1{
+  overflow:hidden;
+  position: relative;
+}
+.team1 img{
+
+  transition: transform 1s ease;
+ overflow: hidden;
+}
+
+.team1:hover img{
+transform: scale(1.1);
+}
+ 
 /*---break---*/
 @theme inline {
   --font-heading: var(--font-sans);
