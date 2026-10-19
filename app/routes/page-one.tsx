@@ -27,6 +27,7 @@ import Video from "./video"
 import { IoIosClose } from "react-icons/io";
 import Quee from "./quee";
 import Team from "./team";
+import Blog from "./blog"
 
 export function Page(){
     const [search, setSearch] = useState(false)
@@ -432,6 +433,7 @@ export function Page(){
      <Video/>
      <Quee/>
      <Team/>
+     <Blog/>
          </div>
     )
    

@@ -21,7 +21,7 @@ align: 'start',
 },
 [
 AutoScroll({
-active: true,
+active: false,
 speed: 0.2,
 startDelay: 0,
 stopOnInteraction: false,
@@ -83,15 +83,15 @@ return (
     </div>
 
     <div>
-        <p className='text-3xl flex justify-center lg:text-5xl bebas-neue-regular tracking-wide'>OUR EXPERT LOGISTIC TEAM</p>
+        <p className='text-3xl flex  justify-center lg:text-5xl bebas-neue-regular tracking-wide'>OUR EXPERT LOGISTIC TEAM</p>
     </div>
 <div className="mx-auto max-w-5xl mt-24">
 <div className="overflow-hidden" ref={emblaRef} >
-<div className="flex ">
+<div className="flex  ">
 
-<div className="team min-w-0 w-full px-3 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] ">
-        <div onMouseEnter={() => { setIcons(true); setDescription1(true) }} onMouseLeave={() => {setIcons(false); setDescription1(false)}} className="team1 flex overflow-visible h-96 relative items-center justify-center rounded-2xl  shadow-md">
-        <img src='team1.jpg' alt="team1" className='h-96  '/>
+<div className="team min-w-0 px-3 flex-[0_0_100%] sm:flex-[0_0_100%] lg:flex-[0_0_33.333%] ">
+        <div onMouseEnter={() => { setIcons(true); setDescription1(true) }} onMouseLeave={() => {setIcons(false); setDescription1(false)}} className="team1 flex  h-96 relative items-center justify-center rounded-2xl  shadow-md">
+        <img src='team1.jpg' alt="team1" className='h-96 object-cover w-full'/>
         
       
         <div  className={`icons absolute transition-all z-20 top-12 shadow shadow-black text-white flex flex-col bg-[#D44216] w-fit h-fit p-3 gap-y-4 duration-500 inset-0 ease-in-out ${
@@ -116,7 +116,7 @@ return (
 
         <div className="team min-w-0 flex-[0_0_100%] w-full relative overflow-hidden sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3">
           <div onMouseEnter={()=> {setIcons2(true);setDescription2(true)}} onMouseLeave={()=> {setIcons2(false); setDescription2(false)}} className="team1 flex h-96 items-center relative justify-center rounded-2xl  shadow-md">
-            <img src='team2.jpg' alt='team2' className='h-96 '/>
+            <img src='team2.jpg' alt='team2' className='h-96 object-cover w-full'/>
             <div  className={`icons absolute transition-all shadow shadow-black top-12 z-20 left-0 text-white flex flex-col bg-[#D44216] w-fit h-fit p-3 gap-y-4 duration-500  ease-in-out ${
           icons2 ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`} >
           < FaXTwitter />
@@ -148,7 +148,7 @@ return (
           onMouseEnter={()=> {setOtherIcons("1"); setDescription3(true)}}
           onMouseLeave={()=> {setOtherIcons(null); setDescription3(false) }}
           className="team1 flex h-96 items-center justify-center rounded-2xl bg-white shadow-md">
-           <img src={x.img} alt={x.id} className='h-96 '/>
+           <img src={x.img} alt={x.id} className='h-96 object-cover w-full'/>
             <div  className={`icons absolute transition-all top-12 z-20 shadow shadow-black left-0 text-white flex flex-col bg-[#D44216] w-fit h-fit p-3 gap-y-4 duration-500  ease-in-out ${
          
         otherIcons ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`} >
@@ -175,7 +175,7 @@ return (
           
           <div 
           onMouseEnter={()=>{setIcons3(true); setDescription4(true)}} onMouseLeave={()=>{setIcons3(false); setDescription4(false)}} className="team1 flex h-96 items-center justify-center rounded-2xl bg-white shadow-md">
-            <img src='team3.jpg' className='h-96 '/>
+            <img src='team3.jpg' className='h-96 object-cover w-full'/>
            <div  className={`icons absolute transition-all top-12 z-20 left-0 text-white flex flex-col bg-[#D44216] w-fit h-fit p-3 shadow shadow-black gap-y-4 duration-500  ease-in-out ${
           icons3 ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`} >
           < FaXTwitter />
@@ -197,7 +197,7 @@ return (
 
         <div className="team min-w-0 flex-[0_0_100%] px-3 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
           <div onMouseEnter={()=>{ setIcons4(true); setDescription5(true)}} onMouseLeave={()=> {setIcons4(false); setDescription5(false)}} className="team1 flex h-96 items-center justify-center rounded-2xl bg-white shadow-md">
-            <img src='team-6.jpg' className='h-96 '/>
+            <img src='team-6.jpg' className='h-96 object-cover w-full'/>
           <div  className={`icons absolute transition-all top-12 z-20 left-0 text-white flex flex-col bg-[#D44216] w-fit h-fit p-3 shadow shadow-black gap-y-4 duration-500  ease-in-out ${
           icons4 ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`} >
           < FaXTwitter />
@@ -220,7 +220,7 @@ return (
 
         <div className="team min-w-0 flex-[0_0_100%] px-3 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
           <div onMouseEnter={()=> {setIcons5(true); setDescription6(true)}} onMouseLeave={()=> {setIcons5(false); setDescription6(false)}} className="team1 flex h-96 items-center justify-center rounded-2xl bg-white shadow-md">
-            <img src='team-7.jpg' className='h-96 '/>
+            <img src='team-7.jpg' className='h-96 object-cover w-full'/>
           <div  className={`icons absolute transition-all top-12 z-20 left-0 text-white flex flex-col bg-[#D44216] w-fit h-fit p-3 shadow shadow-black gap-y-4 duration-500  ease-in-out ${
           icons5 ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`} >
           < FaXTwitter />

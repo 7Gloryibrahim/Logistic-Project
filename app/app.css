@@ -920,6 +920,10 @@ transform: rotateX(0deg);
 .team1:hover img{
 transform: scale(1.1);
 }
+
+.blog-img{
+ 
+}
  
 /*---break---*/
 @theme inline {
