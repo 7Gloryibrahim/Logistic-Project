@@ -160,7 +160,7 @@ useEffect(() => {
                             <li className="Blog flex">BLog <MdArrowDropDown  className="mt-1"/>
                             
                             <ul className="Blog-menu">
-                                 <Link to="/Blog">   <li className="Blog-list">Blog</li></Link>
+                                    <li className="Blog-list"><Link to="/Blog">Blog</Link></li>
                                     <li className="Blog-list">Blog Standard</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
