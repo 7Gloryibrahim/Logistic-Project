@@ -64,8 +64,8 @@ const handleToggle3 = ()=> {
                 
                 <motion.div
                 
-                  initial={{y:10, opacity: 0, scale:0.8}}
-            whileInView={{y:0, opacity:1, scale:1}}
+                  initial={{y:10,  scale:0.8}}
+            whileInView={{y:0,  scale:1}}
             transition={{duration:0.8, ease:"easeOut"}}
                 
                 className="relative  rounded-t-full rounded-b-full">
@@ -93,8 +93,8 @@ const handleToggle3 = ()=> {
 
                  <motion.div
                  
-                   initial={{y:10, opacity: 0, scale:0.8}}
-            whileInView={{y:0, opacity:1, scale:1}}
+                   initial={{y:10,  scale:0.8}}
+            whileInView={{y:0,  scale:1}}
             transition={{duration:0.8, ease:"easeOut"}}
                  
                  className="relative   rounded-t-full rounded-b-full">
@@ -121,8 +121,8 @@ const handleToggle3 = ()=> {
 
                  <motion.div
                  
-                   initial={{y:10, opacity: 0, scale:0.8}}
-            whileInView={{y:0, opacity:1, scale:1}}
+                   initial={{y:10,  scale:0.8}}
+            whileInView={{y:0, scale:1}}
             transition={{duration:0.8, ease:"easeOut"}}
                  
                  className="relative  rounded-t-full rounded-b-full">
