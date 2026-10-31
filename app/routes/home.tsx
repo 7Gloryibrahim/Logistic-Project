@@ -1,4 +1,4 @@
-import {Page} from './page-one'
+import Page from './page'
 
 export default function Home() {
  return<Page/>;

@@ -1,14 +1,19 @@
 import { PiSelectionBackgroundFill } from "react-icons/pi"
-import {Nav} from "../routes/Nav"
+import Nav from "../routes/Nav"
 import Solution from "../routes/Solution"
 import { motion } from "framer-motion"
-
-
+import Footer from "~/routes/footer"
+import SmoothScroll from "~/routes/smoothScroll"
+import Mission from "~/routes/mission"
+import Team from "~/routes/team"
+import BookBtn from "~/routes/book"
+import Delivery from "~/routes/delivery"
 export default function AboutUs(){
 
 
     return(
-        <div className="bg-white overflow-hidden font-sans select-none" >
+        <div className="bg-white overflow-x-hidden font-sans select-none" >
+            <SmoothScroll/>
             <Nav/>
             
             <div className="relative  ">
@@ -30,7 +35,7 @@ export default function AboutUs(){
                 </div>
         {/*Hero section*/}
         <section>
-                <div style={{backgroundImage:"url('/workers1.jpg')", backgroundPosition:"center", backgroundSize:"cover",backgroundAttachment:"fixed", overflow:"hidden",}} className="h-[140vh]">
+                <div style={{backgroundImage:"url('/workers1.jpg')", backgroundPosition:"center", backgroundSize:"cover",backgroundAttachment:"fixed", overflow:"hidden",}} className="h-[50em] lg:h-[140vh]">
                 {/*Hero Text */}
                 <div className="heroText items-center absolute z-40 top-80 left-4 w-[90%] lg:w-[52%]  text-white lg:left-20 backdrop-blur-lg border-2 border-white rounded-2xl p-7">
                     <div className="w-fit">
@@ -58,20 +63,33 @@ export default function AboutUs(){
                 </div>
                 </div>
                 {/*Half Rotating Container*/}
-                <img src="/container2.png"className="container2 left-7 top-[570px]  absolute lg:top-[620px] w-52"/>
+                <img src="/container2.png"className="container2 left-7 top-[570px] z-20  absolute lg:top-[620px] w-52"/>
                 </div>
                 </section>
             </div>
            
             <Solution/>
-          <section className="relative" style={{backgroundImage:"url('/bg2.avif')", height:"140vh", backgroundPosition:"center", backgroundSize:"cover", backgroundAttachment:"fixed", overflow:"hidden", }}>
-            <div className="bg-black/50 inset-0 absolute"></div>
+          <section className="relative min-w-screen " style={{backgroundImage:"url('/bg2.avif')",  backgroundPosition:"center", backgroundSize:"cover", backgroundAttachment:"fixed", overflow:"hidden", }}>
+            {/* <div className="bg-black/50 inset-0  absolute"></div> */}
             <div>
-                <img src="/container1.png" className="absolute left-[70%]"/>
-                
+                <img src="/container1.png" className="absolute -top-16  lg:z-30 left-[20%]"/>
             </div>
-          </section>
 
+                <div className="relative lg:mb-32 z-20">
+                    <Mission />
+                </div>
+
+                <section>
+                    <Team/>
+                </section>
+                        
+
+                <section>
+                   <Delivery/>
+                </section>
+
+          </section>
+            <Footer/>
         </div>
       
 

@@ -1,4 +1,4 @@
-import { useState,} from "react";
+import { useState,useEffect} from "react";
 import Solution  from "./Solution";
 import { Link } from "react-router";
 import { FaFacebookF } from "react-icons/fa6";
@@ -22,22 +22,55 @@ import {motion} from "framer-motion"
 import Latest from "./latest"
 import Why from "./why"
 import Transportation from "./transportation";
-import Testimonials from "./testimonials";
+import Comments from "./Comments";
 import Video from "./video"
 import { IoIosClose } from "react-icons/io";
 import Quee from "./quee";
 import Team from "./team";
-import Blog from "./blog"
-
-export function Page(){
+import Blog from "./Pageblog"
+import Footer from "./footer"
+import SmoothScroll from "./smoothScroll";
+import PageBlog from "./Pageblog";
+export default function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
+    const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+    const handleScroll = () => {
+        setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    };
+}, []);
+
     return(
         <div className="bg-[#111827] font-sans select-none">
-            <nav>
-             <div className="absolute z-50 w-full bg-[#192235] sm:block md:block">
+            <SmoothScroll/>
+            <motion.nav
+            
+             initial={{y:-100, opacity:0}}
+          animate={{y:0, opacity:1}}
+           transition={{duration:0.8, ease: "easeInOut"}}
+            
+            className="z-50 top-0 left-0 w-full fixed">
+             <div className="absolute z-50 w-full bg-[#192235] shadow shadow-black  sm:block md:block">
             {/*first Top */}
-            <div className="bg-[#111827] hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
+            <motion.div
+            
+             initial={false}
+    animate={{
+        height: scrolled ? 0 : "auto",
+        opacity: scrolled ? 0 : 1,
+        y: scrolled ? -20 : 0,
+    }}
+    transition={{ duration: 0.3, ease: "easeInOut" }}
+            
+            className="bg-[#111827] hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
                 {/* Left side */}
                 <div className="">
                     <ul className=" sm:flex sm:gap-5  sm:py-3  ">
@@ -64,7 +97,7 @@ export function Page(){
                        >Search</li>
                     </ul>
                 </div>
-            </div>
+            </motion.div>
 
             {/*Second Top */}
 
@@ -81,23 +114,19 @@ export function Page(){
                             <li className="Drop-one">Header One</li>
                             <li className="Drop-one">Header Two</li>
                             <li className="Drop-one">Header Three</li>
-                            <ul className="Fs-menu flex justify-between ">
-                            <li className="Drop-one  ">Header Styles</li>
-                             < RiArrowRightWideFill className="arrow-one mt-3 mr-3 text-2xl text-[#F75128]" />
-
-                            {/* Second Drop-down */}
-
-                            <ul className="second-menu font-bold text-white">
-                                <li className="home-head-one">Header One</li>
-                                <li className="home-head-one">Header Two</li>
-                                <li className="home-head-one">Header Three</li>
-
-                            </ul>
-
-                           </ul>
+                            <li className="Fs-menu flex justify-between">
+                                <span className="Drop-one">Header Styles</span>
+                                <RiArrowRightWideFill className="arrow-one mt-3 mr-3 text-2xl text-[#F75128]" />
+                                {/* Second Drop-down */}
+                                <ul className="second-menu font-bold text-white">
+                                    <li className="home-head-one">Header One</li>
+                                    <li className="home-head-one">Header Two</li>
+                                    <li className="home-head-one">Header Three</li>
+                                </ul>
+                            </li>
                             </ul>
                             </li>
-                            <li className="flex">About <MdArrowDropDown  className="mt-1"/></li>
+                            <li className="flex"><Link to="/AboutUs">About</Link> <MdArrowDropDown  className="mt-1"/></li>
                             <li className="services flex">Services <MdArrowDropDown className="mt-1"/>
                             <ul className="service-drop-down ">
                                 <li className="service-menu">Services</li>
@@ -114,9 +143,9 @@ export function Page(){
                                 <ul className="Pages-menu">
                                        <li className="pages-list">Team</li> 
                                         <li className="pages-list">Team Details</li>
-                                        <li className="pages-list">Projects</li>
+                                        <li className="pages-list"><Link to="/Project">Projects</Link></li>
                                         <li className="pages-list">Project Details</li>
-                                        <li className="pages-list">Testimonials</li>
+                                         <li className="pages-list"><Link to="/Testimonials">Testimonials</Link></li>
                                         <li className="pages-list">Pricing</li>
                                         <li className="pages-list">FAQ</li>
                                         <li className="pages-list">404 Error</li>
@@ -139,7 +168,7 @@ export function Page(){
                             <li className="Blog flex">Blog <MdArrowDropDown  className="mt-1"/>
                             
                             <ul className="Blog-menu">
-                                    <li className="Blog-list">Blog</li>
+                                    <li className="Blog-list"><Link to="/Blog">Blog</Link></li>
                                     <li className="Blog-list">Blog Standard</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
@@ -148,11 +177,11 @@ export function Page(){
                             </ul>
                             
                             </li>
-                            <li>Contact</li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
 
                             <div className="hidden  sm:hidden md:hidden lg:block">
-                        <button className="track-order border-2 border-double border-white text-white  p-3 h-20  md:block">TRACK ORDER</button>
+                        <Link to="/contact"><button className="track-order border-2 border-double border-white text-white  p-3 h-20  md:block">TRACK ORDER</button></Link>
                        
                     </div>
                          {/*Mobile Icon */}
@@ -164,7 +193,7 @@ export function Page(){
                 </div>
 
             </div>
-            </nav>
+            </motion.nav>
           
             <section>
             {/*Hero Background-Image */}
@@ -267,7 +296,7 @@ export function Page(){
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:2, ease:"easeInOut"}}
                 viewport={{once:false}}
-                className="absolute object-cover h-fit w-72  top-96 left-[78%] z-50 hidden sm:hidden md:hidden lg:block border border-[#F75128] rounded-2xl ">
+                className="absolute object-cover h-fit w-72  top-96 left-[78%] z-40 hidden sm:hidden md:hidden lg:block border border-[#F75128] rounded-2xl ">
                     <video
                     autoPlay
                     playsInline
@@ -281,7 +310,7 @@ export function Page(){
                 transition={{duration:2, ease:"easeInOut"}}
                 viewport={{once:false}}
                     className="absolute backdrop-blur-md border border-[#F75128] p-1 rounded-2xl top-36">
-                       <Link to='/AboutUs'> <button className="bg-[#111827] text-[#F75128] rounded-2xl p-3 cursor-pointer border border-amber-50">Our Team</button></Link>
+                     <button className="bg-[#111827] text-[#F75128] rounded-2xl p-3 cursor-pointer border border-amber-50">   <Link to='/AboutUs'>Our Team</Link></button>
                     </motion.div>
                 </motion.div>
                {/*Mini Hero Box*/}
@@ -290,7 +319,7 @@ export function Page(){
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:2, ease:"easeInOut"}}
                 viewport={{once:false}}
-                className="absolute hidden  z-50 top-96 backdrop-blur-md text-white p-7 border border-[#F75128] rounded-2xl
+                className="absolute hidden  z-40 top-96 backdrop-blur-md text-white p-7 border border-[#F75128] rounded-2xl
                 left-7 sm:hidden md:hidden lg:block ">
                    
                    <div className="flex items-center gap-1 ">
@@ -316,7 +345,7 @@ export function Page(){
                                    }}
                                 viewport={{once:false}}
                                 
-               className=" relative text-wrap z-50 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-[570px] lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
+               className=" relative text-wrap z-10 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-[570px] lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
                 {/*First Text*/}
                 <div >
                     <h1 className="text-white bebas-neue ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full  ">Modern Logistic </h1>
@@ -429,11 +458,12 @@ export function Page(){
     <Latest />
     <Why />
     <Transportation/>
-     <Testimonials/>
+     <Comments/>
      <Video/>
      <Quee/>
      <Team/>
-     <Blog/>
+     <PageBlog/>
+     <Footer/>
          </div>
     )
    

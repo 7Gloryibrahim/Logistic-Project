@@ -16,9 +16,12 @@ export default function Video(){
 
     return(
         <div className="bg-[] relative h-[74em] lg:h-[45em]">
-          <div className="hidden absolute -top-80 lg:block md:hidden">
-                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" width="1351" height="320" preserveAspectRatio="none">
-  <path d="M 0 235.1 C 80 221.6 320 155 480 154.6 C 640 154.1 800 231.7 960 232.4 C 1120 233.1 1360 171 1440 158.7 L 1440 320 L 0 320 Z" fill="#111827"/>
+          <div className="hidden absolute -top-72 left-0  lg:block md:hidden">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"  height="320" 
+                     preserveAspectRatio="none"
+                       className="block w-full h-auto"
+                     >
+  <path d="M 0 235.1 C 80 221.6 320 155 480 154.6 C 640 154.1 800 231.7 960 232.4 C 1120 233.1 1360 171 1440 158.7 L 1440 320 L 0 320 Z" fill="#111827" />
 </svg>
                  </div>
             <div className="flex-1 ml-3 lg:mx-10  lg:gap-40  lg:flex lg:flex-2 md:flex-2 absolute top-36 ">
@@ -37,7 +40,7 @@ export default function Video(){
                 <div className="flex gap-8 items-center">
                     <button onClick={()=> setFaq(!faq)} className="text-[16px] lg:text-2xl text-[#D44216] comic-neue-regular mb-4">How do you handle returns or exchanges?</button>
                    <div onClick={()=>setFaq(!faq)} className="">
-                  { faq ? <LuChevronDown className="text-[#CBCFDA] text-2xl comic-neue-regular" /> : <LuChevronUp className="text-[#D44216] text-2xl"/>}
+                  { faq ? <LuChevronDown className="text-[#111827] text-2xl comic-neue-regular" /> : <LuChevronUp className="text-[#D44216] text-2xl"/>}
                     </div>
                     </div>
                     {
@@ -50,7 +53,7 @@ export default function Video(){
                     <div className="flex gap-28 items-center">
                         <p onClick={()=> setSecondFaq(!secondFaq)} className="text-[16px] lg:text-2xl text-[#D44216] comic-neue-regular mb-4">What does business consulting do?</p>
                    <div onClick={()=>  setSecondFaq(!secondFaq)} className="">
-                    {secondFaq ? <LuChevronDown className="text-[#CBCFDA] text-2xl comic-neue-regular"/> : <LuChevronUp className="text-[#D44216] text-2xl"/> }
+                    {secondFaq ? <LuChevronDown className="text-[#111827] text-2xl comic-neue-regular"/> : <LuChevronUp className="text-[#D44216] text-2xl"/> }
                     </div>
                     </div>
 
@@ -65,13 +68,13 @@ export default function Video(){
                         <p onClick={()=>setThirdfaq(!thirdFaq)} className="text-[16px] lg:text-[22px] text-[#D44216] comic-neue-regular mb-4">Can I cancel a shipment after it's been booked?</p>
                     
                     <div onClick={()=> setThirdfaq(!thirdFaq)}>
-                         {thirdFaq ? < LuChevronDown className="text-[#CBCFDA] text-2xl comic-neue-regular"/> : <LuChevronUp className="text-[#D44216] text-2xl"/> }
+                         {thirdFaq ? < LuChevronDown className="text-[#111827] text-2xl comic-neue-regular"/> : <LuChevronUp className="text-[#D44216] text-2xl"/> }
                          </div>
                     </div>
                 
                     {
                         thirdFaq && (
-                            <p className="w-96 lg:w-[28em] comic-neue-bold-italic mb-3 text-[#445262]">Yes, you can cancel a shipment as long as it has not yet been picked up or dispatched.</p>
+                            <p className="w-96 lg:w-[28em] comic-neue-bold-italic mb-3 text-[#111827]">Yes, you can cancel a shipment as long as it has not yet been picked up or dispatched.</p>
                         )
                     }
 
@@ -79,7 +82,7 @@ export default function Video(){
                     <div className="flex gap- items-center">
                         <p onClick={()=>  setFourthfaq (!fourthFaq)} className="text-[16px] lg:text-[22px] text-[#D44216] comic-neue-regular mb-4">Can you assist with customs clearance procedures?</p>
                         <div onClick={()=> setFourthfaq(!fourthFaq)}>
-                        {fourthFaq ?  < LuChevronDown className="text-[#CBCFDA] text-2xl comic-neue-regular"/> : <LuChevronUp className="text-[#D44216] text-2xl"/>}
+                        {fourthFaq ?  < LuChevronDown className="text-[#111827] text-2xl comic-neue-regular"/> : <LuChevronUp className="text-[#D44216] text-2xl"/>}
                         </div>
                     </div>
                     { fourthFaq && (

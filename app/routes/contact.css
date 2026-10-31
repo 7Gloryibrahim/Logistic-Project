@@ -1,0 +1,63 @@
+.contact-map {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  border: 2px solid #d44216;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+  overflow: hidden;
+}
+
+.contact-map .contact-marker-icon {
+  background: transparent;
+  border: 0;
+}
+
+.contact-map .contact-marker-pin {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  transform: rotate(-45deg);
+  border: 2px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  background-color: #d44216;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 35%);
+}
+
+.contact-map .contact-marker-pin span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.contact-map .leaflet-control-zoom a {
+  color: #d44216;
+}
+
+.contact-map .leaflet-control-zoom a:hover {
+  color: #fff;
+  background-color: #d44216;
+}
+
+.contact-popup .leaflet-popup-content-wrapper {
+  color: #fff;
+  background-color: #d44216;
+  border-radius: 10px;
+}
+
+.contact-popup .leaflet-popup-tip {
+  background-color: #d44216;
+}
+
+.contact-popup .leaflet-popup-close-button {
+  color: #fff;
+}
+
+.contact-popup .leaflet-popup-close-button:hover {
+  color: #ffe0d6;
+}

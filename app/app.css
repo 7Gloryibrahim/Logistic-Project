@@ -3,7 +3,7 @@
 
 @import "tailwindcss";
 @import "tw-animate-css";
-
+@import "lenis/dist/lenis.css";
 
 /*---break---*/
 @custom-variant dark (&:is(.dark *));
@@ -11,6 +11,7 @@ body {
   font-family: 'Inter', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 
@@ -57,6 +58,15 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 
 
 @theme {
@@ -262,9 +272,9 @@ transition: 1s ease;
 .Pages-menu{
 position: absolute;
 visibility: hidden;
-height: 400px;
+
 width: 200px;
-top:40px;
+top:34px;
 padding: 10px;
 background-color: #111827;
 border-top:#F75128 5px solid;
@@ -568,6 +578,8 @@ transform: rotateY(180deg);
       z-index: 5;
       transition: 1s ease-in-out;
     }
+
+
 
     .subhead::before{
       content: "";
@@ -921,8 +933,54 @@ transform: rotateX(0deg);
 transform: scale(1.1);
 }
 
-.blog-img{
- 
+.blogButton1.squash{
+  animation: blogButton 0.6s ease-in-out
+}
+
+@keyframes blogButton{
+  0%{ 
+    transform: scale(1,1);
+  }
+  30%{
+    transform: scale(1.25, 0.75);
+  }
+  50%{
+    transform: scale(1.15, 0.85);
+  }
+  65%{
+    transform:scale(0.95, 1.05);
+  }
+  75%{
+    transform:scale(1.05, 0.95);
+  }
+  100%{
+    transform: scale(1, 1);
+  }
+}
+
+.squash2{
+  animation: squash 0.6s ease-in-out
+}
+
+@keyframes squash {
+   0%{ 
+    transform: scale(1,1);
+  }
+  30%{
+    transform: scale(1.25, 0.75);
+  }
+  50%{
+    transform: scale(1.15, 0.85);
+  }
+  65%{
+    transform:scale(0.95, 1.05);
+  }
+  75%{
+    transform:scale(1.05, 0.95);
+  }
+  100%{
+    transform: scale(1, 1);
+  }
 }
  
 /*---break---*/

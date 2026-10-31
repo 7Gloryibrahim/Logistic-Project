@@ -1,5 +1,5 @@
 
-import { useState, type ChangeEvent, type FormEvent, type TextareaHTMLAttributes } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import {object, z} from 'zod'
 import { IoAirplaneSharp } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
@@ -46,37 +46,28 @@ const [form, setForm]= useState({
 const [errors, setErrors] = useState<Record<string, string>>({
 
 });
+const [submissionStatus, setSubmissionStatus] = useState<"idle" | "sending" | "success" | "error" | "not-configured">("idle");
+
+const fieldError = (name: string) => errors[name] && (
+    <p id={`${name}-error`} role="alert" className="text-red-600 text-sm">
+        {errors[name]}
+    </p>
+);
 
 const handleChange =(
     e: ChangeEvent <HTMLInputElement | HTMLSelectElement| HTMLTextAreaElement>
 ) =>{
 
         const {name, value} = e.target;
-        // if(name === "phone" && !/^\d*$/.test(value) ) 
-    //     if(name === "phone" && !/^\d*$/.test(value))
-    //     {
-    //         return
-    //     }
-
-       
-    
-    setForm({
-        ...form, [e.target.name]: e.target.value
-    });
-
-     if (name === "phone") {
-    setErrors({
-      ...errors,
-      phone: ""
-    });
-}
+    setForm((currentForm) => ({ ...currentForm, [name]: value }));
+    setErrors((currentErrors) => ({ ...currentErrors, [name]: "" }));
+    setSubmissionStatus("idle");
     };
 
-const handleSubmit = (
-    e: FormEvent<HTMLFormElement>) =>{
-            e.preventDefault();
-            const result = requestQuote.safeParse(form);
-             if (!result.success) {
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const result = requestQuote.safeParse(form);
+    if (!result.success) {
     const newErrors: Record<string, string> = {};
 
     result.error.issues.forEach((issue) => {
@@ -88,15 +79,50 @@ const handleSubmit = (
     });
 
     setErrors(newErrors);
+    setSubmissionStatus("idle");
     return;
     }
     setErrors({});
 
-        console.log("Form is valid:", result.data);
+    const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+    if (!endpoint) {
+        console.error("Quote form is not configured: VITE_FORMSPREE_ENDPOINT is missing.");
+        setSubmissionStatus("not-configured");
+        return;
+    }
 
-        alert("Quote request submitted successfully!");
-        
-    };
+    setSubmissionStatus("sending");
+    try {
+        const response = await fetch(endpoint, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: new FormData(e.currentTarget),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Formspree returned status ${response.status}`);
+        }
+
+        setSubmissionStatus("success");
+        setForm({
+            firstName: "",
+            middleName: "",
+            lastName: "",
+            phone: "",
+            email: "",
+            pickupLocation: "",
+            deliveryLocation: "",
+            service: "",
+            load: "",
+            loadSize: "",
+            date: "",
+            notes: "",
+        });
+    } catch (error) {
+        console.error("Quote request could not be delivered.", error);
+        setSubmissionStatus("error");
+    }
+};
 
         const handleReset = () =>{
             setForm({
@@ -113,6 +139,8 @@ const handleSubmit = (
     date: "",
     notes: ""
             })
+            setErrors({});
+            setSubmissionStatus("idle");
         }
 
 return(
@@ -161,34 +189,39 @@ return(
                 {/*Second Card*/}
         <div className="relative">
                 <motion.div
-                initial={{ y:-50}}
-                whileInView={{ y:0}}
+                initial={{opacity:0, y:-50}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration:2, ease:"easeInOut"}}
                 viewport={{once:false}}
-                className="bg-white left-6 lg:left-0  absolute h-[70em] lg:h-[45em] shadow-2xl shadow-[#192235] w-[23em] md:w-[30em] lg:w-[30em] -ml-9 mr-7 rounded -top-36">
+                className="bg-white left-6 lg:left-0  absolute h-fit lg:h-fit shadow-2xl shadow-[#192235] w-[23em] md:w-[30em] lg:w-full -ml-9 mr-7 rounded -top-36">
                     <div>
                         <p className="text-4xl mt-15 font-bold text-[#192235] ml-12">Request a Quote</p>
                     </div>
 
                     <div>
-                        <form noValidate onSubmit={handleSubmit} className="items-center mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-7 gap-4">
-                            {/* <label htmlFor="firstName" className="block">FirstName</label> */}
-                        <input required name="firstName" value={form.firstName} id="firstName" onChange={handleChange} placeholder="First Name" className="border-2 p-2"/>
+                        <form noValidate  onSubmit={handleSubmit} className=" w-full items-center mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-7 gap-4">
+                        <div>
+                            <input required name="firstName" value={form.firstName} id="firstName" onChange={handleChange} placeholder="First Name" aria-invalid={Boolean(errors.firstName)} aria-describedby={errors.firstName ? "firstName-error" : undefined} className="border-2 w-full min-w-0 p-2"/>
+                            {fieldError("firstName")}
+                        </div>
                        
-                       <input required onChange={handleChange} value={form.middleName} name="middleName" id="middleName" placeholder="Midddle Name" className="border-2 p-2"/>
+                       <input onChange={handleChange} value={form.middleName} name="middleName" id="middleName" placeholder="Middle Name (optional)" className="border-2 p-2"/>
                        
-                        <input required onChange={handleChange} value={form.lastName} name="lastName" id="lastName" placeholder="Last Name" className="border-2 p-2 "/>
+                        <div>
+                            <input required onChange={handleChange} value={form.lastName} name="lastName" id="lastName" placeholder="Last Name" aria-invalid={Boolean(errors.lastName)} aria-describedby={errors.lastName ? "lastName-error" : undefined} className="w-full min-w-0 border-2 p-2 "/>
+                            {fieldError("lastName")}
+                        </div>
                     <div className="relative">
-                       <input  onChange={handleChange} name="phone" value={form.phone} type="tel" id="phone" maxLength={11}  pattern="[0-9]{11}"   placeholder="Phone" className="  border-2 p-2"/>
-                        {errors.phone && (
-                        <p className="text-red-500 text-sm absolute">
-                            {errors.phone}
-                        </p>
-                        )}
+                       <input required onChange={handleChange} name="phone" value={form.phone} type="tel" id="phone" maxLength={11} pattern="[0-9]{11}" placeholder="Phone (11 digits)" aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? "phone-error" : undefined} className="border-2 p-2 w-full"/>
+                        {fieldError("phone")}
                             </div>
-                        <input name="email" onChange={handleChange} type="email" required placeholder="atara1@gmail.com" className="p-2 border-2"/>
+                        <div>
+                            <input name="email" value={form.email} onChange={handleChange} type="email" required placeholder="Email address" aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? "email-error" : undefined} className="p-2 w-full min-w-0 border-2"/>
+                            {fieldError("email")}
+                        </div>
                    
-                    <select name="load" onChange={handleChange} value={form.load}>
+                    <div>
+                    <select required name="load" onChange={handleChange} value={form.load} aria-invalid={Boolean(errors.load)} aria-describedby={errors.load ? "load-error" : undefined}>
                         <option disabled value="">Select Your Load Type</option>
                         <option  value="furniture">Furniture</option>
                         <option value="electronics">Electronics</option>
@@ -199,38 +232,48 @@ return(
                         <option value="other">Other</option>
 
                     </select>
+                    {fieldError("load")}
+                    </div>
                      
-                        <select name="service" value={form.service} onChange={handleChange} required>
+                    <div>
+                        <select name="service" value={form.service} onChange={handleChange} required aria-invalid={Boolean(errors.service)} aria-describedby={errors.service ? "service-error" : undefined}>
                           <option value="" disabled>Services Types</option>
                           <option value="01">Standard Delivery</option> 
                           <option value="02">Express Delivery</option> 
                           <option value="03">Delicate Load</option> 
                             <option value="04">Moving Service</option>
                         </select>
+                        {fieldError("service")}
+                    </div>
 
-                           <label ><input name="loadSize" onChange={handleChange} value="medium" checked={form.loadSize === "medium"} type="radio"/>Medium</label> 
+                    <fieldset className="md:col-span-2">
+                        <legend>Load size</legend>
+                        <div className="flex flex-wrap gap-3">
+                           <label ><input required name="loadSize" onChange={handleChange} value="medium" checked={form.loadSize === "medium"} type="radio"/> Medium</label> 
                             <label><input name="loadSize"  checked={form.loadSize === "small"} onChange={handleChange} value="small" type="radio"/>Small</label>
                            <label> <input name="loadSize"  checked={form.loadSize === "large"} onChange={handleChange} value="large" type="radio"/>Large</label>
                             <label><input name="loadSize"  checked={form.loadSize === "extra large"} onChange={handleChange} value="extra large" type="radio"/>Extra Large</label>
-
-                        {/* <option disabled>Load Size</option>
-                        <option >Medium</option>
-                        <option>Small</option>
-                        <option>Large</option>
-                        <option>Extra Large</option> */}
+                        </div>
+                        {fieldError("loadSize")}
+                    </fieldset>
                         
-
-                       <label className="text-[#192235]">Pickup Location <input name="pickupLocation" type="address" value={form.pickupLocation} onChange={handleChange} placeholder="14, Oyedele Oguniyi Street Anthony " className="p-2 border-2 rounded"/></label> 
+                       <div><label className="text-[#192235]">Pickup Location <input required name="pickupLocation" type="text" value={form.pickupLocation} onChange={handleChange} placeholder="Pickup address" aria-invalid={Boolean(errors.pickupLocation)} aria-describedby={errors.pickupLocation ? "pickupLocation-error" : undefined} className="p-2 w-full min-w-0 border-2 rounded"/></label>{fieldError("pickupLocation")}</div>
                         
-                        <label className="text-[#192235]"> Delivery Location<input name="deliveryLocation" type="address" onChange={handleChange} value={form.deliveryLocation} placeholder="Block 9, Baba Omojola Estate, Gbagada, Lagos Nigeria " className="border-2 p-2"/></label>
-                        <textarea name="notes" value={form.notes} onChange={handleChange} className="border-2 p-3" placeholder="Notes"></textarea>
+                        <div><label className="text-[#192235]">Delivery Location<input required name="deliveryLocation" type="text" onChange={handleChange} value={form.deliveryLocation} placeholder="Delivery address" aria-invalid={Boolean(errors.deliveryLocation)} aria-describedby={errors.deliveryLocation ? "deliveryLocation-error" : undefined} className="w-full min-w-0 border-2 p-2"/></label>{fieldError("deliveryLocation")}</div>
+                        <textarea name="notes" value={form.notes} onChange={handleChange} className="w-full min-w-0 border-2 p-3" placeholder="Notes"></textarea>
 
-                             <input required onChange={handleChange} value={form.date} name="date" id="date" type="date" className="border-2"/>
+                        <div><input required onChange={handleChange} value={form.date} name="date" id="date" type="date" aria-invalid={Boolean(errors.date)} aria-describedby={errors.date ? "date-error" : undefined} className="w-full min-w-0 border-2"/>{fieldError("date")}</div>
 
 
-                        
-                        <button type="submit" className="bg-[#192235] text-white font-bold w-32 p-1 rounded">
-                            Request Quote
+                        <div aria-live="polite" className="md:col-span-2">
+                            {submissionStatus === "sending" && <p role="status">Sending your quote request...</p>}
+                            {submissionStatus === "success" && <p role="status" className="text-green-700">Your quote request was sent successfully. We’ll be in touch soon.</p>}
+                            {submissionStatus === "error" && <p role="alert" className="text-red-600">We couldn’t send your request. Please try again later or contact us directly.</p>}
+                            {submissionStatus === "not-configured" && <p role="alert" className="text-red-600">This form isn’t connected yet. Please contact us directly while we finish setting it up.</p>}
+                        </div>
+
+                        <button type="submit" disabled={submissionStatus === "sending"} className="bg-[#192235] text-white font-bold w-32 p-1 rounded disabled:opacity-50">
+                            {submissionStatus === "sending" ? "Sending..." : "Request Quote"}
                         </button>
                             <button type="button" onClick={handleReset} className="bg-[#192235] text-white font-bold w-32 p-1 rounded">Reset</button>
                         </form>
@@ -256,4 +299,3 @@ return(
 )
 
 }
-

@@ -132,9 +132,9 @@ export default function Services(){
                 <section>
                     <img src="/container1.png" alt="container1" className=" blueOrange absolute hidden md:block lg:block -top-3 left-2.5" />
                     <div className="absolute w-full top-28">
-                    <div className="absolute left-24  flex md:left-72 lg:left-130   items-center gap-3">
+                    <div className="absolute   flex flex-row w-full justify-center  items-center gap-3">
                         <div className="h-1 w-6 bg-[#F75127] rounded-2xl"></div>
-                        <div className="font-bold font-sans text-2xl text-[#111827]">
+                        <div className="font-bold font-sans text-2xl  text-[#111827]">
                             <p>
                                 Our Services
                             </p>
@@ -142,10 +142,10 @@ export default function Services(){
                         <IoAirplaneSharp  className="IoAirplaneSharp text-[#CBCFDA] lg:text-[#F75127] text-2xl"/>
                     </div>
 
-                    <div className="absolute mt-10 left-5 text-2xl uppercase md:text-3xl md:left-44 lg:left-72 lg:mt-10 font-bold text-[#111827]">
-                        <p className="lg:text-5xl comic-neue-bold">Provide Efficient Logistics</p>
+                    <div className="absolute mt-10 left-5 right-5 text-2xl uppercase md:text-3xl text-center font-bold text-[#111827]">
+                        <p className="lg:text-5xl comic-neue-bold flex flex-row w-full text-center justify-center">Provide Efficient Logistics</p>
 
-                         <div className="flex ml-12 lg:text-5xl lg:justify-center uppercase gap-2">
+                         <div className="flex  flex-row justify-center lg:text-5xl lg:justify-center uppercase gap-2 w-full">
                         <p>Solutions</p>
                         <p className="underline text-[#F75127] md:text-[#111827] lg:text-[#F75127]">Business</p>
                     </div>

@@ -86,7 +86,7 @@ export default function Solution( {
                             </div>
                             </div>
                              {/* Button & Box */}
-                             <div className=" flex-1 gap-7 items-center mt-5 md:flex lg:gap-16 lg:flex">
+                             <div className=" flex-1 gap-7 justify-center items-center mt-5 md:flex lg:gap-16 lg:flex">
                             <button className="button-more text-white mb-3 ml-14 bg-[#F75128] h-10 w-fit pl-2 pr-2 font-bold rounded lg:mb-0 lg:ml-0" ><Link to="/AboutUs"> More About Us </Link></button>
                             <div className="flex items-center gap-2">
                               <TbPhoneCalling className="text-2xl text-[#F75128]  "/>

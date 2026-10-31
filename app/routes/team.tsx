@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
+import { motion } from 'framer-motion';
 import { FaXTwitter } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 import {ImFacebook } from "react-icons/im";
@@ -75,7 +76,7 @@ const teams = [
   
 ]
 return (
-<section className="mt-20 bg-[#CBCFDA] px-6 py-12">
+<section className="mt-20 bg-[#C3C7D8] px-6 py-12 h-[60em]">
 
     <div className="flex items-center gap-4 justify-center mt-32">
        <div className='h-1 w-6 rounded bg-[#D44216]'></div> 
@@ -83,7 +84,11 @@ return (
     </div>
 
     <div>
-        <p className='text-3xl flex  justify-center lg:text-5xl bebas-neue-regular tracking-wide'>OUR EXPERT LOGISTIC TEAM</p>
+        <motion.p
+        initial={{opacity:0, y:-10, scale:0.8}}
+        whileInView={{opacity:1, y:0, scale:1}}
+        transition={{duration:0.8, ease:"easeInOut"}}
+        className='text-3xl flex  justify-center lg:text-5xl bebas-neue-regular tracking-wide'>OUR EXPERT LOGISTIC TEAM</motion.p>
     </div>
 <div className="mx-auto max-w-5xl mt-24">
 <div className="overflow-hidden" ref={emblaRef} >

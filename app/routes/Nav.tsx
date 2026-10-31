@@ -1,4 +1,4 @@
-import { useState,} from "react";
+import { useState,useEffect} from "react";
 
 import { Link } from "react-router";
 import { FaFacebookF } from "react-icons/fa6";
@@ -11,16 +11,52 @@ import { IoMenu } from "react-icons/io5";
 import { FaMagnifyingGlassChart } from "react-icons/fa6";
 import { RiArrowRightWideFill } from "react-icons/ri";
 import { MdArrowDropDown } from "react-icons/md";
+import { motion } from "framer-motion";
+import { FiX } from "react-icons/fi";
+import Contact from "./contact";
 
-export function Nav(){
+export default function Nav(){
+
     const [search, setSearch]= useState(false)
     const [ menu, setMenu] = useState(false)
+
+
+    const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+    const handleScroll = () => {
+        setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    };
+}, []);
+
+
     return(
         <div>
-         <nav>
-             <div className="absolute z-50 w-full bg-[#192235] sm:block md:block">
+         <motion.nav
+         
+         initial={{y:-100, opacity:0}}
+          animate={{y:0, opacity:1}}
+           transition={{duration:0.8, ease: "easeInOut"}}
+         className="z-50 fixed left-0 top-0 right-0 w-full">
+             <div className="absolute z-50 w-full bg-[#192235] shadow shadow-black sm:block md:block">
             {/*first Top */}
-            <div className="bg-[#111827] hidden z-50 sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
+            <motion.div 
+            
+             initial={false}
+    animate={{
+        height: scrolled ? 0 : "auto",
+        opacity: scrolled ? 0 : 1,
+        y: scrolled ? -20 : 0,
+    }}
+    transition={{ duration: 0.3, ease: "easeInOut" }}
+            
+            className="bg-[#111827] hidden z-50 sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
                 {/* Left side */}
                 <div className="">
                     <ul className=" sm:flex sm:gap-5  sm:py-3  ">
@@ -47,18 +83,18 @@ export function Nav(){
                        >Search</li>
                     </ul>
                 </div>
-            </div>
+            </motion.div>
 
             {/*Second Top */}
 
-                <div className="second-border flex sticky top-0 z-100 bg-[#111827] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-20">
+                <div className="second-border flex sticky top-0 z-50 bg-[#111827] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-16">
                     <div className="bg-[#F75128] w-72 " style={{clipPath:"polygon(0 0, 100% 0, 90% 100%, 0 100%)"}}>
                         <img src="/Truck1.png" alt="Truck" className="mt-4 pb-3 pr-3.5 sm:pl-1 sm:w "/>
                     </div>
                     {/*Nav bar at the top*/}
                     <div className=" flex justify-between w-full  font-bold">
                         <ul className=" hidden  sm:flex sm:ml-4 sm:gap-6 mt-5 text-white items-center md:hidden lg:flex    ">
-                            <li className="Home flex">Home <MdArrowDropDown className="mt-1" />
+                            <li className="Home flex"><Link to="/Page">Home</Link> <MdArrowDropDown className="mt-1" />
                             {/*First Drop Down */}
                             <ul className="Home-one">
                             <li className="Drop-one">Header One</li>
@@ -80,7 +116,7 @@ export function Nav(){
                            </ul>
                             </ul>
                             </li>
-                            <li className="flex">About <MdArrowDropDown  className="mt-1"/></li>
+                            <li className="flex"><Link to="/AboutUs">About</Link> <MdArrowDropDown  className="mt-1"/></li>
                             <li className="services flex">Services <MdArrowDropDown className="mt-1"/>
                             <ul className="service-drop-down ">
                                 <li className="service-menu">Services</li>
@@ -94,12 +130,14 @@ export function Nav(){
                             </li>
                             <li className=" Pages flex">Pages <MdArrowDropDown className="mt-1"/>
                             
-                                <ul className="Pages-menu">
+                                <ul className="Pages-menu h-fit">
                                        <li className="pages-list">Team</li> 
                                         <li className="pages-list">Team Details</li>
-                                        <li className="pages-list">Projects</li>
+                                         <Link to="/Blog"><li className="Blog-list">Blog</li></Link>
+                                         <li className="Blog-list">Blog Details</li>
+                                        <li className="pages-list"><Link to="/Project">Projects</Link></li>
                                         <li className="pages-list">Project Details</li>
-                                        <li className="pages-list">Testimonials</li>
+                                        <li className="pages-list"><Link to="/Testimonials">Testimonials</Link></li>
                                         <li className="pages-list">Pricing</li>
                                         <li className="pages-list">FAQ</li>
                                         <li className="pages-list">404 Error</li>
@@ -122,7 +160,7 @@ export function Nav(){
                             <li className="Blog flex">BLog <MdArrowDropDown  className="mt-1"/>
                             
                             <ul className="Blog-menu">
-                                    <li className="Blog-list">Blog</li>
+                                 <Link to="/Blog">   <li className="Blog-list">Blog</li></Link>
                                     <li className="Blog-list">Blog Standard</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
@@ -135,19 +173,20 @@ export function Nav(){
                         </ul>
 
                             <div className="hidden  sm:hidden md:hidden lg:block">
-                        <button className="track-order border-2 border-double border-white text-white  p-3 h-20  md:block">TRACK ORDER</button>
+                      <Link to="/contact"> <button className="track-order border-2 border-double border-white text-white  p-3 h-16  md:block">TRACK ORDER</button></Link>
                        
                     </div>
                          {/*Mobile Icon */}
-                    <div onClick={()=> setMenu(prev => !prev)} className="absolute right-5 top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128] md:hidden">
+
+                   <div onClick={()=> setMenu(true)} className="absolute left-96 md:left-[20em] top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128]  lg:hidden">
                         <IoMenu  />
-                    </div>
+                    </div> 
                     </div>
 
                 </div>
 
             </div>
-            </nav>
+            </motion.nav>
               <div
     onClick={() => setSearch(false)}
     className={`
@@ -177,9 +216,7 @@ export function Nav(){
     `}
 >
 
-    <div
-        onClick={(e) => e.stopPropagation()}
-        className="w-full flex justify-center">
+    <div onClick={(e) => e.stopPropagation()} className="w-full flex justify-center">
 
         <input
             type="text"
@@ -220,15 +257,20 @@ export function Nav(){
                         
                         `}
                 >
-           <div onClick={(e)=>e.stopPropagation() } className={`h-full `} >
-      <ul className={`text-amber-50`}>
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
-     </ul>
-           </div>
+         {menu && (<>
+         <div onClick={(e) => e.stopPropagation()} className={`h-full `}>
+                    <ul className={`text-amber-50`}>
+                        <li>Home</li>
+                        <li><Link to="/Project" onClick={() => setMenu(false)}>Projects</Link></li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                    </ul>
+                </div>
+                <div onClick={() => setMenu(false)} className="absolute left-38 top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128]  lg:hidden">
+                       <FiX />
+                    </div></>
+        )}
             </div>
             </div>
     )

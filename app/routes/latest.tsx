@@ -14,7 +14,7 @@ export default function Latest(){
 </div> */}
 
             <section>
-                <div className="bg-[#CBCFDA] relative h-[103em] md:h-[55em] lg:h-[55em]">
+                <div className="bg-[#C3C7D8] relative h-[103em] md:h-[55em] lg:h-[55em]">
 
                     <div className=" grid grid-cols-1 md:grid-cols-2    lg:grid-cols-2 gap-7 p-9">
                         <div className="shadow lg:w-[40em] lg:h-[20em] shadow-[#192235] relative rounded-2xl">
@@ -42,8 +42,8 @@ export default function Latest(){
 
                     <motion.div
                     
-                      initial={{ y:50}}
-                        whileInView={{ y:0}}
+                      initial={{ y:50, opacity:0}}
+                        whileInView={{opacity:1, y:0}}
                         transition={{duration:2, ease:"easeInOut"}}
                         viewport={{once:true}}
                     className="videoSix overflow-hidden shadow shadow-[#192235] p-3 lg:h-[23em] md:h-[12em] rounded-2xl">
@@ -84,9 +84,9 @@ export default function Latest(){
                      <div className="grid grid-cols-1 ml-12 md:grid-cols-2 lg:grid-cols-4 md:ml-3  lg:ml-3 gap-2">
                      {/*img1*/}
                     <motion.div 
-                      initial={{ y:50}}
-                        whileInView={{ y:0}}
-                        transition={{duration:0.9, ease:"easeInOut"}}
+                      initial={{ y:50, opacity:0}}
+                        whileInView={{ y:0, opacity:1}}
+                        transition={{duration:3, ease:"easeInOut"}}
                         viewport={{once:false}}
                     className="latest1 relative p-3  shadow shadow-[#192235] w-80  rounded-2xl overflow-hidden ">
                       <div className="overflow-hidden rounded-2xl">
@@ -99,9 +99,9 @@ export default function Latest(){
 {/*img2*/}
                 <motion.div 
                 
-                  initial={{ y:50}}
-                        whileInView={{ y:0}}
-                        transition={{duration:0.8, ease:"easeInOut"}}
+                  initial={{opacity:0, y:50}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:2, ease:"easeInOut"}}
                         viewport={{once:false}}
 
                 className="latest1 h-60 mt-4 md:mt-0 lg:mt-0 w-80 p-3 items-center rounded-2xl overflow-hidden shadow shadow-[#192235]  ">
@@ -115,9 +115,9 @@ export default function Latest(){
 {/*img3*/}
                  <motion.div 
                  
-                   initial={{ y:50}}
-                        whileInView={{ y:0}}
-                        transition={{duration:0.7, ease:"easeInOut"}}
+                   initial={{opacity:0, y:50}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:2, ease:"easeInOut"}}
                         viewport={{once:false}}
 
                  className="latest1 relative h-60 mt-4 md:mt-0 lg:mt-0 w-80  p-3 items-center rounded-2xl overflow-hidden shadow shadow-[#192235]  ">
@@ -130,8 +130,8 @@ export default function Latest(){
                 </motion.div>
 {/*img4*/}
                   <motion.div 
-                    initial={{ y:50}}
-                        whileInView={{ y:0}}
+                    initial={{opacity:0, y:50}}
+                        whileInView={{opacity:1, y:0}}
                         transition={{duration:0.6, ease:"easeInOut"}}
                         viewport={{once:false}}
 

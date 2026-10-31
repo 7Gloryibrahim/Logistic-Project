@@ -2,7 +2,7 @@ import { LiaAngellist } from "react-icons/lia";
 import { FaMapLocation } from "react-icons/fa6";
 import { GiReceiveMoney } from "react-icons/gi";
 import {motion} from "framer-motion"
-import Testimonials from "./testimonials"
+import Testimonials from "./Comments"
 
 
 const container={
@@ -35,7 +35,7 @@ export default function Transportation(){
 
 return(
 
-    <div className="h-[80em] lg:h-[50em] bg-[#CBCFDA]">
+    <div className="h-[80em] lg:h-[50em] bg-[#C3C7D8]">
         <div className="relative ">
 
             
@@ -83,7 +83,7 @@ return(
             <div className="relative skill overflow-hidden w-full h-full">
             <img src="skill-v1.jpg" className=" w-[35em] lg:h-[36em]"/>
               </div>
-            <div className="bg-[#D44216]  ">
+            <div className="bg-[#D44216] pb-7 ">
                 <div className="flex items-center">
                 <div className="bg-white w-5 h-0.5 ml-5 mt-5"></div>
                 <p className="text-white text-2xl pl-6 lg:text-5xl lg:pl-7 lg:pr-7 pt-9 bebas-neue-regular">Transportation Services We Are Often Considered</p>
