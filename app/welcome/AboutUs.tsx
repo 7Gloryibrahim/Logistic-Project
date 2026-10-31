@@ -24,8 +24,8 @@ export default function AboutUs(){
                 {/*The Hero Worker Image*/}
                 <div className="" >
                 <motion.img
-                initial={{ x: 300, opacity: 0 }}
-  whileInView={{ x: 0, opacity: 1 }}
+                initial={{ x: 300,}}
+  whileInView={{ x: 0,}}
   viewport={{ once: true,}}
   transition={{
     duration: 1,
