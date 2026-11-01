@@ -88,7 +88,7 @@ export default function Contact() {
       <SmoothScroll/>
       <Nav/>
       <div>
-        <div style={{backgroundImage:"url('/Customer-care7.jpg')", backgroundSize:"cover"}}className="h-[50em] lg:h-[40em] relative">
+        <div style={{backgroundImage:"url('/Customer-care7.webp')", backgroundSize:"cover"}} className="h-[50em] lg:h-[40em] relative">
         <div className=' inset-0 bg-linear-to-r from-black/90 via-black/90 to-transparent z-30 absolute h-[50em] top-0 bottom-0  lg:h-[40em]'></div>
           {/* <img src="/Customer-care6.jpg"  alt="Customer care team" className=' w-full  object-cover object-center'/> */}
        <div className='absolute w-full flex flex-col justify-center text-center top-80 lg:top-1/2'>
