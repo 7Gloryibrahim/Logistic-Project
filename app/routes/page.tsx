@@ -198,7 +198,7 @@ useEffect(() => {
             <section>
             {/*Hero Background-Image */}
             <div>
-                <div style={{backgroundImage:"url('/homebg.jpg')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden"}} className="relative overflow-hidden h-[45em] sm:h-[140vh] md:h-[180vh] lg:h-[140vh] ">
+                <div style={{backgroundImage:"url('/homebg.webp')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden", }} className="relative overflow-hidden h-[45em] sm:h-[140vh] md:h-[180vh] lg:h-[140vh] ">
                
               
                 <div>
