@@ -12,7 +12,7 @@ import Footer from "./footer"
             <Nav/>
             <div className="relative h-[50em] lg:h-[90em] overflow-hidden">
                 
-                <div style={{backgroundImage:"url('/detail1.jpg')", backgroundSize:"cover", }} className="h-[50em] lg:h-[44em]">
+                <div style={{backgroundImage:"url('/detail1.webp')", backgroundSize:"cover", }} className="h-[50em] lg:h-[44em]">
                 {/* <img src="/detail1.jpg" className="h-[38em] w-screen fixed"/> */}
                 
                 </div>
