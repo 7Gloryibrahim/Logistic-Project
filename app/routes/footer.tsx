@@ -27,7 +27,7 @@ export default function Footer(){
         <footer className="w-full bg-fixed relative bottom-0 bg-[#C3C7D7]">
             <div className="relative">
                
-               <div style={{backgroundImage:"url('logistiq-footer.png')", backgroundPosition:"bottom", backgroundRepeat:"no-repeat"}} className=" h-[90em] lg:h-[50em] md:h-[50em] w-full top-0  object-center">
+               <div style={{backgroundImage:"url('logistiq-footer.webp')", backgroundPosition:"bottom", backgroundRepeat:"no-repeat"}} className=" h-[90em] lg:h-[50em] md:h-[50em] w-full top-0  object-center">
                 {/* <img src="logistiq-footer.png" alt="idea4" className="h-[39em] w-screen bottom-0 bg-fixed object-cover "/> */}
                
                
