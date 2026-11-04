@@ -1,5 +1,5 @@
 
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useState, useEffect, type ChangeEvent, type FormEvent } from "react";
 import {object, z} from 'zod'
 import { IoAirplaneSharp } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
@@ -42,6 +42,8 @@ const [form, setForm]= useState({
     notes: ""
 
 })
+
+const [draftLoaded, setDraftLoaded] = useState(false);
 
 const [errors, setErrors] = useState<Record<string, string>>({
 
