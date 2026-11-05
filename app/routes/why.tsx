@@ -195,7 +195,7 @@ return(
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:2, ease:"easeInOut"}}
                 viewport={{once:false}}
-                className="bg-white left-6 lg:left-0  absolute h-fit lg:h-fit shadow-2xl shadow-[#192235] w-[23em] md:w-[30em] lg:w-full -ml-9 mr-7 rounded -top-36">
+                className="bg-white left- lg:left-0  absolute h-fit lg:h-fit shadow-2xl shadow-[#192235] w-[23em] md:w-[30em] lg:w-full -ml-9 mr-7 rounded -top-36">
                     <div>
                         <p className="text-4xl mt-15 font-bold text-[#192235] ml-12">Request a Quote</p>
                     </div>

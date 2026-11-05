@@ -81,7 +81,7 @@ export default function Latest(){
                     </motion.div>
                    </div>
                      {/*Flexed Images*/}
-                     <div className="grid grid-cols-1 ml-12 md:grid-cols-2 lg:grid-cols-4 md:ml-3  lg:ml-3 gap-2">
+                     <div className="grid grid-cols-1 ml-11 md:grid-cols-2 lg:grid-cols-4 md:ml-3  lg:ml-3 gap-2">
                      {/*img1*/}
                     <motion.div 
                       initial={{ y:50, opacity:0}}

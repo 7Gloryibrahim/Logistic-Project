@@ -71,7 +71,7 @@ useEffect(() => {
     }}
     transition={{ duration: 0.3, ease: "easeInOut" }}
             
-            className="bg-[#111827] hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
+            className=" hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
                 {/* Left side */}
                 <div className="">
                     <ul className=" sm:flex sm:gap-5  sm:py-3  ">
@@ -105,7 +105,7 @@ useEffect(() => {
 
             {/*Second Top */}
 
-                <div className="second-border flex bg-[#111827] border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-20">
+                <div className="second-border flex  border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-16">
                     <div className="bg-[#F75128] w-72 " style={{clipPath:"polygon(0 0, 100% 0, 90% 100%, 0 100%)"}}>
                         <img src="/Truck1.png" alt="Truck" className="mt-4 items-center pr-3.5 pb-3 sm:pl-1 sm:w " />
                     </div>
@@ -185,7 +185,7 @@ useEffect(() => {
                         </ul>
 
                             <div className="hidden  sm:hidden md:hidden lg:block">
-                        <Link to="/contact"><button className="track-order border-2 border-double border-white text-white  p-3 h-20  md:block">TRACK ORDER</button></Link>
+                        <Link to="/contact"><button className="track-order border-2 border-double border-white text-white  p-3 h-15  md:block">TRACK ORDER</button></Link>
                        
                     </div>
                          {/*Mobile Icon */}
@@ -202,7 +202,7 @@ useEffect(() => {
             <section>
             {/*Hero Background-Image */}
             <div>
-                <div style={{backgroundImage:"url('/logistica-profesionales.webp')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", backgroundRepeat:"no-repeat", overflow:"hidden", width:"100%" }} className="relative overflow-hidden h-[45em] sm:h-[140vh] md:h-[180vh] lg:h-[40em] ">
+                <div style={{backgroundImage:"url('/bg4.webp')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", backgroundRepeat:"no-repeat", overflow:"hidden", width:"100%" }} className="relative overflow-hidden h-[36em] sm:h-[140vh] md:h-[180vh] lg:h-[45em] ">
                
               
                 {/* <div>
@@ -291,7 +291,7 @@ The right hand dot*
                 </div> */}
 
     {/* Hero Overlay */}
-                <div className="absolute bg-black/50 inset-0 h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh]"></div>
+                <div className="absolute bg-black/50 lg:bg-gradient-to-t from-black via-black/70  inset-0 h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh]"></div>
                 
              {/*Hero mini video*/}   
                 {/* <motion.div 
@@ -332,11 +332,11 @@ The right hand dot*
                     </div>
                     <div className="flex items-center gap-1 ">
                         <div className="bg-[#F75128] h-1 w-7 rounded"></div>
-                    <p className="font-bold">On Time,</p>
+                    <p className="font-bold">We Are,</p>
                     <p className="text-[#F75128] text-4xl"><FlipWords
-    words={["Ahead", "Safe", "Success","Direct","Proven","Swift "]}
+    words={["Ahead", "Safe", "Attentive","Direct","Proven","Swift "]}
   /></p>
-  <p className="font-bold">Everytime</p>
+  {/* <p className="font-bold">Everytime</p> */}
                     </div>
                 </motion.div>
 
@@ -348,13 +348,18 @@ The right hand dot*
                                    }}
                                 viewport={{once:false}}
                                 
-               className=" relative text-wrap z-10 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top- lg:gap-4 lg: lg:backdrop-blur-lg ">
+               className=" lg:w-full relative lg:top-1/2">
                 {/*First Text*/}
-                <div >
-                    <h1 className="text-white bebas-neue ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full  ">Modern Logistic </h1>
+                <div className="md:border-white absolute text-wrap z-10 top-30  gap-4 rounded md:border left-1/2 -translate-x-1/2 md:mx-auto md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-[50em]  lg:p-4 lg:justify-center lg:gap-4 lg:flex-row lg:backdrop-blur-lg">
+                <div>
+                    <div className="lg:flex lg:flex-col">
+                    <h1 className="text-white bebas-neue ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:text-5xl lg:w-full lg: whitespace-nowrap ">Modern Logistic </h1>
                        <p className="text-[#F75128] font-bold ml-10 sm:text-4xl  sm:mb-5 sm:ml-0 md:ml-10 lg:ml-0 lg:text-right"> Transport</p>
+                       </div>
+                       <div>
                     <p className=" text-white ml-10 md:ml-10 sm:ml-0 lg:ml-0  lg:text-right">Specialist In Modern</p>
                     <p className=" text-white mb-5 ml-10 sm:ml-0 md:ml-10 md:mb-3 lg:text-right lg:ml-0">Transportation</p>
+                    </div>
                 </div>
    {/* Line in-between */}
                 <div className="hidden sm:block bg-[#F75128] w-1 sm:h-72 md:hidden lg:block lg:h-64"></div>
@@ -366,7 +371,7 @@ The right hand dot*
                         in the global supply chain ecosystem managing.</p>
                     </div>
        {/*Rounded Hero Images*/}
-                    <div className=" relative block ml-10 mt-5 gap-x-24 sm:ml-0 md:flex md:ml-10 lg:ml-0 lg:flex ">
+                    <div className=" relative block ml-10 mt-5 gap-x-24 sm:ml-0 md:flex md:ml-10 lg:ml-0 lg:flex lg:flex-row lg:w-full">
                      
                         <img src="hero1.jpg" alt="hero1" className="relative rounded-full border-2 border-[#F75128]"/>
 
@@ -375,8 +380,8 @@ The right hand dot*
                         <img src="/hero3.jpg" alt="hero3" className="absolute left-20 top-0 rounded-full border-2 border-[#F75128]"/>
                    
 
-                    <div>
-                        <p className="text-white  md:text-2xl lg:text-2xl">Customer Satisfied</p>
+                    <div className="flex flex-col">
+                        <p className="text-white  md:text-2xl lg:text-2xl whitespace-nowrap">Customer Satisfied</p>
                         <p className="text-white ">4.8 (15k Reviews)</p>
                     </div>
                     
@@ -386,6 +391,7 @@ The right hand dot*
                  
                   </button>
                  
+                </div>
                 </div>
                </motion.div>
                     
