@@ -35,6 +35,7 @@ export default function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
     const [scrolled, setScrolled] = useState(false);
+    const phoneNumber = "+123 456 789";
 
 useEffect(() => {
     const handleScroll = () => {
@@ -75,10 +76,13 @@ useEffect(() => {
                 <div className="">
                     <ul className=" sm:flex sm:gap-5  sm:py-3  ">
                       
-                        <li className="flex gap-1 text-white  translate duration-300 hover:text-[#F75128]"><MdPhoneInTalk className="mt-1 text-[#F75128]"/>[+123 456 789]</li>
+                        <li className="flex gap-1 text-white  translate duration-300 hover:text-[#F75128]">
+                            <MdPhoneInTalk className="mt-1 text-[#F75128]" />
+                            <a href={`tel:${phoneNumber}`} className="hover:underline">{phoneNumber}</a>
+                        </li>
                         <li className="flex text-white translate duration-300 hover:text-[#F75128]">
                         < MdEmail className="mt-1 text-[#F75128]"/>
-                        <a href='mailto:support@logistra.com'>[support@logistra.com]</a></li>
+                        <a href='mailto:support@logistra.com'>support@logistra.com</a></li>
                     </ul>
                 </div>
                 {/*Right side */}
@@ -198,12 +202,12 @@ useEffect(() => {
             <section>
             {/*Hero Background-Image */}
             <div>
-                <div style={{backgroundImage:"url('/homebg.webp')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", overflow:"hidden", }} className="relative overflow-hidden h-[45em] sm:h-[140vh] md:h-[180vh] lg:h-[140vh] ">
+                <div style={{backgroundImage:"url('/logistica-profesionales.webp')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", backgroundRepeat:"no-repeat", overflow:"hidden", width:"100%" }} className="relative overflow-hidden h-[45em] sm:h-[140vh] md:h-[180vh] lg:h-[40em] ">
                
               
-                <div>
+                {/* <div>
                     <img src="/hero-globe.png" alt="Globe" className="absolute   left-1/2 -translate-x-1/2 z-40 top-28 sm:mx-auto md:top-36    lg:top-44"/>
-{/*Goe location icons */}
+Goe location icons 
                     <div className="relative z-40 text-wrap justify-center h-full top-20 sm:top-50  ">
                     <div className="circleicon1  absolute text-[#F75128] sm:left-1/3 sm:top-"><FaCircle className="relative text-[#F75128] left-26 top-9 sm:top-2 sm:left-20" /><FaRegCircle className=" absolute text-[#F75128] text-3xl left-24 top-7  sm:top-0 sm:left-18.25 "/>
 <div className="dot1 absolute top-10 text-[#111827] z-50 p-2 font-bold rounded left-28 lg:left-0 bg-white w-36 text-center">
@@ -262,11 +266,10 @@ useEffect(() => {
                     
 
                      </div>
-                     {/*right*/}
+                     right
                      <div className="circleicon4 text-[#F75128] absolute sm:left-2/3 sm:top-20"> <FaCircle className="circleicon4 relative left-14 top-16 sm:top-2 sm:left-4"/><FaRegCircle className=" absolute text-3xl left-12 top-14 sm:top-0 sm:left-2"/>
 
-
-         {/*The right hand dot*/}           
+The right hand dot*
                      <div>
                          <div>
                     <div className="bg-white absolute h-16 w-16 rounded-full md:-left-[270px] md:top-24 left-[214px] top-8 lg:-top-4 lg:-left-2 transition  [animation-duration:1s] animate-ping  -z-20 "></div>
@@ -285,13 +288,13 @@ useEffect(() => {
                    
 
                     </div>
-                </div>
+                </div> */}
 
     {/* Hero Overlay */}
                 <div className="absolute bg-black/50 inset-0 h-[140vh] sm:h-[140vh] md:h-[180vh] lg:h-[140vh]"></div>
                 
              {/*Hero mini video*/}   
-                <motion.div 
+                {/* <motion.div 
                  initial={{opacity:0, y:-50}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:2, ease:"easeInOut"}}
@@ -312,14 +315,14 @@ useEffect(() => {
                     className="absolute backdrop-blur-md border border-[#F75128] p-1 rounded-2xl top-36">
                      <button className="bg-[#111827] text-[#F75128] rounded-2xl p-3 cursor-pointer border border-amber-50">   <Link to='/AboutUs'>Our Team</Link></button>
                     </motion.div>
-                </motion.div>
+                </motion.div> */}
                {/*Mini Hero Box*/}
                 <motion.div 
                 initial={{opacity:0, y:-50}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:2, ease:"easeInOut"}}
                 viewport={{once:false}}
-                className="absolute hidden  z-40 top-96 backdrop-blur-md text-white p-7 border border-[#F75128] rounded-2xl
+                className="absolute hidden  z-40 top-44 backdrop-blur-md text-white p-7 border border-[#F75128] rounded-2xl
                 left-7 sm:hidden md:hidden lg:block ">
                    
                    <div className="flex items-center gap-1 ">
@@ -338,14 +341,14 @@ useEffect(() => {
                 </motion.div>
 
      {/*Hero text*/}
-               <motion.div initial={{opacity:0 , y:50}}
-                                   whileInView={{opacity:1, y:0}}
+               <motion.div initial={{opacity:0 , y:50, scale:0.8}}
+                                   whileInView={{opacity:1, y:0, scale:1}}
                                    transition={{duration:0.8,
                                     ease:"easeOut"
                                    }}
                                 viewport={{once:false}}
                                 
-               className=" relative text-wrap z-10 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top-[570px] lg:gap-4 lg:left-1/6 lg:backdrop-blur-md ">
+               className=" relative text-wrap z-10 top-72 gap-4 rounded md:border md:border-white md:mx-7 md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-fit lg:p-4 lg:top- lg:gap-4 lg: lg:backdrop-blur-lg ">
                 {/*First Text*/}
                 <div >
                     <h1 className="text-white bebas-neue ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:w-full  ">Modern Logistic </h1>

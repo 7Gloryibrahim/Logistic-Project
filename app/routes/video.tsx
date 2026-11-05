@@ -26,7 +26,7 @@ export default function Video(){
                  </div>
             <div className="flex-1 ml-3 lg:mx-10  lg:gap-40  lg:flex lg:flex-2 md:flex-2 absolute top-36 ">
            
-            <div className="w-[25em] h-fit bg-[#E6EEF7] hover:bg-[#DAE6F3] duration-300 pt-5 pb-5 lg:w-[34em] rounded-2xl  shadow-2xl shadow-[#D44216] pl-3 lg:pl-5 border-t-8 border-[#D44216]">
+            <div className="w-fit h-fit bg-[#E6EEF7] hover:bg-[#DAE6F3] duration-300 pt-5 pb-5 lg:w-[34em] rounded-2xl  shadow-2xl shadow-[#D44216] pl-3 lg:pl-5 border-t-8 border-[#D44216]">
                 <div className="flex items-center gap-3  mt-7 mb-5">
                     <div className="bg-[#D44216] h-1 w-6 rounded-2xl"/>
                 <p>Company's FAQ</p>
@@ -37,7 +37,7 @@ export default function Video(){
                     <p>FREQUENTLY ASKED QUESTIONS</p>
                     </div>
 
-                <div className="flex gap-8 items-center">
+                <div className="flex  gap-8 items-center">
                     <button onClick={()=> setFaq(!faq)} className="text-[16px] lg:text-2xl text-[#D44216] comic-neue-regular mb-4">How do you handle returns or exchanges?</button>
                    <div onClick={()=>setFaq(!faq)} className="">
                   { faq ? <LuChevronDown className="text-[#111827] text-2xl comic-neue-regular" /> : <LuChevronUp className="text-[#D44216] text-2xl"/>}
@@ -90,9 +90,9 @@ export default function Video(){
                     )}
             </div>
             </div>
-                    <div className="mt-16 lg:mt-0 w-96 lg:w-[30em] lg:h-[27em] h-[32em]  shadow shadow-[#D44216] rounded p-2 border-2 border-[#D44216]">
-            <img src="/delivery1.webp" className="w-96 lg:w-[30em] h-[31em] rounded absolute  lg:-top-20"/>
-                               <div  className="backdrop-blur-lg w-fit rounded-full border-2 border-white p-5 text-5xl absolute top-[14em] lg:top-36 font-extrabold ml-50 ">
+                    <div className="mt-16 lg:mt-0 w-72 lg:w-[30em] lg:h-[27em] h-[32em]  shadow shadow-[#D44216] rounded p-2 border-2 border-[#D44216]">
+            <img src="/delivery1.webp" className="w-72 lg:w-[30em] h-[31em] rounded absolute  lg:-top-20"/>
+                               <div  className="backdrop-blur-lg w-fit rounded-full border-2 border-white p-5 text-5xl absolute top-[15em] lg:top-36 font-extrabold ml-50 ">
                                 <CiPlay1 onClick={()=> setVideo(true)}  className="text-[#D44216] text-shadow-2xl text-shadow-black  z-10 "/>
                                 </div>
                                 <div className="">
