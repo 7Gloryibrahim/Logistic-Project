@@ -171,10 +171,23 @@ export default function BlogDetails(){
                                              <h2 className="text-[#F75128] bebas-neue-regular text-4xl scroll-mt-28 mt-16"  >
                                       Leave a Comment
                                               </h2>
+                                                <div className="">
+                                              <form className="flex flex-col gap-y-5">
+                                                <input name="name" value={comment.name} placeholder="Name" type="text" id="name"
+                                                onChange={(c)=> setComment({
+                                                    ...comment, name: c.target.value
+                                                })}
+                                               className="w-96 pl-5 h-14 outline-none bg-[#111827] text-[#F55128]" />
 
-                                              <form>
-                                                <input name="name" value={comment.name} placeholder="Name" type="name" />
+                                               <input name="email" placeholder="email" type="text" value={comment.email}
+                                               id="email" 
+                                              onChange={(c)=>({
+                                                ...comment,
+                                                name: c.target.value
+                                              })}
+                                                className="w-96 pl-5 h-14 outline-none bg-[#111827] text-[#F55128]" />
                                               </form>
+                                              </div>
                                         </div>
 
                                     </div>

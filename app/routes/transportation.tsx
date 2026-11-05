@@ -94,7 +94,7 @@ return(
 
                 <p className="text-white hidden lg:block pl-6 pr-6 uppercase mt-5 bebas-neue-regular text-2xl tracking-wider">We are frequently trusted and chosen by businesses across industries to manage the following core transportation services:</p>
 
-                    <div className="flex flex-col items-center  lg:mb-10   lg:ml-7 mt-7  gap-6 lg:gap-x-8 lg:flex-row">
+                    <div className="flex flex-col items-center md:flex-row lg:mb-10 md:ml-5   lg:ml-7 mt-7  gap-6 lg:gap-x-8 lg:flex-row">
                     <motion.div 
                     
                     

@@ -134,7 +134,7 @@ useEffect(() => {
                                        <li className="pages-list">Team</li> 
                                         <li className="pages-list">Team Details</li>
                                          <Link to="/Blog"><li className="Blog-list">Blog</li></Link>
-                                         <li className="Blog-list">Blog Details</li>
+                                        <li className="Blog-list"><Link to="/Blogdetails">Blog Details</Link></li>
                                         <li className="pages-list"><Link to="/Project">Projects</Link></li>
                                         <li className="pages-list">Project Details</li>
                                         <li className="pages-list"><Link to="/Testimonials">Testimonials</Link></li>
@@ -164,7 +164,7 @@ useEffect(() => {
                                     <li className="Blog-list">Blog Standard</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
                                     <li className="Blog-list">Blog Left Sidebar</li>
-                                    <li className="Blog-list">Blog Details</li>
+                                    <li className="Blog-list"><Link to="/Blogdetails">Blog Details</Link></li>
 
                             </ul>
                             
@@ -178,9 +178,11 @@ useEffect(() => {
                     </div>
                          {/*Mobile Icon */}
 
-                   <div onClick={()=> setMenu(true)} className="absolute left-96 md:left-[20em] top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128]  lg:hidden">
-                        <IoMenu  />
-                    </div> 
+                                        <div
+                            onClick={() => setMenu(true)}
+                            className="absolute right-6 top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128] lg:hidden">
+                            <IoMenu />
+                        </div>
                     </div>
 
                 </div>
@@ -259,11 +261,12 @@ useEffect(() => {
                 >
          {menu && (<>
          <div onClick={(e) => e.stopPropagation()} className={`h-full `}>
-                    <ul className={`text-amber-50`}>
-                        <li>Home</li>
-                        <li><Link to="/Project" onClick={() => setMenu(false)}>Projects</Link></li>
-                        <li>Home</li>
-                        <li>Home</li>
+                    <ul className={`text-amber-50 ml-3 gap-y-6 flex flex-col`}>
+                        <li className=" "><Link to="/Page">Home</Link> </li>
+                          <li className=""><Link to="/Project">Projects</Link></li>
+                       <li className=""><Link to="/Blog">Blog</Link></li>
+                        <li className=""><Link to="/Testimonials">Testimonials</Link></li>
+                         <li className="flex "><Link to="/AboutUs">About</Link></li>
                         <li>Home</li>
                     </ul>
                 </div>

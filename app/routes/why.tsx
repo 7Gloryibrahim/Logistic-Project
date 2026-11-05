@@ -195,12 +195,14 @@ return(
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:2, ease:"easeInOut"}}
                 viewport={{once:false}}
-                className="bg-white left- lg:left-0  absolute h-fit lg:h-fit shadow-2xl shadow-[#192235] w-[23em] md:w-[30em] lg:w-full -ml-9 mr-7 rounded -top-36">
+                className="bg-white w-fit   lg:left-0  absolute h-fit lg:h-fit shadow-2xl shadow-[#192235] w-[23em] md:w-[30em] lg:w-full   mr-7 rounded -top-36">
                     <div>
-                        <p className="text-4xl mt-15 font-bold text-[#192235] ml-12">Request a Quote</p>
+                        <p className="text-3xl lg:text-4xl mt-15 font-bold text-[#192235] ml-6 lg:ml-12">Request a Quote</p>
                     </div>
 
                     <div>
+
+                        
                         <form noValidate  onSubmit={handleSubmit} className=" w-full items-center mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-7 gap-4">
                         <div>
                             <input required name="firstName" value={form.firstName} id="firstName" onChange={handleChange} placeholder="First Name" aria-invalid={Boolean(errors.firstName)} aria-describedby={errors.firstName ? "firstName-error" : undefined} className="border-2 w-full min-w-0 p-2"/>

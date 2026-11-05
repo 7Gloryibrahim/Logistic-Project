@@ -14,7 +14,7 @@ export default function Latest(){
 </div> */}
 
             <section>
-                <div className="bg-[#C3C7D8] relative h-[103em] md:h-[55em] lg:h-[55em]">
+                <div className="bg-[#C3C7D8]  relative h-[103em] md:h-[55em] lg:h-[55em]">
 
                     <div className=" grid grid-cols-1 md:grid-cols-2    lg:grid-cols-2 gap-7 p-9">
                         <div className="shadow lg:w-[40em] lg:h-[20em] shadow-[#192235] relative rounded-2xl">
@@ -48,7 +48,7 @@ export default function Latest(){
                         viewport={{once:true}}
                     className="videoSix overflow-hidden shadow shadow-[#192235] p-3 lg:h-[23em] md:h-[12em] rounded-2xl">
                        
-                       <div className="videoBox flex w-72  absolute top-16 ml-4 md:left-1 lg:flex justify-between items-center z-10 lg:top-52 bg-white h-20 lg:w-96 rounded-r-full lg:ml-7 pl-4 pt-4 pb-4 border-l-4 border-l-[#F75127]">
+                       <div className="videoBox flex w-72  absolute top-16 ml- md:left-1 lg:flex justify-between items-center z-10 lg:top-52 bg-white h-20 lg:w-96 rounded-r-full lg:ml-7 pl-4 pt-4 pb-4 border-l-4 border-l-[#F75127]">
                            
                             <div className="text-2xl text-[#192235]">
                                 <p>Logistic</p>
@@ -56,7 +56,7 @@ export default function Latest(){
                             </div>
 
                            
-                            <div className=" bg-[#F75127] p-2 rounded-r-full text-white font-bold ml-64  absolute lg:ml-[22em]  ">
+                            <div className="hidden lg:block bg-[#F75127] p-2 rounded-r-full text-white font-bold ml-64  absolute lg:ml-[22em]  ">
                                  <p className="straightUp">↗</p>
                             </div>
                            

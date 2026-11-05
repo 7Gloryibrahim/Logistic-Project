@@ -202,7 +202,7 @@ useEffect(() => {
             <section>
             {/*Hero Background-Image */}
             <div>
-                <div style={{backgroundImage:"url('/bg4.webp')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", backgroundRepeat:"no-repeat", overflow:"hidden", width:"100%" }} className="relative overflow-hidden h-[36em] sm:h-[140vh] md:h-[180vh] lg:h-[45em] ">
+                <div style={{backgroundImage:"url('/bg4.webp')", backgroundPosition:"center", backgroundAttachment:"fixed",backgroundSize:"cover", backgroundRepeat:"no-repeat", overflow:"hidden", width:"100%" }} className="relative overflow-hidden h-[36em] sm:h-[140vh] md:h-[51em] lg:h-[45em] ">
                
               
                 {/* <div>
@@ -346,11 +346,11 @@ The right hand dot*
                                    transition={{duration:0.8,
                                     ease:"easeOut"
                                    }}
-                                viewport={{once:false}}
+                                viewport={{once:true}}
                                 
                className=" lg:w-full relative lg:top-1/2">
                 {/*First Text*/}
-                <div className="md:border-white absolute text-wrap z-10 top-30  gap-4 rounded md:border left-1/2 -translate-x-1/2 md:mx-auto md:p-7 md:backdrop-blur-md lg:border lg:border-white sm:top-2/3    sm:flex sm:items-center  md:block md:top-1/2 lg:flex lg:w-[50em]  lg:p-4 lg:justify-center lg:gap-4 lg:flex-row lg:backdrop-blur-lg">
+                <div className="md:border-white absolute text-wrap z-10 top-30  gap-4 rounded md:border left-1/2 -translate-x-1/2 md:mx-auto md:p-7 md:backdrop-blur-md lg:border lg:border-white     sm:flex sm:items-center  md:block md:top-72 lg:top-1/2 lg:flex lg:w-[50em]  lg:p-4 lg:justify-center lg:gap-4 lg:flex-row lg:backdrop-blur-lg">
                 <div>
                     <div className="lg:flex lg:flex-col">
                     <h1 className="text-white bebas-neue ml-10 text-4xl sm:mb-5 md:top-0 md:ml-10 md:text-5xl sm:w-fit lg:ml-0 lg:text-5xl lg:w-full lg: whitespace-nowrap ">Modern Logistic </h1>

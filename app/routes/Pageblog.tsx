@@ -40,7 +40,7 @@ const handleToggle3 = ()=> {
             <div className="w-6 h-1 rounded-2xl bg-[#D44216] mb-12"/>
             <p className="mb-12">Blog</p> <p className="text-[#D44216] mb-12">News</p>
             </div>
-            <div className="flex  justify-center gap-7 gap-y-96 mx-5 flex-col lg:flex lg:flex-row absolute top-28 ">
+            <div className="flex  justify-center gap-7 gap-y-96 mx-3 flex-col lg:flex lg:flex-row absolute top-28 ">
                 
                 <motion.div
                 
@@ -55,7 +55,7 @@ const handleToggle3 = ()=> {
                     <div className="blog-text absolute  bg-[#D44216] min-h-[16em] ">
                        <div className="flex gap-2 md:gap-3 lg:gap-4 justify-center items-center mt-4 comic-neue-bold text-white/50">
 
-                       <div className="flex gap-1 items-center">
+                       <div className="flex flex-row  gap-1 items-center">
                         <BsPersonFill />
                         <p className="text-2xl">Atara Graham</p>
                         </div>
@@ -63,7 +63,7 @@ const handleToggle3 = ()=> {
                                 <MdComment />
                         <p>12 Comments</p>
                         </div>
-                        <p className="bg-[#C3C7D8]/50 text-red-800 p-2 text-2xl h-20 pt-5 -mt-12">01 june</p>
+                        <p className="bg-[#C3C7D8]/50 text-red-800 p-1  lg:p-2 lg:text-2xl h-fit lg:h-20 lg:pt-5 -mt-12">01 june</p>
                         </div>
                         <h1 className="mt-8 bebas-neue-regular text-2xl text-white tracking-wide pl-3">Ocean Freight</h1>
                         <p className=" comic-neue-bold   text-white pl-3">Discover how ocean freight provides a reliable and cost-effective way to transport goods across international waters.</p>
@@ -91,7 +91,7 @@ const handleToggle3 = ()=> {
                         <MdComment />
                         <p>20 Comments</p>
                         </div>
-                        <p className="bg-[#C3C7D8]/50 text-red-800 p-2 text-2xl h-20 pt-5 -mt-12">01 August</p>
+                        <p className="bg-[#C3C7D8]/50 text-red-800 p-2 lg:p-2 lg:text-2xl lg:h-20 lg:pt-5 -mt-12">01 August</p>
                         </div>
                         <h1 className="mt-8 bebas-neue-regular text-2xl text-white tracking-wide pl-3">Global Shipping</h1>
                         <p className="text-white  comic-neue-bold pl-3 ">Explore how international freight connects businesses to global markets through seamless shipping and delivery solutions.</p>
@@ -119,7 +119,7 @@ const handleToggle3 = ()=> {
                              <MdComment />
                         <p>23 Comments</p>
                         </div>
-                        <p className="bg-[#C3C7D8]/50 text-red-800 p-2 text-2xl h-20 pt-5 -mt-12">01 Jan</p>
+                        <p className="bg-[#C3C7D8]/50 text-red-800 p-1 lg:p-2 lg:text-2xl lg:h-20 lg:pt-5 -mt-12">01 Jan</p>
                         </div>
                         <h1 className="mt-8 bebas-neue-regular text-2xl text-white tracking-wide pl-3">Warehousing & Storage</h1>
                         <p className="comic-neue-bold text-white pl-3">Learn how secure warehousing and efficient inventory management keep your goods safe, organized, and ready for delivery.</p>

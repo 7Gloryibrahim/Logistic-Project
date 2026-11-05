@@ -127,7 +127,7 @@ export default function Services(){
  
 
     return(
-<div style={{backgroundImage:"url('/blob.jpg')", backgroundSize:"cover",backgroundPosition:"center", overflow:"hidden", backgroundAttachment:"fixed"}} className="h-[55em]  lg:h-[69em] relative">
+<div style={{backgroundImage:"url('/blob.jpg')", backgroundSize:"cover",backgroundPosition:"center", overflow:"hidden", backgroundAttachment:"fixed"}} className="h-[55em] md:h-[58em]  lg:h-[69em] relative">
 
                 <section>
                     <img src="/container1.png" alt="container1" className=" blueOrange absolute hidden md:block lg:block -top-3 left-2.5" />
