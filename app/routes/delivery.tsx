@@ -16,7 +16,7 @@ export default function Delivery(){
                         <p className="bebas-neue-regular text-2xl lg:text-3xl text-[#111827]">Transportation Fast Delivery Service! </p>
                     <BookBtn/>
                 </div>
-                <img src="/logisWorker.png" className="h-[25em] z-20 -mt-20"/>
+                <img src="/logisWorker.webp" className="h-[25em] z-20 -mt-20"/>
             </motion.div>
         </div>
     )

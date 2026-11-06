@@ -31,6 +31,7 @@ import Blog from "./Pageblog"
 import Footer from "./footer"
 import SmoothScroll from "./smoothScroll";
 import PageBlog from "./Pageblog";
+import Nav from "./Nav";
 export default function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
@@ -52,152 +53,15 @@ useEffect(() => {
     return(
         <div className="bg-[#111827] font-sans select-none">
             <SmoothScroll/>
-            <motion.nav
-            
-             initial={{y:-100, opacity:0}}
-          animate={{y:0, opacity:1}}
-           transition={{duration:0.8, ease: "easeInOut"}}
-            
-            className="z-50 top-0 left-0 w-full fixed">
-             <div className="absolute z-50 w-full bg-[#192235] shadow shadow-black  sm:block md:block">
+             
             {/*first Top */}
-            <motion.div
             
-             initial={false}
-    animate={{
-        height: scrolled ? 0 : "auto",
-        opacity: scrolled ? 0 : 1,
-        y: scrolled ? -20 : 0,
-    }}
-    transition={{ duration: 0.3, ease: "easeInOut" }}
-            
-            className=" hidden sm:flex sm:justify-between sm:px-7 md:pl-0 sm:ml-6 sm:mr-3  md:hidden  md:ml-6 lg:justify-between lg:pl-7 lg:flex   ">
-                {/* Left side */}
-                <div className="">
-                    <ul className=" sm:flex sm:gap-5  sm:py-3  ">
-                      
-                        <li className="flex gap-1 text-white  translate duration-300 hover:text-[#F75128]">
-                            <MdPhoneInTalk className="mt-1 text-[#F75128]" />
-                            <a href={`tel:${phoneNumber}`} className="hover:underline">{phoneNumber}</a>
-                        </li>
-                        <li className="flex text-white translate duration-300 hover:text-[#F75128]">
-                        < MdEmail className="mt-1 text-[#F75128]"/>
-                        <a href='mailto:support@logistra.com'>support@logistra.com</a></li>
-                    </ul>
-                </div>
-                {/*Right side */}
-                <div className="">
-                    <ul className="bg-[#F75128] py-3 px-10 flex sm:-mr-7 sm:w-80 sm:gap-3 sm:text-center md:gap-3 md:-mr-7 md:text-center lg:gap-3 lg:-mr-7 lg:text-center" style={{clipPath: "polygon( 15% 0%,100% 0%, 100% 100%,0% 100%)"}}>
-                        <li className="text-white  transition duration-300 hover:text-black"><Link to='/page-one'><FaFacebookF /></Link></li>
-                        <li className="border-r-2 border-amber-50"></li>
-                        <li className="text-white transition duration-300 hover:text-black">< FaXTwitter/></li>
-                         <li className="border-r-2 border-amber-50"></li>
-                        <li className="text-white transition duration-300 hover:text-black"><FaInstagram/> </li>
-                         <li className="border-r-2 border-amber-50"></li>
-                        <li className="text-white transition duration-300 hover:text-black"><RiLinkedinFill/></li>
-                         <li className="border-r-2 border-amber-50"></li>
-                        <li className="text-white transition duration-300 hover:text-black"
-                         onClick={() => setSearch(true)}
-                       >Search</li>
-                    </ul>
-                </div>
-            </motion.div>
-
             {/*Second Top */}
 
-                <div className="second-border flex  border-r-2 border-orange-600  mr-2 sm:border-r-0 sm:border-t-2 sm:ml-6 sm:h-20 sm:mr-3 md:mr-3 md:h-20 md:border-r-2 md:border-orange-600 lg:mr-3 lg:h-16">
-                    <div className="bg-[#F75128] w-72 " style={{clipPath:"polygon(0 0, 100% 0, 90% 100%, 0 100%)"}}>
-                        <img src="/Truck1.png" alt="Truck" className="mt-4 items-center pr-3.5 pb-3 sm:pl-1 sm:w " />
-                    </div>
-                    {/*Nav bar at the top*/}
-                    <div className=" flex justify-between w-full  font-bold">
-                        <ul className=" hidden  sm:flex sm:ml-4 sm:gap-6 mt-5 text-white items-center md:hidden lg:flex    ">
-                            <li className="Home flex">Home <MdArrowDropDown className="mt-1" />
-                            {/*First Drop Down */}
-                            <ul className="Home-one">
-                            <li className="Drop-one">Header One</li>
-                            <li className="Drop-one">Header Two</li>
-                            <li className="Drop-one">Header Three</li>
-                            <li className="Fs-menu flex justify-between">
-                                <span className="Drop-one">Header Styles</span>
-                                <RiArrowRightWideFill className="arrow-one mt-3 mr-3 text-2xl text-[#F75128]" />
-                                {/* Second Drop-down */}
-                                <ul className="second-menu font-bold text-white">
-                                    <li className="home-head-one">Header One</li>
-                                    <li className="home-head-one">Header Two</li>
-                                    <li className="home-head-one">Header Three</li>
-                                </ul>
-                            </li>
-                            </ul>
-                            </li>
-                            <li className="flex"><Link to="/AboutUs">About</Link> <MdArrowDropDown  className="mt-1"/></li>
-                            <li className="services flex">Services <MdArrowDropDown className="mt-1"/>
-                            <ul className="service-drop-down ">
-                                <li className="service-menu">Services</li>
-                                <li className="service-menu">International Transport</li>
-                                <li className="service-menu">Local Track Transport</li>
-                                <li className="service-menu">Fast Personal Delivery</li>
-                                <li className="service-menu">Safe Ocean Transport</li>
-                                 <li className="service-menu"> Warehouse Facility</li>
-                               <li className="service-menu">Emergency Transport</li> 
-                            </ul>
-                            </li>
-                            <li className=" Pages flex">Pages <MdArrowDropDown className="mt-1"/>
-                            
-                                <ul className="Pages-menu">
-                                       <li className="pages-list">Team</li> 
-                                        <li className="pages-list">Team Details</li>
-                                        <li className="pages-list"><Link to="/Project">Projects</Link></li>
-                                        <li className="pages-list">Project Details</li>
-                                         <li className="pages-list"><Link to="/Testimonials">Testimonials</Link></li>
-                                        <li className="pages-list">Pricing</li>
-                                        <li className="pages-list">FAQ</li>
-                                        <li className="pages-list">404 Error</li>
-                                </ul>
+              <Nav/>
 
-                            </li>
-                            <li className=" Shop flex">Shop <MdArrowDropDown  className="mt-1"/>
-                            
-                                <ul className="Shop-menu">
-                                   <li className="Shop-list">Products</li> 
-                                     <li className="Shop-list">Product Details </li> 
-                                     <li className="Shop-list">Cart </li>
-                                       <li className="Shop-list">Checkout</li>
-                                         <li className="Shop-list">Wishlist</li>
-                                        <li className="Shop-list">Sign up</li>
-                                          <li className="Shop-list">Login</li>  
-                                </ul>
-
-                            </li>
-                            <li className="Blog flex">Blog <MdArrowDropDown  className="mt-1"/>
-                            
-                            <ul className="Blog-menu">
-                                    <li className="Blog-list"><Link to="/Blog">Blog</Link></li>
-                                    <li className="Blog-list">Blog Standard</li>
-                                    <li className="Blog-list">Blog Left Sidebar</li>
-                                    <li className="Blog-list">Blog Left Sidebar</li>
-                                    <li className="Blog-list">Blog Details</li>
-
-                            </ul>
-                            
-                            </li>
-                            <li><Link to="/contact">Contact</Link></li>
-                        </ul>
-
-                            <div className="hidden  sm:hidden md:hidden lg:block">
-                        <Link to="/contact"><button className="track-order border-2 border-double border-white text-white  p-3 h-15  md:block">TRACK ORDER</button></Link>
-                       
-                    </div>
-                         {/*Mobile Icon */}
-                    <div onClick={()=> setMenu(prev => !prev)} className="absolute left-5/6  text-[#F75128] text-3xl font-bold  sm:hidden md:block md:mt-6 md:left-5/6  lg:hidden ">
-                        <IoMenu  />
-                    </div>
-                    </div>
-
-                </div>
-
-            </div>
-            </motion.nav>
+           
+         
           
             <section>
             {/*Hero Background-Image */}

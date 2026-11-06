@@ -2,13 +2,93 @@ import Footer from "./footer"
 import Nav from "./Nav"
 import { motion } from "framer-motion"
 import SmoothScroll from "./smoothScroll"
-import { useState } from "react"
+import { useState, useEffect, use } from "react"
+import { email } from "zod"
+import { BsThreeDotsVertical } from "react-icons/bs";
 export default function BlogDetails(){
     const [comment, setComment] =useState({
         name:"",
         email:"",
         comment:""
     })
+const [commentsLoaded, setCommentsLoaded] = useState(false);
+const [openMenu, setMenuOpen]= useState< number | null >(null)
+
+    const [comments, setComments]= useState<
+  {
+        id: number,
+        name: string,
+        email: string,
+        comment: string,
+        date: string
+   } []
+    > ([]);
+
+    const handleSubmit = (e: React.FormEvent <HTMLFormElement>)=>{
+        e.preventDefault();
+        if(
+            !comment.name.trim() || !comment.email.trim() || !comment.comment.trim()){
+                return
+            }
+
+            const newComment = {
+                id:Date.now(),
+                name: comment.name,
+                email:comment.email,
+                comment:comment.comment,
+                date: new Date().toLocaleString()
+            };
+
+              setComments(prev => [...prev, newComment]);
+
+            setComment({
+                       name: "",
+                        email: "",
+                        comment: ""
+            })  
+    };
+
+    // useEffect(()=>{
+    //     const addedComments= localStorage.getItem("blogComments")
+
+    //     if(addedComments){
+    //     setComment(JSON.parse(addedComments))
+    //     }
+    // },[])
+
+    // useEffect(()=> {
+    //     localStorage.setItem("blogComments", JSON.stringify(comments))
+    // },[comments])
+
+    // Retrieve comments
+useEffect(() => {
+    const addedComments = localStorage.getItem("blogComments");
+    
+    if (addedComments) {
+        try {
+            setComments(JSON.parse(addedComments));
+        } catch {
+            console.error("Unable to retrieve comments");
+        }
+    }
+
+    setCommentsLoaded(true);
+}, []);
+
+
+// Save comments
+useEffect(() => {
+    if (commentsLoaded) {
+        localStorage.setItem("blogComments", JSON.stringify(comments));
+    }
+}, [comments, commentsLoaded]);
+
+
+
+const handleDelete = (id: number) => {
+    setComments(prev => prev.filter(item => item.id !== id));
+}
+
     return(
         <div className="bg-[#C3C7D8]">
             <Nav/>
@@ -44,7 +124,7 @@ export default function BlogDetails(){
                    whileInView={{y:0, scale:1}}
                    transition={{duration:0.8, ease:"easeInOut"}}
                    viewport={{once:false}}
-                  className="lg:grid-cols-1 top-28  border border-[#F75128] p-6 self-start h-fit w-fit sticky hidden md:hidden lg:block">
+                  className="lg:grid-cols-1 top-28 shadow shadow-[#111827]  border border-[#F75128] p-6 self-start h-fit w-fit sticky hidden md:hidden lg:block">
                      
 
                         <h2 className="mt-5">Blog Information</h2>
@@ -131,7 +211,7 @@ export default function BlogDetails(){
                                      <p className="max-w-[30em]  lg:max-w-2xl"  >Energy efficiency is a top priority in modern construction. Buildings are designed with advanced insulation, energy-efficient windows, and smart HVAC systems to minimize energy consumption. Renewable energy sources, such as solar panels and wind turbines, are also being integrated into building designs to reduce reliance on fossil fuels.</p>
 
                                  <h2 className="text-[#F75128] bebas-neue-regular text-4xl scroll-mt-28 mt-16" id="comment">
-                                       Post Comments
+                                      Comments ({3+ comments.length})
                                     </h2>
                                     <div className="mt-10">
                                         <div className="flex flex-row gap-6">
@@ -167,25 +247,76 @@ export default function BlogDetails(){
                                             </div>
                                         </div>
 
+                                             {comments.map((item) => (
+                                                   <div key={item.id}  className="mt-10 flex flex-row gap-6">
+                                                    <div className="flex flex-col gap-y-3">
+                                                        <p className="comic-neue-bold text-2xl">
+                                                            {item.name}
+                                                        </p>
+
+
+                                                        <p className="comic-neue-bold ">
+                                                            {item.date}
+                                                        </p>
+                                                        <div className="flex flex-row gap-36">
+                                                        <p className=" text-xl">
+                                                            {item.comment}
+                                                        </p>
+                                                        <div className="flex flex-row gap-5">
+                                                       <button
+                                                            type="button"
+                                                            onClick={() => setMenuOpen(openMenu === item.id ? null : item.id)}
+                                                        >
+                                                            <BsThreeDotsVertical />
+                                                        </button>
+                                                        {openMenu === item.id && (
+                                                                <button
+                                                                    type="button"
+                                                                    onClick={() => {
+                                                                        handleDelete(item.id);
+                                                                        setMenuOpen(null);
+                                                                    }}
+                                                                className="bg-red-800 text-white p-1">
+                                                                    Delete
+                                                                </button>
+                                                            )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   </div>
+                                                ))
+                                                }
+
+
                                         <div>
                                              <h2 className="text-[#F75128] bebas-neue-regular text-4xl scroll-mt-28 mt-16"  >
                                       Leave a Comment
                                               </h2>
                                                 <div className="">
-                                              <form className="flex flex-col gap-y-5">
+                                              <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
                                                 <input name="name" value={comment.name} placeholder="Name" type="text" id="name"
                                                 onChange={(c)=> setComment({
                                                     ...comment, name: c.target.value
                                                 })}
                                                className="w-96 pl-5 h-14 outline-none bg-[#111827] text-[#F55128]" />
 
-                                               <input name="email" placeholder="email" type="text" value={comment.email}
+                                               <input name="email" placeholder="email" type="email" value={comment.email}
                                                id="email" 
-                                              onChange={(c)=>({
+                                              onChange={(c)=>setComment({
                                                 ...comment,
-                                                name: c.target.value
+                                                email: c.target.value
                                               })}
                                                 className="w-96 pl-5 h-14 outline-none bg-[#111827] text-[#F55128]" />
+
+                                                <textarea name="comment" placeholder="Your comment..." value={comment.comment}  onChange={(c)=> setComment({
+                                                    ...comment,
+                                                    comment: c.target.value
+                                                })} 
+                                                className="w-96 pl-5 pt-10 h-28 outline-none bg-[#111827] text-[#F55128]" 
+                                                ></textarea>
+
+                                               
+                                                <div className="w-full flex justify-center"><button className="bg-[#111827] text-[#F55128] w-fit p-2 rounded">Add Comment</button></div>
                                               </form>
                                               </div>
                                         </div>
