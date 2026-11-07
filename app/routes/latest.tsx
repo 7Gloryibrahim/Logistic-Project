@@ -93,7 +93,7 @@ export default function Latest(){
                         <img src="/warehouse7.jpeg" className="latestImg rounded-2xl overflow-hidden " />
                             </div>
                              <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#FFFFFF]  font-sans">
-                        <Link to="/detail"><p>Warehouse Solutions</p></Link>
+                        <Link to="/ProjectDetails"><p>Warehouse Solutions</p></Link>
                         </div>
                     </motion.div>
 {/*img2*/}
@@ -109,7 +109,7 @@ export default function Latest(){
                         <img src="/warehouse.jpg" className="latestImg h-52 w-80 rounded-2xl"/>
                     </div>
                      <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#FFFFFF]  font-sans">
-                     <Link to="/detail"><p>Warehouse Solutions</p></Link>
+                     <Link to="/ProjectDetails"><p>Warehouse Solutions</p></Link>
                         </div>
                 </motion.div>
 {/*img3*/}
@@ -125,7 +125,7 @@ export default function Latest(){
                         <img src="/warehouse3.jpg" className="latestImg h-52 w-80 rounded-2xl"/>
                     </div>
                      <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127] text-[#FFFFFF]  font-sans">
-                        <Link to="/detail"><p>Warehouse Solutions</p></Link>
+                        <Link to="/ProjectDetails"><p>Warehouse Solutions</p></Link>
                         </div>
                 </motion.div>
 {/*img4*/}
@@ -141,7 +141,7 @@ export default function Latest(){
                     </div>
 
                         <div className="imgcardText absolute top-33 backdrop-blur-md shadow shadow-[#192235] left-5 p-3 font-bold rounded-r-full border-l-2 border-[#F75127]  text-[#FFFFFF]  font-sans">
-                        <p><Link to="/detail">Warehouse Solutions </Link></p>
+                        <p> <Link to="/ProjectDetails"> Warehouse Solutions </Link></p>
                         </div>
 
                 </motion.div>

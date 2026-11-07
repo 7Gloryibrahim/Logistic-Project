@@ -3,6 +3,7 @@ import Nav from "./Nav"
 import {motion} from "framer-motion"
 import SmoothScroll from "./smoothScroll"
 import Footer from "./footer"
+import { Link } from "react-router"
 
  export default function Project() {
 
@@ -156,7 +157,7 @@ import Footer from "./footer"
                  <div className="relative min-h-[233em] lg:min-h-[95em] bg-[#002A7A]">
                     <div style={{backgroundImage:"url('/v2.png')", backgroundSize:"cover", backgroundPosition:"fixed" }} className="h-[20em] w-full"></div>
                   
-                    <div className="relative -top-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-48 lg:gap-y-72 gap-x-7 w-full justify-items-center">
+                    <div className="relative -top-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-48 lg:gap-y-72 gap-x-7 w-full justify-items-center">
 
                             <motion.div 
                             
@@ -171,7 +172,7 @@ import Footer from "./footer"
                                     <p className=" bebas-neue-regular text-2xl lg:text-3xl">Freight Wave</p>
                                     <p className="w-80 inter-regular">Reliable freight forwarding solutions designed to simplify international shipping, improve cargo handling, and keep global trade moving.</p>
                                    <div className="w-full justify-end flex">
-                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl ">Project Details</button>
+                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl "><Link  to="/ProjectDetails">Project Details</Link></button>
                                    </div>
                                 </div>
                                 </motion.div>
@@ -191,7 +192,7 @@ import Footer from "./footer"
                                     <p className=" bebas-neue-regular text-2xl lg:text-3xl">GoFreight Logistics</p>
                                     <p className=" inter-regular">Integrated logistics solutions combining transportation, warehousing, and delivery coordination to help businesses move goods more efficiently.</p>
                                           <div className="w-full justify-end flex">
-                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl ">Project Details</button>
+                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl "><Link  to="/ProjectDetails">Project Details</Link></button>
                                    </div>
                                 </div>
                                 
@@ -211,7 +212,7 @@ import Footer from "./footer"
                                     <p className=" inter-regular">Speed-focused delivery solutions designed to minimize delays, optimize transportation routes, and meet demanding delivery schedules.</p>
                                       
                                       <div className="w-full justify-end flex mt-2">
-                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl ">Project Details</button>
+                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl "><Link  to="/ProjectDetails">Project Details</Link></button>
                                    </div>
                                 </div>
 
@@ -233,7 +234,7 @@ import Footer from "./footer"
                                     <p className="w-full inter-regular">Dependable transportation services connecting businesses and destinations through safe cargo handling and efficient freight distribution.</p>
                                       
                                       <div className="w-full justify-end flex mt-2">
-                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl ">Project Details</button>
+                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl "><Link  to="/ProjectDetails">Project Details</Link></button>
                                    </div>
                                 </div>
                                 </motion.div>
@@ -253,7 +254,7 @@ import Footer from "./footer"
                                     <p className=" inter-regular">Specialized express shipping for urgent cargo, combining priority handling, efficient transportation, and responsive delivery coordination.</p>
                                       
                                       <div className="w-full justify-end flex mt-2">
-                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl ">Project Details</button>
+                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl "><Link  to="/ProjectDetails">Project Details</Link></button>
                                    </div>
                                 </div>
                                 </motion.div>
@@ -274,7 +275,7 @@ import Footer from "./footer"
                                     <p className="w-72 inter-regular">Reliable freight management focused on organized shipment scheduling, transparent tracking, and consistent delivery performance.</p>
                                       
                                       <div className="w-full justify-end flex mt-2">
-                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl ">Project Details</button>
+                                   <button className="bg-[#111827] text-[#F75128] p-2 rounded rounded-bl-xl "><Link  to="/ProjectDetails">Project Details</Link></button>
                                    </div>
                                 </div>
 

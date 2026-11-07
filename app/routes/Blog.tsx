@@ -5,6 +5,7 @@ import { BsPersonFill } from "react-icons/bs";
 import { MdComment } from "react-icons/md";
 import Nav from "./Nav";
 import Footer from "./footer";
+import Top from "./toTop";
 export default function Blog(){
 const [blogButton1, setBlogButton1] = useState(false)
 const [blogButton2, setBlogButton2] = useState(false)
@@ -151,6 +152,7 @@ const handleToggle3 = ()=> {
             </div>
 
             <Footer/>
+            <Top/>
         </div>
     )
 }

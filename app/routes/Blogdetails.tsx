@@ -5,6 +5,7 @@ import SmoothScroll from "./smoothScroll"
 import { useState, useEffect, use } from "react"
 import { email } from "zod"
 import { BsThreeDotsVertical } from "react-icons/bs";
+import Top from "./toTop"
 export default function BlogDetails(){
     const [comment, setComment] =useState({
         name:"",
@@ -60,6 +61,8 @@ const [openMenu, setMenuOpen]= useState< number | null >(null)
     //     localStorage.setItem("blogComments", JSON.stringify(comments))
     // },[comments])
 
+
+    
     // Retrieve comments
 useEffect(() => {
     const addedComments = localStorage.getItem("blogComments");
@@ -329,6 +332,7 @@ const handleDelete = (id: number) => {
                 </div>
             </section>
             <Footer/>
+            <Top/>
             <SmoothScroll/>
         </div>
     )

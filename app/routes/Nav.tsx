@@ -37,7 +37,7 @@ useEffect(() => {
 
 
     return(
-        <div>
+        <div id="nav">
          <motion.nav
          
          initial={{y:-100, opacity:0}}
@@ -261,7 +261,7 @@ useEffect(() => {
                 >
          {menu && (<>
          <div onClick={(e) => e.stopPropagation()} className={`h-full `}>
-                    <ul className={`text-amber-50 ml-3 gap-y-6 flex flex-col`}>
+                    <ul className={`text-amber-50 ml-3 mt-7 gap-y-6 flex flex-col`}>
                         <li className=" "><Link to="/Page">Home</Link> </li>
                           <li className=""><Link to="/Project">Projects</Link></li>
                        <li className=""><Link to="/Blog">Blog</Link></li>

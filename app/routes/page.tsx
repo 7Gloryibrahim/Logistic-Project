@@ -32,6 +32,7 @@ import Footer from "./footer"
 import SmoothScroll from "./smoothScroll";
 import PageBlog from "./Pageblog";
 import Nav from "./Nav";
+import Top from "./toTop";
 export default function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
@@ -336,7 +337,9 @@ The right hand dot*
      <Quee/>
      <Team/>
      <PageBlog/>
+     
      <Footer/>
+     <Top/>
          </div>
     )
    

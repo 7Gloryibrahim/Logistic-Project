@@ -11,6 +11,7 @@ import toggle from './toggle';
 import Why from './why';
 import type { ReactFormState } from 'react-dom/client';
 import { email } from 'zod';
+import Top from './toTop';
 export default function Contact() {
    const { toggle, handleToggle } = useToggle();
    const [popUp, setPopUp] = useState(false)
@@ -261,6 +262,7 @@ export default function Contact() {
       <footer className='mt-28'>
         <Footer/>
       </footer>
+      <Top/>
     </div>
   )
 }

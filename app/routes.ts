@@ -7,5 +7,6 @@ export default [index("routes/home.tsx"),
             route("Page", "routes/page.tsx"),
             route("Testimonials", "routes/testimonials.tsx"),
             route("BlogDetails", "routes/Blogdetails.tsx"),
-            route ("Blog","routes/Blog.tsx")
+            route ("Blog","routes/Blog.tsx"),
+            route("ProjectDetails", "routes/project-details.tsx")
 ] satisfies RouteConfig;
