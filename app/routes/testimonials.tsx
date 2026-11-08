@@ -37,7 +37,7 @@ const handleScroll = ()=>{
             <section className="mt-28">
                 <Comments/>
             </section>
-            <section className=" h-[60em] lg:h-[25em]">
+            <section className=" h-[55em] lg:h-[25em]">
                 <Delivery/>
             </section>
 
