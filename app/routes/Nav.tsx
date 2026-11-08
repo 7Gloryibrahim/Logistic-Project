@@ -169,7 +169,7 @@ useEffect(() => {
                             </ul>
                             
                             </li>
-                            <li>Contact</li>
+                             <Link to="/contact"> <li>Contact</li></Link>
                         </ul>
 
                             <div className="hidden  sm:hidden md:hidden lg:block">
@@ -239,7 +239,7 @@ useEffect(() => {
     bottom-2
     left-0
     z-[90]
-    w-52
+    w-[20em]
     rounded-tr-2xl
     rounded-br-2xl
     h-screen
@@ -261,16 +261,17 @@ useEffect(() => {
                 >
          {menu && (<>
          <div onClick={(e) => e.stopPropagation()} className={`h-full `}>
-                    <ul className={`text-amber-50 ml-3 mt-7 gap-y-6 flex flex-col`}>
+                    <ul className={`text-amber-50 ml-3 mt-10 gap-y-6 flex flex-col text-xl uppercase `}>
                         <li className=" "><Link to="/Page">Home</Link> </li>
                           <li className=""><Link to="/Project">Projects</Link></li>
                        <li className=""><Link to="/Blog">Blog</Link></li>
                         <li className=""><Link to="/Testimonials">Testimonials</Link></li>
                          <li className="flex "><Link to="/AboutUs">About</Link></li>
+                         <Link to="/contact"> <li>Contact</li></Link>
                         <li>Home</li>
                     </ul>
                 </div>
-                <div onClick={() => setMenu(false)} className="absolute left-38 top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128]  lg:hidden">
+                <div onClick={() => setMenu(false)} className="absolute left-64 top-5 z-[100] cursor-pointer text-3xl font-bold text-[#F75128]  lg:hidden">
                        <FiX />
                     </div></>
         )}
