@@ -92,7 +92,7 @@ export default function Video(){
             </div>
                     <div className="mt-16 lg:mt-0 w-72 lg:w-[30em] lg:h-[27em] h-[32em]  shadow shadow-[#D44216] rounded p-2 border-2 border-[#D44216]">
             <img src="/delivery1.webp" className="w-72 lg:w-[30em] h-[31em] rounded absolute  lg:-top-20"/>
-                               <div  className="backdrop-blur-lg w-fit rounded-full border-2 border-white p-5 text-5xl absolute top-[15em] lg:top-36 font-extrabold ml-28 ">
+                               <div  className="backdrop-blur-lg w-fit rounded-full border-2 border-white p-5 text-5xl absolute top-[15em] lg:top-36 font-extrabold ml-28 lg:ml-52">
                                 <CiPlay1 onClick={()=> setVideo(true)}  className="text-[#D44216] text-shadow-2xl text-shadow-black  z-10 "/>
                                 </div>
                                 <div className="">
