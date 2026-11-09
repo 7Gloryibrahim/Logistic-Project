@@ -13,9 +13,9 @@ export default function Why(){
     
 
     const requestQuote = z.object({
-        firstName:z.string().regex(/^[A-Za-z]+$/).min(2, "First name is required"),
+        firstName:z.string().trim().regex(/^[A-Za-z]+$/).min(2, "First name is required"),
        middleName:z.string().optional(),
-       lastName:z.string().regex(/^[A-Za-z]+$/).min(2, "Last name is required"),
+       lastName:z.string().trim().regex(/^[A-Za-z]+$/).min(2, "Last name is required"),
         phone: z.string().regex(/^\d{11}$/, "Phone must be 11 digits"),
     email: z.string().email("Enter a valid email"),
     pickupLocation: z.string().min(1, "Pickup location is required"),
