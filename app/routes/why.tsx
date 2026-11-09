@@ -84,10 +84,13 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     setErrors({});
 
     const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+    console.log("Form endpoint:", endpoint);
+console.log("Current website:", window.location.href);
     if (!endpoint) {
         console.error("Quote form is not configured: VITE_FORMSPREE_ENDPOINT is missing.");
         setSubmissionStatus("not-configured");
         return;
+        
     }
 
     setSubmissionStatus("sending");
