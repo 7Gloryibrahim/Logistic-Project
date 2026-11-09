@@ -1,25 +1,24 @@
 
-import { useState, useEffect, type ChangeEvent, type FormEvent } from "react";
-import {object, z} from 'zod'
+import { useState, type ChangeEvent, type FormEvent } from "react";
+import { z } from "zod";
 import { IoAirplaneSharp } from "react-icons/io5";
 import { MdPhoneInTalk } from "react-icons/md";
 import { Link } from "react-router";
 import {motion} from "framer-motion"
 import Transportation from "./transportation";
-import Video from "./video";
 
 
 export default function Why(){
     
 
     const requestQuote = z.object({
-        firstName:z.string().trim().regex(/^[A-Za-z]+$/).min(2, "First name is required"),
-       middleName:z.string().optional(),
-       lastName:z.string().trim().regex(/^[A-Za-z]+$/).min(2, "Last name is required"),
+        firstName: z.string().trim().regex(/^(?=.{2,}$)[\p{L}]+(?:[ '-][\p{L}]+)*$/u, "Enter a valid first name"),
+       middleName: z.string().trim().optional(),
+       lastName: z.string().trim().regex(/^(?=.{2,}$)[\p{L}]+(?:[ '-][\p{L}]+)*$/u, "Enter a valid last name"),
         phone: z.string().regex(/^\d{11}$/, "Phone must be 11 digits"),
-    email: z.string().email("Enter a valid email"),
-    pickupLocation: z.string().min(1, "Pickup location is required"),
-    deliveryLocation: z.string().min(1, "Delivery location is required"),
+    email: z.string().trim().email("Enter a valid email"),
+    pickupLocation: z.string().trim().min(1, "Pickup location is required"),
+    deliveryLocation: z.string().trim().min(1, "Delivery location is required"),
     service: z.string().min(1, "Please select a service"),
     load: z.string().min(1, "Please select your load type"),
     loadSize: z.string().min(1, "Please select your load size"),
@@ -42,8 +41,6 @@ const [form, setForm]= useState({
     notes: ""
 
 })
-
-const [draftLoaded, setDraftLoaded] = useState(false);
 
 const [errors, setErrors] = useState<Record<string, string>>({
 
@@ -95,10 +92,17 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
     setSubmissionStatus("sending");
     try {
+        const formData = new FormData(e.currentTarget);
+        Object.entries(result.data).forEach(([name, value]) => {
+            if (typeof value === "string") {
+                formData.set(name, value);
+            }
+        });
+
         const response = await fetch(endpoint, {
             method: "POST",
             headers: { Accept: "application/json" },
-            body: new FormData(e.currentTarget),
+            body: formData,
         });
 
         if (!response.ok) {
