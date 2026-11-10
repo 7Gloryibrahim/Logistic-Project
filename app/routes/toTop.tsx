@@ -8,7 +8,7 @@ export default function Top(){
     }
     return(
         <div className="fixed z-50 bottom-10 flex   right-5 justify-end">
-            <button onClick={handleScrollToTop} className="bg-white p-5 rounded-full items-center"> 
+            <button onClick={handleScrollToTop} className="bg-white shadow shadow-black p-5 rounded-full items-center"> 
             <FaArrowUp className="text-[#F55128]   "/>
             </button>
         </div>

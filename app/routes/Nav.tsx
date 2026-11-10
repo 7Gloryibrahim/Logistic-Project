@@ -136,7 +136,7 @@ useEffect(() => {
                                          <Link to="/Blog"><li className="Blog-list">Blog</li></Link>
                                         <li className="Blog-list"><Link to="/Blogdetails">Blog Details</Link></li>
                                         <li className="pages-list"><Link to="/Project">Projects</Link></li>
-                                        <li className="pages-list">Project Details</li>
+                                        <Link to="/ProjectDetails"><li className="pages-list">Project Details</li></Link>
                                         <li className="pages-list"><Link to="/Testimonials">Testimonials</Link></li>
                                         <li className="pages-list">Pricing</li>
                                         <li className="pages-list">FAQ</li>
