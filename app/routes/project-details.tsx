@@ -9,7 +9,7 @@ return(
     <div className="bg-[#C3C7D8] ">
         <Nav/>
         <section>
-            <div style={{backgroundImage:"url('/project-detail2.jpg')", backgroundPosition:"center", objectPosition:"center", backgroundRepeat:"no-repeat", backgroundSize:"cover",backgroundAttachment:"fixed"}} className="relative h-[40em] w-full top-0 left-0 right-0"></div>
+            <div style={{backgroundImage:"url('/project-detail2.webp')", backgroundPosition:"center", objectPosition:"center", backgroundRepeat:"no-repeat", backgroundSize:"cover",backgroundAttachment:"fixed"}} className="relative h-[40em] w-full top-0 left-0 right-0"></div>
             <div className="absolute top-1/2 justify-center flex w-full text-5xl bebas-neue-regular text-[#F75128] uppercase ">
                 <p> Project Details</p>
             </div>
