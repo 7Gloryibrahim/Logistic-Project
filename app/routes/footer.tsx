@@ -40,11 +40,11 @@ export default function Footer(){
                     <p className="text-4xl  bebas-neue-regular text-[#D44216]">Quick Links</p>
                    
                    <div className="flex flex-col gap-y-4 text-[#262A70] comic-neue-bold">
-                     <p className="mt-5">Home</p>
+                    <Link to="/Page"> <p className="mt-5">Home</p></Link>
                     <Link to="/AboutUs"><p>About Us</p></Link>
                     <p>Service</p>
-                   <p> Latest Project</p>
-                   <Link to="/contact"> <li>Contact</li></Link>
+                   <Link to="/Project"><p> Latest Project</p></Link>
+                   <Link to="/contact"> <p>Contact</p></Link>
                    </div>
                 </div>
                 <div>
