@@ -4,6 +4,7 @@ import {motion} from "framer-motion"
 import SmoothScroll from "./smoothScroll"
 import Footer from "./footer"
 import { Link } from "react-router"
+import Top from "./toTop"
 
  export default function Project() {
 
@@ -284,6 +285,7 @@ import { Link } from "react-router"
                              </div>
                  </div>
                  </div>
+                 <Top/>
                  <div  className="mt-28">
                       <Footer/>
                       </div>
