@@ -10,7 +10,7 @@ export default function PageLoader() {
   return (
     <div className="fixed inset-0 z-[9999] bg-[#062E39] flex flex-col items-center justify-center">
 
-      {/* LOGISTIQ BRAND */}
+     
       <div className="animate-pulse">
 
         <h1 className="text-white text-4xl md:text-5xl font-bold tracking-[8px]">
@@ -25,8 +25,7 @@ export default function PageLoader() {
         </div>
 
       </div>
-
-      {/* LOADING TEXT */}
+ 
       <p className="text-white/60 text-xs tracking-[5px] uppercase mt-8">
         Moving beyond limits
       </p>

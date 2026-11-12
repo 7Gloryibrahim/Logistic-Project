@@ -33,7 +33,7 @@ import SmoothScroll from "./smoothScroll";
 import PageBlog from "./Pageblog";
 import Nav from "./Nav";
 import Top from "./toTop";
-import PageLoader from "./pageLoader";
+import PageLoader from "../components/pageLoader";
 export default function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
