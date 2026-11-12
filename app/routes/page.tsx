@@ -33,6 +33,7 @@ import SmoothScroll from "./smoothScroll";
 import PageBlog from "./Pageblog";
 import Nav from "./Nav";
 import Top from "./toTop";
+import PageLoader from "./pageLoader";
 export default function Page(){
     const [search, setSearch] = useState(false)
     const [menu, setMenu] = useState(false)
@@ -53,6 +54,7 @@ useEffect(() => {
 
     return(
         <div className="bg-[#111827] font-sans select-none">
+            <PageLoader/>
             <SmoothScroll/>
              
             {/*first Top */}
