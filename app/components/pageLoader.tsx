@@ -1,27 +1,29 @@
 import { useEffect, useState } from "react";
-import { useNavigation } from "react-router";
+import { useLocation, useNavigation } from "react-router";
 
 export default function PageLoader() {
   const navigation = useNavigation();
-  const [initialLoading, setInitialLoading] = useState(true);
+  const location = useLocation();
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Show the splash screen briefly on initial page load/refresh
+    setIsVisible(true);
+
     const timer = setTimeout(() => {
-      setInitialLoading(false);
-    }, 1500); // Adjust duration in milliseconds (e.g., 1500 = 1.5 seconds)
+      setIsVisible(false);
+    }, 900); // Keeps the loader visible for at least 900ms on every visit
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.key]); // Triggers on EVERY navigation, not just pathname changes
 
-  const isLoading = initialLoading || navigation.state !== "idle";
+  const active = isVisible || navigation.state !== "idle";
 
-  if (!isLoading) {
+  if (!active) {
     return null;
   }
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-[#111827] flex flex-col items-center justify-center">
+    <div className="fixed inset-0 z- bg-[#062E39] flex flex-col items-center justify-center transition-opacity duration-300">
       <div className="animate-pulse">
         <h1 className="text-white text-4xl md:text-5xl font-bold tracking-[8px]">
           LOGISTIQ
