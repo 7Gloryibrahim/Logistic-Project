@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
- import PageLoader from "../components/pageLoader";
+ import PageLoader from "./components/pageLoader";
 import type { Route } from "./+types/root";
 import "./app.css";
 
