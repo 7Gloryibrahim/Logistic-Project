@@ -8,7 +8,7 @@ export default function PageLoader() {
   }
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-[#111827] flex flex-col items-center justify-center">
+    <div className="fixed inset-0 z-[9999] bg-[#062E39] flex flex-col items-center justify-center">
 
       {/* LOGISTIQ BRAND */}
       <div className="animate-pulse">

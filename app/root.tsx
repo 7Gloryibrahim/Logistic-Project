@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-import PageLoader from "./routes/pageLoader";
+ import PageLoader from "./routes/pageLoader";
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -48,7 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
    return (
     <>
-      <PageLoader />
+      <PageLoader/>
       <Outlet />
     </>
   );
