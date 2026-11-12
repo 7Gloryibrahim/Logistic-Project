@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { BsPersonFill } from "react-icons/bs";
 import { MdComment } from "react-icons/md";
+import PageLoader from "~/components/pageLoader";
 import Nav from "./Nav";
 import Footer from "./footer";
 import Top from "./toTop";
@@ -39,6 +40,7 @@ const handleToggle3 = ()=> {
 }
     return(
         <div className="bg-[#C3C7D8]">
+           <PageLoader/>
             <Nav/>
 
              <section>

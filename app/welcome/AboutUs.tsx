@@ -6,13 +6,14 @@ import Footer from "~/routes/footer"
 import SmoothScroll from "~/routes/smoothScroll"
 import Mission from "~/routes/mission"
 import Team from "~/routes/team"
-import BookBtn from "~/routes/book"
+import PageLoader from "~/components/pageLoader"
 import Delivery from "~/routes/delivery"
 export default function AboutUs(){
 
 
     return(
         <div className="bg-white overflow-x-hidden font-sans select-none" >
+            <PageLoader/>
             <SmoothScroll/>
             <Nav/>
             
